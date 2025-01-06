@@ -199,7 +199,7 @@
                         Contact Us
                     </mj-navbar-link>
                 </mj-navbar>
-                <mj-text font-family="karla" align="right">
+                <mj-text font-family="Karla" align="right">
                     © 2025 PlayVital
                 </mj-text>
             </mj-column>
