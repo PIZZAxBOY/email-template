@@ -1,151 +1,151 @@
 <mjml>
-    <mj-head>
-        <mj-preview>
-            Level up your gaming experience with PlayVital's premium controller accessories! 🎮 Exclusive collaboration opportunity inside →
-        </mj-preview>
-        <mj-font name="Karla" href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" />
-        <mj-font name="Space Grotesk" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" />
-        <mj-style>
-            .navebar-link {
-                text-decoration-color: rgb(90, 89, 255) !important;
-                text-decoration-line: underline !important;
-                text-decoration-thickness: 2px !important;
-                text-underline-offset: 2px !important;
-            }
-        </mj-style>
-    </mj-head>
+  <mj-head>
+    <mj-preview>
+      Level up your gaming experience with PlayVital's premium controller accessories! 🎮 Exclusive collaboration opportunity inside →
+    </mj-preview>
+    <mj-font name="Karla" href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" />
+    <mj-font name="Space Grotesk" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" />
+    <mj-style>
+      .navebar-link {
+        text-decoration-color: rgb(90, 89, 255) !important;
+        text-decoration-line: underline !important;
+        text-decoration-thickness: 2px !important;
+        text-underline-offset: 2px !important;
+      }
+    </mj-style>
+  </mj-head>
 
-    </mj-head>
-    <mj-body>
-        <!--header-->
-        <mj-section background-color="#f6f8fc">
-            <mj-column>
-                <mj-image href="https://playvital.com" src="https://files.catbox.moe/tx35nm.png" alt="PlayVital logo" />
+  </mj-head>
+  <mj-body>
+    <!--header-->
+    <mj-section background-color="#f6f8fc">
+      <mj-column>
+        <mj-image href="https://playvital.com" src="https://files.catbox.moe/tx35nm.png" alt="PlayVital logo" />
 
-                <!--公司介绍-->
-                <mj-text font-size="18px" font-family="Karla,'sans-serif', Arial" align="center" font-weight="800" letter-spacing="0.5px" line-height="22px">
-                    PlayVital aims to produce premium and well-designed video game accessories for gamers to change their gaming life.
-                </mj-text>
-            </mj-column>
-        </mj-section>
-        <!--邮件正文-->
-        <mj-section background-color="#f6f8fc">
-            <mj-column width="90%" background-color="white" border-radius="20px">
-                <mj-text font-size="16px" color="black" font-family="Karla" font-weight="350" line-height="20px">
+        <!--公司介绍-->
+        <mj-text font-size="18px" font-family="Karla,'sans-serif', Arial" align="center" font-weight="800" letter-spacing="0.5px" line-height="22px">
+          PlayVital aims to produce premium and well-designed video game accessories for gamers to change their gaming life.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <!--邮件正文-->
+    <mj-section background-color="#f6f8fc">
+      <mj-column width="90%" background-color="white" border-radius="20px">
+        <mj-text font-size="16px" color="black" font-family="Karla" font-weight="350" line-height="20px">
 
-                    <h1>Hi friend 👋</h1>
-                    <p>Your passion for creating contents truly inspires me, and I know it resonates with your vast
-                        audience. We'd love to explore potential collaborations that would benefit both of us. We see
-                        exciting possibilities in having you reviewing our gaming accessories.</p>
+          <h1>Hi friend 👋</h1>
+          <p>Your passion for creating contents truly inspires me, and I know it resonates with your vast
+            audience. We'd love to explore potential collaborations that would benefit both of us. We see
+            exciting possibilities in having you reviewing our gaming accessories.</p>
 
-                    <p> Of course, we understand the importance of maintaining your creative integrity and wouldn't want to
-                        dictate your content.</p>
+          <p> Of course, we understand the importance of maintaining your creative integrity and wouldn't want to
+            dictate your content.</p>
 
-                    <p>We're open to your ideas and would love to discuss how we can collaborate in a way that feels
-                        authentic and exciting for you and your audience. We've curated a selection below, but feel free to
-                        explore our full catalog at Our official store.</p>
+          <p>We're open to your ideas and would love to discuss how we can collaborate in a way that feels
+            authentic and exciting for you and your audience. We've curated a selection below, but feel free to
+            explore our full catalog at Our official store.</p>
 
-                    <p>If anything sparks your interest, just shoot us a reply! We're happy to answer any questions and get
-                        you hooked up.</p>
+          <p>If anything sparks your interest, just shoot us a reply! We're happy to answer any questions and get
+            you hooked up.</p>
 
-                    <p>Thanks for your time, and keep slaying!</p>
+          <p>Thanks for your time, and keep slaying!</p>
 
-                    <p>Regards,<br>
-                        Tom</p>
-                </mj-text>
-            </mj-column>
-        </mj-section>
-        <!--产品展示-->
-        <mj-section background-color="#f6f8fc">
-
-
-            <mj-column>
-                <mj-image fluid-on-mobile="true" border-radius="20px" src="https://files.catbox.moe/u7nfvk.JPG" alt="x3-demon" href="https://playvital.com/products/playvital-cute-demon-silicone-cover-with-thumb-grip-caps-for-xbox-series-x-s-controller-xbox-core-wireless-controller-blue-pukx3p002?_pos=2&_sid=d2af945fd&_ss=r" />
-                <mj-image fluid-on-mobile="true" border-radius="20px" src="https://files.catbox.moe/3vgoen.jpg" alt="p5-bear" href="https://playvital.com/products/playvital-cute-bear-controller-silicone-case-with-thumb-grips-for-ps5-wireless-controller-compatible-with-charging-station-black-purple-uybpfp005" />
-
-                <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/u5y96m.webp" href="https://playvital.com/products/playvital-zealprotect-soft-tpu-slim-protective-case-with-tempered-glass-screen-protector-thumb-grips-abxy-direction-button-caps-for-nintendo-switch-pp-vv-rnsyv6060" alt="ppvv" border-radius="20px" />
-
-                <mj-image href="https://playvital.com/products/playvital-zealprotect-soft-tpu-slim-protective-case-with-tempered-glass-screen-protector-thumb-grips-abxy-direction-button-caps-for-nintendo-switch-pudding-rabbit-rnsyv6063" fluid-on-mobile="true" src="https://files.catbox.moe/j3u4gg.jpg" alt="pudding-rabbit" border-radius="20px" />
-
-            </mj-column>
-            <mj-column>
-                <mj-image href="https://playvital.com/products/playvital-samurai-edition-ergonomic-silicone-skin-protective-case-for-nintendo-switch-pro-controller-soft-anti-slip-controller-grip-protector-for-nintendo-switch-pro-with-thumb-grip-caps-white-ebnpp001" fluid-on-mobile="true" border-radius="20px" src="https://files.catbox.moe/adgj1s.jpg" alt="ns-cover" />
-
-                <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/vbfl19.jpg" alt="FHSDV004&YFSDM007" border-radius="20px" href="https://playvital.com/products/playvital-the-great-wave-professional-textured-soft-rubber-pads-handle-for-steam-deck?_pos=1&_sid=fd0917a8c&_ss=r" />
-            </mj-column>
-        </mj-section>
-        <!--收集表-->
-        <mj-section background-color="#f6f8fc">
-            <mj-column>
-                <mj-image src="https://files.catbox.moe/6l8qk3.png" alt="join us" width="150px" href="https://tally.so/r/n0OyxA" padding="0" />
-            </mj-column>
-        </mj-section>
+          <p>Regards,<br>
+            Tom</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <!--产品展示-->
+    <mj-section background-color="#f6f8fc">
 
 
-        <!--新品-->
-        <mj-hero background-color="#f6f8fc" mode="fluid-height" background-width="2000px" background-height="1000px" background-url="https://files.catbox.moe/4p62hd.jpg" vertical-align="middle">
-            <mj-text color="white" font-family="'Space Grotesk', Karla" font-size="30px" align="center">
-                Gothic Imp Series
-            </mj-text>
-            <mj-button border-radius="20px" background-color="white" font-family="Karla" color="black" href="https://playvital.com/search?type=product&q=gothic&options%5Bprefix%5D=last">
-                EXPLORE NOW
-            </mj-button>
-        </mj-hero>
+      <mj-column>
+        <mj-image fluid-on-mobile="true" border-radius="20px" src="https://files.catbox.moe/u7nfvk.JPG" alt="x3-demon" href="https://playvital.com/products/playvital-cute-demon-silicone-cover-with-thumb-grip-caps-for-xbox-series-x-s-controller-xbox-core-wireless-controller-blue-pukx3p002?_pos=2&_sid=d2af945fd&_ss=r" />
+        <mj-image fluid-on-mobile="true" border-radius="20px" src="https://files.catbox.moe/3vgoen.jpg" alt="p5-bear" href="https://playvital.com/products/playvital-cute-bear-controller-silicone-case-with-thumb-grips-for-ps5-wireless-controller-compatible-with-charging-station-black-purple-uybpfp005" />
 
-        <mj-section>
-            <mj-column>
-                <mj-spacer height="20px" />
-            </mj-column>
-        </mj-section>
+        <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/u5y96m.webp" href="https://playvital.com/products/playvital-zealprotect-soft-tpu-slim-protective-case-with-tempered-glass-screen-protector-thumb-grips-abxy-direction-button-caps-for-nintendo-switch-pp-vv-rnsyv6060" alt="ppvv" border-radius="20px" />
 
+        <mj-image href="https://playvital.com/products/playvital-zealprotect-soft-tpu-slim-protective-case-with-tempered-glass-screen-protector-thumb-grips-abxy-direction-button-caps-for-nintendo-switch-pudding-rabbit-rnsyv6063" fluid-on-mobile="true" src="https://files.catbox.moe/j3u4gg.jpg" alt="pudding-rabbit" border-radius="20px" />
 
-        <!-- 页脚 -->
-        <mj-section background-color="#E9E9E9" padding-top="40px">
+      </mj-column>
+      <mj-column>
+        <mj-image href="https://playvital.com/products/playvital-samurai-edition-ergonomic-silicone-skin-protective-case-for-nintendo-switch-pro-controller-soft-anti-slip-controller-grip-protector-for-nintendo-switch-pro-with-thumb-grip-caps-white-ebnpp001" fluid-on-mobile="true" border-radius="20px" src="https://files.catbox.moe/adgj1s.jpg" alt="ns-cover" />
 
-            <mj-column>
-
-                <mj-text align="center" font-family="Karla" font-size="18px">
-                    Follow us:
-                </mj-text>
-
-                <mj-social padding="0 0 0 0" icon-size="20px" icon-padding="3px" font-family="Karla" font-size="15px" border-radius="5px">
-
-                    <!--youtube-->
-                    <mj-social-element background-color="white" src="https://cdn.shopify.com/shopify-email/b44b9z24d10ct9dov9fozqqm8vqf.svg?width=60&height=60&format=png" href="https://www.youtube.com/@PlayVitalGaming">
-                    </mj-social-element>
-
-                    <!--TikTok-->
-                    <mj-social-element background-color="white" src="https://cdn.shopify.com/shopify-email/4s0eae5xdawkwa9aals5ya8qujky.svg?width=60&height=60&format=png" href="https://www.tiktok.com/@playvitalgaming">
-
-                    </mj-social-element>
+        <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/vbfl19.jpg" alt="FHSDV004&YFSDM007" border-radius="20px" href="https://playvital.com/products/playvital-the-great-wave-professional-textured-soft-rubber-pads-handle-for-steam-deck?_pos=1&_sid=fd0917a8c&_ss=r" />
+      </mj-column>
+    </mj-section>
+    <!--收集表-->
+    <mj-section background-color="#f6f8fc">
+      <mj-column>
+        <mj-image src="https://files.catbox.moe/6l8qk3.png" alt="join us" width="150px" href="https://tally.so/r/n0OyxA" padding="0" />
+      </mj-column>
+    </mj-section>
 
 
-                    <!--instagram-->
-                    <mj-social-element background-color="white" src="https://cdn.shopify.com/shopify-email/mezbe8bg2srefo0ca2vqbbv13mjg.svg?width=60&height=60&format=png" href="https://www.instagram.com/playvitalgaming/">
+    <!--新品-->
+    <mj-hero background-color="#f6f8fc" mode="fluid-height" background-width="2000px" background-height="1000px" background-url="https://files.catbox.moe/4p62hd.jpg" vertical-align="middle">
+      <mj-text color="white" font-family="'Space Grotesk', Karla" font-size="30px" align="center">
+        Gothic Imp Series
+      </mj-text>
+      <mj-button border-radius="20px" background-color="white" font-family="Karla" color="black" href="https://playvital.com/search?type=product&q=gothic&options%5Bprefix%5D=last">
+        EXPLORE NOW
+      </mj-button>
+    </mj-hero>
 
-                    </mj-social-element>
+    <mj-section>
+      <mj-column>
+        <mj-spacer height="20px" />
+      </mj-column>
+    </mj-section>
 
 
-                    <!--twitter-->
-                    <mj-social-element background-color="white" src="https://cdn.shopify.com/shopify-email/1m71lepjigcxdvp7yvsp6fhrv3ih.svg?width=60&height=60&format=png" href="https://x.com/PlayVitalGaming">
+    <!-- 页脚 -->
+    <mj-section background-color="#E9E9E9" padding-top="40px">
 
-                    </mj-social-element>
-                </mj-social>
+      <mj-column>
 
-                <mj-navbar hamburger="hamburger" ico-color="#ffffff">
-                    <mj-navbar-link css-class="navebar-link" font-weight="600" font-family="Karla" href="https://playvital.com/collections/new-products">
-                        New Products
-                    </mj-navbar-link>
-                    <mj-navbar-link css-class="navebar-link" font-weight="600" font-family="Karla" href="https://af.uppromote.com/playvital/register?p=175715">
-                        Affiliate Program
-                    </mj-navbar-link>
-                    <mj-navbar-link css-class="navebar-link" font-weight="600" font-family="Karla" href="mailto:sns@playvital.com">
-                        Contact Us
-                    </mj-navbar-link>
-                </mj-navbar>
-                <mj-text font-family="karla" align="right">
-                    © 2025 PlayVital
-                </mj-text>
-            </mj-column>
-        </mj-section>
+        <mj-text align="center" font-family="Karla" font-size="18px">
+          Follow us:
+        </mj-text>
+
+        <mj-social padding="0 0 0 0" icon-size="20px" icon-padding="3px" font-family="Karla" font-size="15px" border-radius="5px">
+
+          <!--youtube-->
+          <mj-social-element background-color="white" src="https://cdn.shopify.com/shopify-email/b44b9z24d10ct9dov9fozqqm8vqf.svg?width=60&height=60&format=png" href="https://www.youtube.com/@PlayVitalGaming">
+          </mj-social-element>
+
+          <!--TikTok-->
+          <mj-social-element background-color="white" src="https://cdn.shopify.com/shopify-email/4s0eae5xdawkwa9aals5ya8qujky.svg?width=60&height=60&format=png" href="https://www.tiktok.com/@playvitalgaming">
+
+          </mj-social-element>
+
+
+          <!--instagram-->
+          <mj-social-element background-color="white" src="https://cdn.shopify.com/shopify-email/mezbe8bg2srefo0ca2vqbbv13mjg.svg?width=60&height=60&format=png" href="https://www.instagram.com/playvitalgaming/">
+
+          </mj-social-element>
+
+
+          <!--twitter-->
+          <mj-social-element background-color="white" src="https://cdn.shopify.com/shopify-email/1m71lepjigcxdvp7yvsp6fhrv3ih.svg?width=60&height=60&format=png" href="https://x.com/PlayVitalGaming">
+
+          </mj-social-element>
+        </mj-social>
+
+        <mj-navbar hamburger="hamburger" ico-color="#ffffff">
+          <mj-navbar-link css-class="navebar-link" font-weight="600" font-family="Karla" href="https://playvital.com/collections/new-products">
+            New Products
+          </mj-navbar-link>
+          <mj-navbar-link css-class="navebar-link" font-weight="600" font-family="Karla" href="https://af.uppromote.com/playvital/register?p=175715">
+            Affiliate Program
+          </mj-navbar-link>
+          <mj-navbar-link css-class="navebar-link" font-weight="600" font-family="Karla" href="mailto:sns@playvital.com">
+            Contact Us
+          </mj-navbar-link>
+        </mj-navbar>
+        <mj-text font-family="karla" align="right">
+          © 2025 PlayVital
+        </mj-text>
+      </mj-column>
+    </mj-section>
 </mjml>
