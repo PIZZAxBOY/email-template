@@ -32,7 +32,7 @@ rl.question('请输入收件人邮箱地址: ', (recipient) => {
 
 
   //阅读html内容
-  const htmlContent = fs.readFileSync('通用.html', 'utf8');
+  const htmlContent = fs.readFileSync('二次开发.html', 'utf8');
 
   // 将 HTML 转换为纯文本
   const textContent = convert(htmlContent, {
@@ -42,7 +42,7 @@ rl.question('请输入收件人邮箱地址: ', (recipient) => {
   let mailOptions = {
     from: '"Tom Wu" <belugua0@qq.com>', // 发件人
     to: recipient, //收件人
-    subject: 'Partnering with PlayVital!', // 主题
+    subject: 'New Gaming Gear! Lets partner up!', // 主题
     text: textContent, // 纯文本
     html: htmlContent, // html内容
   };
