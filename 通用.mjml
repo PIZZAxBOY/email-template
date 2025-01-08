@@ -151,7 +151,8 @@
                 </mj-text>
 
                 <mj-social padding="0 0 0 0" icon-size="20px" icon-padding="3px"
-                  font-family="Karla" font-size="15px" border-radius="5px" inner-padding="10px">
+                  font-family="Karla" font-size="15px" border-radius="5px"
+                  inner-padding="10px">
 
                     <!--youtube-->
                     <mj-social-element background-color="white"

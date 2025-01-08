@@ -1,0 +1,54 @@
+<mjml>
+    <mj-head>
+        <mj-font name="Karla"
+          href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" />
+        <mj-attributes>
+            <mj-all font-family="karla" />
+        </mj-attributes>
+        <mj-style>
+            .navebar-link {
+                text-decoration-color: rgb(90, 89, 255) !important;
+                text-decoration-line: underline !important;
+                text-decoration-thickness: 2px !important;
+                text-underline-offset: 2px !important;
+            }
+
+            h1 {
+                font-weight: 800;
+                font-size: 2rem;
+            }
+
+            p {
+                font-weight: 350;
+                font-size: 1rem;
+            }
+        </mj-style>
+    </mj-head>
+    <mj-body background-color="#f6f8fc">
+        <!-- header -->
+        <mj-section>
+            <mj-column>
+                <mj-image href="https://playvital.com"
+                  src="https://files.catbox.moe/tx35nm.png"
+                  alt="PlayVital logo" />
+                <mj-text align="center" letter-spacing="2px">
+                    <h1>A Brand New Year</h1>
+                </mj-text>
+            </mj-column>
+        </mj-section>
+        <!-- 正文 -->
+        <mj-section>
+            <mj-column width="90%" background-color="white"
+              border-radius="20px">
+                <mj-text>
+                    <h2>
+                        Hi Friend! 🥳
+                    </h2>
+                    <p>
+                        It's been a while since our last
+                    </p>
+                </mj-text>
+            </mj-column>
+        </mj-section>
+    </mj-body>
+</mjml>
