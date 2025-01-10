@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<quicktext version="2">
+  <filetype>scripts</filetype>
+  <script>
+    <name>
+      <![CDATA[ToFirstOrLastname]]>
+    </name>
+    <body>
+      <![CDATA[var data = this.mQuicktext.process_to(mVariables);
+
+// use lastname if firstname is not available
+if(typeof data['firstname'] == 'undefined') {
+  data['firstname'] = [];
+}
+for(var i = 0; i < data['lastname'].length; i++) {
+  if(typeof data['firstname'][i] == 'undefined' || data['firstname'][i] == '') {
+    data['firstname'][i] = data['lastname'][i];
+  }
+}
+
+if(typeof data['firstname'] != 'undefined') {
+  if(mVariables.length < 1) mVariables[0] = ", ";
+  return data['firstname'].join(mVariables[0].replace(/\\n/g, "\n").replace(/\\t/g, "\t"));
+} else return "";]]>
+    </body>
+  </script>
+  <script>
+    <name>
+      <![CDATA[ContentType]]>
+    </name>
+    <body>
+      <![CDATA[let variable = this.mVariables[0];
+let choice = ""
+// 空值检查
+if (!variable) {
+  return "No input provided!";
+}
+
+// 转为小写进行比较
+variable = variable.toLowerCase();
+
+switch (variable) {
+  case "youtube":
+    choice = "[[INPUT=产出类型|select|shorts;Integration;dedicated video]]";
+    return choice
+  case "instagram":
+    choice = "[[INPUT=产出类型|select|reel;post]]";
+    return choice
+  default:
+    return "TikTok video";
+}]]>
+    </body>
+  </script>
+  <script>
+    <name>
+      <![CDATA[videoLength]]>
+    </name>
+    <body>
+      <![CDATA[var variable = this.mVariables[0];
+var platform = await this.mQuicktext.get_input(["平台"]);
+let message = `
+  <h2>Video Length</h2>
+  <p>We're flexible, but ideally <b>[[INPUT=视频时长(分钟)]] min</b>. This allows enough time for an engaging and 
+  informative review without being too lengthy for your viewers. <br>
+  </p>
+`;
+
+variable = variable.toLowerCase();
+platform  = platform.toLowerCase();
+
+switch (platform) {
+  case "youtube":
+    return message; 
+  case "instagram":
+    if (variable === "reel") {
+      return message; 
+    }
+    return ""; // 如果不是 Reels，则返回空字符串
+  default:
+    return message;
+}]]>
+    </body>
+  </script>
+</quicktext>
