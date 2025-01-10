@@ -78,3 +78,33 @@
 
         // 初始化下拉框
         window.onload = updateAccountSelect;
+
+
+        // 改变模板
+        const templates = [
+            "通用.html",
+            "二次开发.html",
+        ];
+        
+        function loadTemplates() {
+            const templateSelect = document.getElementById("template-select");
+        
+            templates.forEach(template => {
+                const option = document.createElement("option");
+                option.value = `template/${template}`;
+                option.textContent = template.replace('.html', ''); // 去掉扩展名
+                templateSelect.appendChild(option);
+            });
+        }
+        
+        function changeTemplate() {
+            const templateSelect = document.getElementById("template-select");
+            const selectedTemplate = templateSelect.value;
+        
+            if (selectedTemplate) {
+                document.getElementById("email-preview").src = selectedTemplate;
+            }
+        }
+        
+        document.addEventListener("DOMContentLoaded", loadTemplates);
+        
