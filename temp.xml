@@ -6,8 +6,7 @@
 		<texts>
 			<text shortcut="1" type="0">
 				<name><![CDATA[名字]]></name>
-				<body><![CDATA[[[SCRIPT=ToFirstOrLastname]]
-        ]]></body>
+				<body><![CDATA[[[SCRIPT=ToFirstOrLastname]]]]></body>
 			</text>
 			<text shortcut="2" type="1">
 				<name><![CDATA[报价]]></name>
