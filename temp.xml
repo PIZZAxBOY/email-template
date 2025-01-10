@@ -1,25 +1,18 @@
 <?xml version="1.0"?>
 <quicktext version="2">
-  <filetype>templates</filetype>
-  <menu>
-    <title>
-      <![CDATA[写信模板]]>
-    </title>
-    <texts>
-      <text shortcut="1" type="0">
-        <name>
-          <![CDATA[名字]]>
-        </name>
-        <body>
-          <![CDATA[[[SCRIPT=ToFirstOrLastname]]]]>
-        </body>
-      </text>
-      <text shortcut="2" type="1">
-        <name>
-          <![CDATA[报价]]>
-        </name>
-        <body>
-          <![CDATA[<div class="quick-text">
+	<filetype>templates</filetype>
+	<menu>
+		<title><![CDATA[写信模板]]></title>
+		<texts>
+			<text shortcut="1" type="0">
+				<name><![CDATA[名字]]></name>
+				<body><![CDATA[
+          [[SCRIPT=ToFirstOrLastname]]
+        ]]></body>
+			</text>
+			<text shortcut="2" type="1">
+				<name><![CDATA[报价]]></name>
+				<body><![CDATA[<div class="quick-text">
   <p>Hi [[SCRIPT=ToFirstOrLastname]],</p>
   <p>Thanks for getting back to us. We're excited about the
     possibility of partnering with you on <b>[[INPUT=平台|select|YouTube;Instagram;TikTok]]</b> showcasing
@@ -62,34 +55,24 @@
     hearing from you.</p>
   <p>Thanks,<br>
     Tom<br></p>
-</div>]]>
-        </body>
-      </text>
-      <text shortcut="3" type="1">
-        <name>
-          <![CDATA[Callout]]>
-        </name>
-        <keyword>
-          <![CDATA[note]]>
-        </keyword>
-        <body>
-          <![CDATA[<div class="callout">
+</div>
+        ]]></body>
+			</text>
+			<text shortcut="3" type="1">
+				<name><![CDATA[Callout        ]]></name>
+				<keyword><![CDATA[note]]></keyword>
+				<body><![CDATA[<div class="callout">
   <p><span class="warning">Note:&nbsp</span>[[CURSOR]]</p>
 </div>
-<p></br></p>]]>
-        </body>
-      </text>
-      <text shortcut="" type="1">
-        <name>
-          <![CDATA[form]]>
-        </name>
-        <keyword>
-          <![CDATA[form]]>
-        </keyword>
-        <body>
-          <![CDATA[<a href="https://tally.so/r/n0OyxA" target="_blank">Delivery Info Form</a>]]>
-        </body>
-      </text>
-    </texts>
-  </menu>
+<p></br></p>
+        ]]></body>
+			</text>
+			<text shortcut="" type="1">
+				<name><![CDATA[form        ]]></name>
+				<keyword><![CDATA[form]]></keyword>
+				<body><![CDATA[<a href="https://tally.so/r/n0OyxA" target="_blank">Delivery Info Form</a>
+        ]]></body>
+			</text>
+		</texts>
+	</menu>
 </quicktext>

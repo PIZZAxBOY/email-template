@@ -1,12 +1,9 @@
 <?xml version="1.0"?>
 <quicktext version="2">
-  <filetype>scripts</filetype>
-  <script>
-    <name>
-      <![CDATA[ToFirstOrLastname]]>
-    </name>
-    <body>
-      <![CDATA[var data = this.mQuicktext.process_to(mVariables);
+	<filetype>scripts</filetype>
+	<script>
+		<name><![CDATA[ToFirstOrLastname]]></name>
+		<body><![CDATA[var data = this.mQuicktext.process_to(mVariables);
 
 // use lastname if firstname is not available
 if(typeof data['firstname'] == 'undefined') {
@@ -21,15 +18,11 @@ for(var i = 0; i < data['lastname'].length; i++) {
 if(typeof data['firstname'] != 'undefined') {
   if(mVariables.length < 1) mVariables[0] = ", ";
   return data['firstname'].join(mVariables[0].replace(/\\n/g, "\n").replace(/\\t/g, "\t"));
-} else return "";]]>
-    </body>
-  </script>
-  <script>
-    <name>
-      <![CDATA[ContentType]]>
-    </name>
-    <body>
-      <![CDATA[let variable = this.mVariables[0];
+} else return "";]]></body>
+	</script>
+	<script>
+		<name><![CDATA[ContentType]]></name>
+		<body><![CDATA[let variable = this.mVariables[0];
 let choice = ""
 // 空值检查
 if (!variable) {
@@ -48,15 +41,11 @@ switch (variable) {
     return choice
   default:
     return "TikTok video";
-}]]>
-    </body>
-  </script>
-  <script>
-    <name>
-      <![CDATA[videoLength]]>
-    </name>
-    <body>
-      <![CDATA[var variable = this.mVariables[0];
+}]]></body>
+	</script>
+	<script>
+		<name><![CDATA[videoLength]]></name>
+		<body><![CDATA[var variable = this.mVariables[0];
 var platform = await this.mQuicktext.get_input(["平台"]);
 let message = `
   <h2>Video Length</h2>
@@ -78,7 +67,6 @@ switch (platform) {
     return ""; // 如果不是 Reels，则返回空字符串
   default:
     return message;
-}]]>
-    </body>
-  </script>
+}]]></body>
+	</script>
 </quicktext>
