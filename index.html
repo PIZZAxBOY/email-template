@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多账号存储示例</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="account-select">
+        <div>
+            <h1>多账号存储示例</h1>
+            <label for="email">邮箱地址:</label>
+            <input type="email" id="email" name="email">
+            <label for="password">授权码:</label>
+            <input type="password" id="password" name="password">
+            <button onclick="saveData()">保存数据</button>
+
+            <label for="account-select">选择账号:</label>
+            <select id="account-select" onchange="selectAccount()">
+                <option value="" disabled selected>请选择账号</option>
+            </select>
+        </div>
+        <div id="preview-wrapper">
+            <iframe id="email-preview" title="email-preview" width="100%" height="100%" allowfullscreen src="template\通用.html">
+            </iframe>
+        </div>
+    </div>
+
+    <script src="account.js"></script>
+</body>
+
+</html>

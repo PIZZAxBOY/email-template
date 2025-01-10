@@ -32,7 +32,7 @@ rl.question('请输入收件人邮箱地址: ', (recipient) => {
 
 
   //阅读html内容
-  const htmlContent = fs.readFileSync('二次开发.html', 'utf8');
+  const htmlContent = fs.readFileSync('template/二次开发.html', 'utf8');
 
   // 将 HTML 转换为纯文本
   const textContent = convert(htmlContent, {

@@ -1,0 +1,15 @@
+/* iframe 的样式 */
+#preview-wrapper {
+    width: 50vw;
+    height: 100vw;
+    margin: 0
+}
+
+.account-select {
+    display: flex;
+    justify-content: space-between;
+}
+
+iframe {
+    border: none;
+}
