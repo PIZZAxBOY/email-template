@@ -1,7 +1,7 @@
 <mjml>
     <mj-head>
         <mj-preview>
-            Join us in welcoming the Lunar New Year with special collaborations! 🌟
+            Join us in welcoming the Lunar New Year with special collaborations!
         </mj-preview>
         <mj-font name="Karla"
           href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" />
@@ -19,8 +19,8 @@
             h1 {
                 text-transform: uppercase;
                 font-weight: 800;
-                font-size: 2rem;
-                letter-spacing: .4rem;
+                font-size: 1.5rem;
+                letter-spacing: .3rem;
             }
 
             p {
@@ -30,12 +30,16 @@
             }
         </mj-style>
     </mj-head>
-    <mj-body background-color="white">
-        <mj-hero background-url="https://files.catbox.moe/u9qvz4.webp" background-height="300px"
-          background-width="600px" vertical-align="bottom">
-        <mj-text color="white">
-            <h1>Happy Lunar New Year</h1>
-        </mj-text>
-        </mj-hero>
+    <mj-body background-color="#FAF5F0">
+        <!-- header -->
+        <mj-section background-url="https://files.catbox.moe/t0lqqm.png" background-size="cover">
+            <mj-column>
+                <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/ycsgx1.png"
+                  alt="an image of PPVV Happy New Year" />
+                <mj-text align="center" color="maroon">
+                    <h1>Happy Lunar new year!</h1>
+                </mj-text>
+            </mj-column>
+        </mj-section>
     </mj-body>
 </mjml>
