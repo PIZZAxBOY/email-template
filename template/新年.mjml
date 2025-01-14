@@ -1,0 +1,41 @@
+<mjml>
+    <mj-head>
+        <mj-preview>
+            Join us in welcoming the Lunar New Year with special collaborations! 🌟
+        </mj-preview>
+        <mj-font name="Karla"
+          href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" />
+        <mj-attributes>
+            <mj-all font-family="karla" />
+        </mj-attributes>
+        <mj-style>
+            .navebar-link {
+                text-decoration-color: rgb(90, 89, 255) !important;
+                text-decoration-line: underline !important;
+                text-decoration-thickness: 2px !important;
+                text-underline-offset: 2px !important;
+            }
+
+            h1 {
+                text-transform: uppercase;
+                font-weight: 800;
+                font-size: 2rem;
+                letter-spacing: .4rem;
+            }
+
+            p {
+                font-weight: 350;
+                font-size: 1rem;
+                line-height: 1.2rem;
+            }
+        </mj-style>
+    </mj-head>
+    <mj-body background-color="white">
+        <mj-hero background-url="https://files.catbox.moe/u9qvz4.webp" background-height="300px"
+          background-width="600px" vertical-align="bottom">
+        <mj-text color="white">
+            <h1>Happy Lunar New Year</h1>
+        </mj-text>
+        </mj-hero>
+    </mj-body>
+</mjml>
