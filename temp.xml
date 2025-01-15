@@ -71,7 +71,7 @@
 				<body><![CDATA[<a href="https://tally.so/r/n0OyxA" target="_blank">Delivery Info Form</a>
         ]]></body>
 			</text>
-      <text shortcut="" type="1">
+      <text shortcut="4" type="1">
       <name><![CDATA[negative]]></name>
       <keyword><![CDATA[refuse]]></keyword>
       <body><![CDATA[<p>Hi [[SCRIPT=ToFirstOrLastname]],</p><p>Thank you for your support! Unfortunately, we can't provide products at this time due to specific requirements
