@@ -57,7 +57,7 @@
         ]]></body>
 			</text>
 			<text shortcut="3" type="1">
-				<name><![CDATA[Callout        ]]></name>
+				<name><![CDATA[Callout]]></name>
 				<keyword><![CDATA[note]]></keyword>
 				<body><![CDATA[<div class="callout">
   <p><span class="warning">Note:&nbsp</span>[[CURSOR]]</p>
@@ -71,6 +71,16 @@
 				<body><![CDATA[<a href="https://tally.so/r/n0OyxA" target="_blank">Delivery Info Form</a>
         ]]></body>
 			</text>
+      <text shortcut="" type="1">
+      <name><![CDATA[negative]]></name>
+      <keyword><![CDATA[refuse]]></keyword>
+      <body><![CDATA[<p>Hi [[SCRIPT=ToFirstOrLastname]],</p><p>Thank you for your support! Unfortunately, we can't provide products at this time due to specific requirements
+      for influencers. You can join our <a href="https://af.uppromote.com/playvital/register" target="_blank">Affiliate
+        Program</a> for a 10% commission on every order with a unique code for your followers. Thank you for your
+      interest and support - we hope to collaborate in the future.</p>
+    <p>Best,<br>
+      PlayVital</p>]]></body>
+      </text>
 		</texts>
 	</menu>
 </quicktext>
