@@ -3,10 +3,9 @@
         <mj-preview>
             Join us in welcoming the Lunar New Year with special collaborations!
         </mj-preview>
-        <mj-font name="Karla"
-          href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" />
         <mj-attributes>
-            <mj-all font-family="karla" />
+            <mj-all font-family="Georgia" />
+            <mj-text padding="0 25px" />
         </mj-attributes>
         <mj-style>
             .navebar-link {
@@ -17,27 +16,89 @@
             }
 
             h1 {
+                font-family: Georgia;
                 text-transform: uppercase;
                 font-weight: 800;
                 font-size: 1.5rem;
                 letter-spacing: .3rem;
+                text-align: center;
+                line-height: 2rem;
             }
 
             p {
-                font-weight: 350;
+                font-weight: 400;
                 font-size: 1rem;
-                line-height: 1.2rem;
+                line-height: 1.3rem;
+                color: rgb(89, 62, 34);
+            }
+
+            .first-letter {
+                font-family: Georgia;
+                font-weight: 600;
+                line-height: 2.5rem;
+                font-size: 2.5rem;
+                float: left;
+                margin-right: .2rem;
+            }
+
+            h2 {
+                font-weight: 600;
+            }
+
+            li {
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
+            ol {
+                list-style-type: lower-greek
             }
         </mj-style>
     </mj-head>
     <mj-body background-color="#FAF5F0">
         <!-- header -->
-        <mj-section background-url="https://files.catbox.moe/t0lqqm.png" background-size="cover">
+        <mj-section background-url="https://files.catbox.moe/t0lqqm.png" background-size="cover"
+          padding-bottom="0">
             <mj-column>
                 <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/ycsgx1.png"
                   alt="an image of PPVV Happy New Year" />
-                <mj-text align="center" color="maroon">
-                    <h1>Happy Lunar new year!</h1>
+                <mj-text color="maroon">
+                    <h1>Happy Lunar new year🐍</h1>
+                </mj-text>
+            </mj-column>
+        </mj-section>
+        <!-- 正文 -->
+        <mj-section padding="20px 20px">
+            <mj-column background-color="white" border-radius="8px">
+                <mj-text>
+                    <p><span class="first-letter">W</span>e hope this email finds you well! As the
+                        Chinese Lunar New Year approaches,
+                        PlayVital is excited to celebrate this vibrant occasion with an exclusive
+                        campaign, and we’d love for you to be a part of it!</p>
+                    <p>As a brand that specializes in premium gaming accessories, including
+                        controller protective cases for PS5, Xbox, and Nintendo Switch, we want to
+                        bring joy to gamers everywhere during this festive season! </p>
+                    <p>For this special collaboration, we’re offering exciting opportunities for you
+                        to showcase our products and engage with your followers. Together, we can
+                        celebrate the Lunar New Year with fun giveaways, exclusive discounts, and
+                        unique content ideas!</p>
+                    <h2>
+                        To Get Start...
+                    </h2>
+                    <ol>
+                        <li>
+                            Head to our <a href="https://playvital.com/collections/new-products"
+                              title="Latest products" target="_blank">official store</a>
+                        </li>
+                        <li>
+                            Choose your favorite products and copy the URL
+                        </li>
+                        <li>
+                            Fill out the <a href="https://tally.so/r/n0OyxA">Delivery Form</a>
+                        </li>
+                        <li>
+                            The products will be shipped soon!
+                        </li>
+                    </ol>
                 </mj-text>
             </mj-column>
         </mj-section>
