@@ -1,20 +1,12 @@
 <mjml>
     <mj-head>
         <mj-preview>
-            Join us in welcoming the Lunar New Year with special collaborations!
+            Join us in welcoming the Chinese New Year with special collaborations!
         </mj-preview>
         <mj-attributes>
-            <mj-all font-family="Georgia" />
-            <mj-text padding="0 25px" />
+            <mj-all font-family="Georgia" color="#593e22" />
         </mj-attributes>
         <mj-style>
-            .navebar-link {
-                text-decoration-color: rgb(90, 89, 255) !important;
-                text-decoration-line: underline !important;
-                text-decoration-thickness: 2px !important;
-                text-underline-offset: 2px !important;
-            }
-
             h1 {
                 font-family: Georgia;
                 text-transform: uppercase;
@@ -29,7 +21,6 @@
                 font-weight: 400;
                 font-size: 1rem;
                 line-height: 1.3rem;
-                color: rgb(89, 62, 34);
             }
 
             .first-letter {
@@ -49,9 +40,6 @@
                 font-size: 1rem;
                 line-height: 1.5rem;
             }
-            ol {
-                list-style-type: lower-greek
-            }
         </mj-style>
     </mj-head>
     <mj-body background-color="#FAF5F0">
@@ -62,7 +50,7 @@
                 <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/ycsgx1.png"
                   alt="an image of PPVV Happy New Year" />
                 <mj-text color="maroon">
-                    <h1>Happy Lunar new year🐍</h1>
+                    <h1>Happy Chinese New Year🐍</h1>
                 </mj-text>
             </mj-column>
         </mj-section>
@@ -79,8 +67,11 @@
                         bring joy to gamers everywhere during this festive season! </p>
                     <p>For this special collaboration, we’re offering exciting opportunities for you
                         to showcase our products and engage with your followers. Together, we can
-                        celebrate the Lunar New Year with fun giveaways, exclusive discounts, and
+                        celebrate the Chinese New Year with fun giveaways, exclusive discounts, and
                         unique content ideas!</p>
+                    <p>If anything sparks your interest, just <em>shoot</em> us a reply!
+                        We're happy to answer any questions and get
+                        you hooked up.</p>
                     <h2>
                         To Get Start...
                     </h2>
@@ -100,6 +91,99 @@
                         </li>
                     </ol>
                 </mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section>
+            <mj-column>
+                <mj-image fluid-on-mobile="true" border-radius="8px"
+                  src="https://files.catbox.moe/7uf15u.webp" alt="x3-demon"
+                  href="https://playvital.com/products/playvital-cute-demon-silicone-cover-with-thumb-grip-caps-for-xbox-series-x-s-controller-xbox-core-wireless-controller-blue-pukx3p002?_pos=2&_sid=d2af945fd&_ss=r" />
+                <mj-image fluid-on-mobile="true" border-radius="8px"
+                  src="https://files.catbox.moe/e9rwoi.webp" alt="p5-bear"
+                  href="https://playvital.com/products/playvital-cute-bear-controller-silicone-case-with-thumb-grips-for-ps5-wireless-controller-compatible-with-charging-station-black-purple-uybpfp005" />
+
+                <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/u5y96m.webp"
+                  href="https://playvital.com/products/playvital-zealprotect-soft-tpu-slim-protective-case-with-tempered-glass-screen-protector-thumb-grips-abxy-direction-button-caps-for-nintendo-switch-pp-vv-rnsyv6060"
+                  alt="ppvv" border-radius="8px" />
+
+                <mj-image
+                  href="https://playvital.com/products/playvital-zealprotect-soft-tpu-slim-protective-case-with-tempered-glass-screen-protector-thumb-grips-abxy-direction-button-caps-for-nintendo-switch-pudding-rabbit-rnsyv6063"
+                  fluid-on-mobile="true" src="https://files.catbox.moe/j3u4gg.jpg"
+                  alt="pudding-rabbit" border-radius="8px" />
+
+            </mj-column>
+            <mj-column>
+                <mj-image
+                  href="https://playvital.com/products/playvital-samurai-edition-ergonomic-silicone-skin-protective-case-for-nintendo-switch-pro-controller-soft-anti-slip-controller-grip-protector-for-nintendo-switch-pro-with-thumb-grip-caps-white-ebnpp001"
+                  fluid-on-mobile="true" border-radius="8px"
+                  src="https://files.catbox.moe/qyu254.webp" alt="ns-cover" />
+
+                <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/mmedan.webp"
+                  alt="FHSDV004&YFSDM007" border-radius="8px"
+                  href="https://playvital.com/products/playvital-the-great-wave-professional-textured-soft-rubber-pads-handle-for-steam-deck?_pos=1&_sid=fd0917a8c&_ss=r" />
+            </mj-column>
+        </mj-section>
+        <!-- 页脚 -->
+        <mj-section>
+            <mj-column>
+                <mj-divider border-width="1px" border-style="dotted" border-color="rgb(89, 62, 34)" width="100%" />
+                <mj-navbar hamburger="hamburger" ico-color="rgb(89, 62, 34)">
+                    <mj-navbar-link css-class="navebar-link" font-weight="600"
+                      href="https://playvital.com/collections/new-products">
+                        New Products
+                    </mj-navbar-link>
+                    <mj-navbar-link css-class="navebar-link" font-weight="600"
+                      href="https://af.uppromote.com/playvital/register?p=175715">
+                        Affiliate Program
+                    </mj-navbar-link>
+                    <mj-navbar-link css-class="navebar-link" font-weight="600"
+                      href="mailto:sns@playvital.com">
+                        Contact Us
+                    </mj-navbar-link>
+                </mj-navbar>
+            </mj-column>
+        </mj-section>
+
+        <mj-section padding="0 10px">
+            <mj-group>
+                <mj-column vertical-align="middle">
+                    <mj-text align="left">
+                        © 2025 PlayVital
+                    </mj-text>
+                </mj-column>
+                <mj-column vertical-align="middle">
+                    <mj-social icon-size="16px" align="right">
+
+                        <!--youtube-->
+                        <mj-social-element
+                          src="https://cdn.shopify.com/shopify-email/b44b9z24d10ct9dov9fozqqm8vqf.svg?width=60&height=60&format=png"
+                          href="https://www.youtube.com/@PlayVitalGaming">
+                        </mj-social-element>
+
+                        <!--TikTok-->
+                        <mj-social-element
+                          src="https://cdn.shopify.com/shopify-email/4s0eae5xdawkwa9aals5ya8qujky.svg?width=60&height=60&format=png"
+                          href="https://www.tiktok.com/@playvitalgaming">
+
+                        </mj-social-element>
+
+
+                        <!--instagram-->
+                        <mj-social-element
+                          src="https://cdn.shopify.com/shopify-email/mezbe8bg2srefo0ca2vqbbv13mjg.svg?width=60&height=60&format=png"
+                          href="https://www.instagram.com/playvitalgaming/">
+
+                        </mj-social-element>
+
+
+                        <!--twitter-->
+                        <mj-social-element
+                          src="https://cdn.shopify.com/shopify-email/1m71lepjigcxdvp7yvsp6fhrv3ih.svg?width=60&height=60&format=png"
+                          href="https://x.com/PlayVitalGaming">
+
+                        </mj-social-element>
+                    </mj-social>
+            </mj-group>
             </mj-column>
         </mj-section>
     </mj-body>
