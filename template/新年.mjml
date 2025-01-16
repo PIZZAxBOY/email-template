@@ -44,10 +44,10 @@
     </mj-head>
     <mj-body background-color="#FAF5F0">
         <!-- header -->
-        <mj-section background-url="https://files.catbox.moe/t0lqqm.png" background-size="cover"
-          padding-bottom="0">
+        <mj-section background-url="https://files.catbox.moe/t0lqqm.png"
+           background-size="60%" padding-bottom="0" padding-top="0">
             <mj-column>
-                <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/ycsgx1.png"
+                <mj-image padding="0" src="https://files.catbox.moe/88zvw4.png"
                   alt="an image of PPVV Happy New Year" />
                 <mj-text color="maroon">
                     <h1>Happy Chinese New Year🐍</h1>
@@ -126,7 +126,8 @@
         <!-- 页脚 -->
         <mj-section>
             <mj-column>
-                <mj-divider border-width="1px" border-style="dotted" border-color="rgb(89, 62, 34)" width="100%" />
+                <mj-divider border-width="1px" border-style="dotted" border-color="rgb(89, 62, 34)"
+                  width="100%" />
                 <mj-navbar hamburger="hamburger" ico-color="rgb(89, 62, 34)">
                     <mj-navbar-link css-class="navebar-link" font-weight="600"
                       href="https://playvital.com/collections/new-products">
