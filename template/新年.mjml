@@ -44,8 +44,8 @@
     </mj-head>
     <mj-body background-color="#FAF5F0">
         <!-- header -->
-        <mj-section background-url="https://files.catbox.moe/t0lqqm.png"
-           background-size="60%" padding-bottom="0" padding-top="0">
+        <mj-section background-url="https://files.catbox.moe/t0lqqm.png" background-size="60%"
+          padding-bottom="0" padding-top="0">
             <mj-column>
                 <mj-image padding="0" src="https://files.catbox.moe/88zvw4.png"
                   alt="an image of PPVV Happy New Year" />
@@ -67,7 +67,7 @@
                         bring joy to gamers everywhere during this festive season! </p>
                     <p>For this special collaboration, we’re offering exciting opportunities for you
                         to showcase our products and engage with your followers. Together, we can
-                        celebrate the Chinese New Year with fun giveaways, exclusive discounts, and
+                        celebrate the Chinese New Year with fun giveaways and
                         unique content ideas!</p>
                     <p>If anything sparks your interest, just <em>shoot</em> us a reply!
                         We're happy to answer any questions and get
@@ -126,7 +126,7 @@
         <!-- 页脚 -->
         <mj-section>
             <mj-column>
-                <mj-divider border-width="1px" border-style="dotted" border-color="rgb(89, 62, 34)"
+                <mj-divider border-width="1px" border-color="rgb(89, 62, 34)"
                   width="100%" />
                 <mj-navbar hamburger="hamburger" ico-color="rgb(89, 62, 34)">
                     <mj-navbar-link css-class="navebar-link" font-weight="600"
