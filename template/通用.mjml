@@ -19,9 +19,9 @@
     </mj-head>
 
     </mj-head>
-    <mj-body>
+    <mj-body background-color="#f6f8fc">
         <!--header-->
-        <mj-section background-color="#f6f8fc">
+        <mj-section>
             <mj-column>
                 <mj-image href="https://playvital.com" src="https://files.catbox.moe/tx35nm.png"
                   alt="PlayVital logo" />
@@ -35,9 +35,9 @@
             </mj-column>
         </mj-section>
         <!--邮件正文-->
-        <mj-section background-color="#f6f8fc">
+        <mj-section>
             <mj-column width="90%" background-color="white" border-radius="20px">
-                <mj-text font-size="16px" color="black" font-family="Karla" font-weight="350"
+                <mj-text font-size="16px" color="black" font-family="Karla" font-weight="400"
                   line-height="20px">
 
                     <h1>Hi friend 👋</h1>
@@ -58,7 +58,7 @@
                         curated a selection below, but feel free to
                         explore our full catalog at Our official store.</p>
 
-                    <p>If anything sparks your interest, just shoot us a reply!
+                    <p>If anything sparks your interest, just <em>shoot</em> us a reply!
                         We're happy to answer any questions and get
                         you hooked up.</p>
 
@@ -70,7 +70,7 @@
             </mj-column>
         </mj-section>
         <!--产品展示-->
-        <mj-section background-color="#f6f8fc">
+        <mj-section>
             <mj-column>
                 <mj-image fluid-on-mobile="true" border-radius="20px"
                   src="https://files.catbox.moe/7uf15u.webp" alt="x3-demon"
@@ -101,7 +101,7 @@
             </mj-column>
         </mj-section>
         <!--收集表-->
-        <mj-section background-color="#f6f8fc">
+        <mj-section>
             <mj-column>
                 <mj-image src="https://files.catbox.moe/6l8qk3.png" alt="join us" width="150px"
                   href="https://tally.so/r/n0OyxA" padding="0" />
