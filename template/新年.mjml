@@ -1,7 +1,7 @@
 <mjml>
     <mj-head>
         <mj-preview>
-            Join us in welcoming the Chinese New Year with special collaborations!
+            Join us in welcoming the Chinese New Year with special collaborations!*********************
         </mj-preview>
         <mj-attributes>
             <mj-all font-family="Georgia" color="#593e22" />
@@ -69,7 +69,8 @@
                         to showcase our products and engage with your followers. Together, we can
                         celebrate the Chinese New Year with fun giveaways and
                         unique content ideas!</p>
-                    <p>If anything sparks your interest, just <em>shoot</em> us a reply!
+                    <p>If anything sparks your interest and you would like to know <em>more</em>
+                        details, just <em>shoot</em> us a reply!
                         We're happy to answer any questions and get
                         you hooked up.</p>
                     <h2>
@@ -126,8 +127,7 @@
         <!-- 页脚 -->
         <mj-section>
             <mj-column>
-                <mj-divider border-width="1px" border-color="rgb(89, 62, 34)"
-                  width="100%" />
+                <mj-divider border-width="1px" border-color="rgb(89, 62, 34)" width="100%" />
                 <mj-navbar hamburger="hamburger" ico-color="rgb(89, 62, 34)">
                     <mj-navbar-link css-class="navebar-link" font-weight="600"
                       href="https://playvital.com/collections/new-products">
