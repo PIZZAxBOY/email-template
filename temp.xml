@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <quicktext version="2">
-	<filetype>templates</filetype>
-	<menu>
-		<title><![CDATA[写信模板]]></title>
-		<texts>
-			<text shortcut="1" type="0">
-				<name><![CDATA[名字]]></name>
-				<body><![CDATA[[[SCRIPT=ToFirstOrLastname]]]]></body>
-			</text>
-			<text shortcut="2" type="1">
-				<name><![CDATA[报价]]></name>
-				<body><![CDATA[<div class="quick-text">
+  <filetype>templates</filetype>
+  <menu>
+    <title><![CDATA[写信模板]]></title>
+    <texts>
+      <text shortcut="1" type="0">
+        <name><![CDATA[名字]]></name>
+        <body><![CDATA[[[SCRIPT=ToFirstOrLastname]]]]></body>
+      </text>
+      <text shortcut="2" type="1">
+        <name><![CDATA[报价]]></name>
+        <body><![CDATA[<div class="quick-text">
   <p>Hi [[SCRIPT=ToFirstOrLastname]],</p>
   <p>Thanks for getting back to us. We're excited about the
     possibility of partnering with you on <b>[[INPUT=平台|select|YouTube;Instagram;TikTok]]</b> showcasing
@@ -55,32 +55,62 @@
     Tom<br></p>
 </div>
         ]]></body>
-			</text>
-			<text shortcut="3" type="1">
-				<name><![CDATA[Callout]]></name>
-				<keyword><![CDATA[note]]></keyword>
-				<body><![CDATA[<div class="callout">
+      </text>
+      <text shortcut="3" type="1">
+        <name><![CDATA[Callout]]></name>
+        <keyword><![CDATA[note]]></keyword>
+        <body><![CDATA[<div class="callout">
   <p><span class="warning">Note:&nbsp</span>[[CURSOR]]</p>
 </div>
 <p></br></p>
         ]]></body>
-			</text>
-			<text shortcut="" type="1">
-				<name><![CDATA[form        ]]></name>
-				<keyword><![CDATA[form]]></keyword>
-				<body><![CDATA[<a href="https://tally.so/r/n0OyxA" target="_blank">Delivery Info Form</a>
+      </text>
+      <text shortcut="" type="1">
+        <name><![CDATA[form]]></name>
+        <keyword><![CDATA[form]]></keyword>
+        <body><![CDATA[<a href="https://tally.so/r/n0OyxA" target="_blank">Delivery Info Form</a>
         ]]></body>
-			</text>
+      </text>
+      <text type="1">
+        <name><![CDATA[Positive]]></name>
+        <keyword><![CDATA[agree]]></keyword>
+        <body><![CDATA[<p>Thank you for reaching out. We would absolutely love to work with you! 🤗 We are primarily interested in promoting our newest arrivals.
+<h2>
+  To Get Start...
+</h2>
+<ol>
+  <li>
+    Head to our <a href="https://playvital.com/collections/new-products" title="Latest products" target="_blank">official store</a>
+  </li>
+  <li>
+    Choose your favorite products and copy the URL
+  </li>
+  <li>
+    Fill out the <a href="https://tally.so/r/n0OyxA">Delivery Form</a>
+  </li>
+  <li>
+    The products will be shipped soon!
+  </li>
+</ol>
+
+<h2>One more thing:</h2>
+<p>To make this partnership even more rewarding, we'd like to invite you to join our <a href=" https://af.uppromote.com/playvital/register?p=175715" target="_blank">affiliate program</a>! This means your followers will not only discover awesome products through your reviews, but they'll also get a special <b>10%</b> discount using your unique coupon code. Plus, you'll earn a <b>15%</b> commission on every sale generated through your referrals!</p>
+
+<p>Let us know if there is any question or concern!</p>
+
+<p>Wishing you all the best☺️<br>
+  PlayVital</p>]]></body>
+      </text>
       <text shortcut="4" type="1">
-      <name><![CDATA[negative]]></name>
-      <keyword><![CDATA[refuse]]></keyword>
-      <body><![CDATA[<p>Hi [[SCRIPT=ToFirstOrLastname]],</p><p>Thank you for your support! Unfortunately, we can't provide products at this time due to specific requirements
+        <name><![CDATA[negative]]></name>
+        <keyword><![CDATA[refuse]]></keyword>
+        <body><![CDATA[<p>Hi [[SCRIPT=ToFirstOrLastname]],</p><p>Thank you for your support! Unfortunately, we can't provide products at this time due to specific requirements
       for influencers. You can join our <a href="https://af.uppromote.com/playvital/register" target="_blank">Affiliate
         Program</a> for a 10% commission on every order with a unique code for your followers. Thank you for your
       interest and support - we hope to collaborate in the future.</p>
     <p>Best,<br>
       PlayVital</p>]]></body>
       </text>
-		</texts>
-	</menu>
+    </texts>
+  </menu>
 </quicktext>
