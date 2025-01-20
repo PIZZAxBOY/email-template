@@ -74,7 +74,9 @@
       <text type="1">
         <name><![CDATA[Positive]]></name>
         <keyword><![CDATA[agree]]></keyword>
-        <body><![CDATA[<p>Thank you for reaching out. We would absolutely love to work with you! 🤗 We are primarily interested in promoting our newest arrivals.
+        <body><![CDATA[<p>Hi [[SCRIPT=ToFirstOrLastname]], </p>
+
+<p>Thank you for reaching out. We would absolutely love to work with you! 🤗 We are primarily interested in promoting our newest arrivals.
 <h2>
   To Get Start...
 </h2>
