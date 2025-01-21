@@ -7,7 +7,7 @@
       <text shortcut="1" type="1">
         <name><![CDATA[名字]]></name>
         <body><![CDATA[<p>Hi! [[SCRIPT=ToFirstOrLastname]]</p>
-        <p>[[cursor]]</p>
+        <p>[[CURSOR]]</p>
         ]]></body>
       </text>
       <text shortcut="2" type="1">
