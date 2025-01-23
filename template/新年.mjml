@@ -98,9 +98,6 @@
         <mj-section>
             <mj-column>
                 <mj-image fluid-on-mobile="true" border-radius="8px"
-                  src="https://files.catbox.moe/7uf15u.webp" alt="x3-demon"
-                  href="https://playvital.com/products/playvital-cute-demon-silicone-cover-with-thumb-grip-caps-for-xbox-series-x-s-controller-xbox-core-wireless-controller-blue-pukx3p002?_pos=2&_sid=d2af945fd&_ss=r" />
-                <mj-image fluid-on-mobile="true" border-radius="8px"
                   src="https://files.catbox.moe/e9rwoi.webp" alt="p5-bear"
                   href="https://playvital.com/products/playvital-cute-bear-controller-silicone-case-with-thumb-grips-for-ps5-wireless-controller-compatible-with-charging-station-black-purple-uybpfp005" />
 
@@ -115,6 +112,9 @@
 
             </mj-column>
             <mj-column>
+                <mj-image fluid-on-mobile="true" border-radius="8px"
+                  src="https://files.catbox.moe/riwbv4.webp" alt="x3-gothic"
+                  href="https://playvital.com/collections/for-ps5-gothic-imp-series-silicone-cover" />
                 <mj-image
                   href="https://playvital.com/products/playvital-samurai-edition-ergonomic-silicone-skin-protective-case-for-nintendo-switch-pro-controller-soft-anti-slip-controller-grip-protector-for-nintendo-switch-pro-with-thumb-grip-caps-white-ebnpp001"
                   fluid-on-mobile="true" border-radius="8px"
