@@ -5,7 +5,8 @@
             *******************************************************************************************************************************************************************************
         </mj-preview>
         <mj-attributes>
-            <mj-all font-family="Georgia" color="#593e22" />
+            <mj-all font-family="Georgia" color="#593e22" font-size="16px" />
+            <mj-navbar-link font-size="13px" />
         </mj-attributes>
         <mj-style>
             h1 {

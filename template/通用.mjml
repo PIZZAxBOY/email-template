@@ -8,6 +8,9 @@
           href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" />
         <mj-font name="Space Grotesk"
           href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" />
+        <mj-attributes>
+            <mj-all font-family="Karla" />
+        </mj-attributes>
         <mj-style>
             .navebar-link {
                 text-decoration-color: rgb(90, 89, 255) !important;
@@ -27,8 +30,8 @@
                   alt="PlayVital logo" />
 
                 <!--公司介绍-->
-                <mj-text font-size="18px" font-family="Karla,'sans-serif', Arial" align="center"
-                  font-weight="800" letter-spacing="0.5px" line-height="22px">
+                <mj-text font-size="18px" align="center" font-weight="800" letter-spacing="0.5px"
+                  line-height="22px">
                     PlayVital aims to produce premium and well-designed video
                     game accessories for gamers to change their gaming life.
                 </mj-text>
@@ -124,33 +127,44 @@
             </mj-button>
         </mj-hero>
 
-        <mj-section>
+
+        <!-- 页脚 -->
+        <mj-section padding="30px 0 0 0">
             <mj-column>
-                <mj-spacer height="20px" />
+                <mj-navbar hamburger="hamburger" ico-color="#ffffff">
+                    <mj-navbar-link css-class="navebar-link" font-weight="600"
+                      href="https://playvital.com/collections/new-products">
+                        New Products
+                    </mj-navbar-link>
+                    <mj-navbar-link css-class="navebar-link" font-weight="600"
+                      href="https://af.uppromote.com/playvital/register?p=175715">
+                        Affiliate Program
+                    </mj-navbar-link>
+                    <mj-navbar-link css-class="navebar-link" font-weight="600"
+                      href="mailto:sns@playvital.com">
+                        Contact Us
+                    </mj-navbar-link>
+                </mj-navbar>
             </mj-column>
         </mj-section>
 
-
-        <!-- 页脚 -->
-        <mj-section background-color="#E9E9E9" padding-top="40px">
-
+        <mj-section padding="0">
             <mj-column>
-
-                <mj-text align="center" font-family="Karla" font-size="18px">
-                    Follow us:
+                <mj-text font-family="Karla" align="left">
+                    © 2025 PlayVital
                 </mj-text>
-
-                <mj-social padding="0 0 0 0" icon-size="20px" icon-padding="3px" font-family="Karla"
-                  font-size="15px" border-radius="5px" inner-padding="10px">
+            </mj-column>
+            <mj-column>
+                <mj-social icon-size="16px" align="right">
 
                     <!--youtube-->
-                    <mj-social-element background-color="white"
+                    <mj-social-element
                       src="https://cdn.shopify.com/shopify-email/b44b9z24d10ct9dov9fozqqm8vqf.svg?width=60&height=60&format=png"
                       href="https://www.youtube.com/@PlayVitalGaming">
                     </mj-social-element>
 
                     <!--TikTok-->
-                    <mj-social-element background-color="white"
+                    <mj-social-element
                       src="https://cdn.shopify.com/shopify-email/4s0eae5xdawkwa9aals5ya8qujky.svg?width=60&height=60&format=png"
                       href="https://www.tiktok.com/@playvitalgaming">
 
@@ -158,7 +172,7 @@
 
 
                     <!--instagram-->
-                    <mj-social-element background-color="white"
+                    <mj-social-element
                       src="https://cdn.shopify.com/shopify-email/mezbe8bg2srefo0ca2vqbbv13mjg.svg?width=60&height=60&format=png"
                       href="https://www.instagram.com/playvitalgaming/">
 
@@ -166,30 +180,12 @@
 
 
                     <!--twitter-->
-                    <mj-social-element background-color="white"
+                    <mj-social-element
                       src="https://cdn.shopify.com/shopify-email/1m71lepjigcxdvp7yvsp6fhrv3ih.svg?width=60&height=60&format=png"
                       href="https://x.com/PlayVitalGaming">
 
                     </mj-social-element>
                 </mj-social>
-
-                <mj-navbar hamburger="hamburger" ico-color="#ffffff">
-                    <mj-navbar-link css-class="navebar-link" font-weight="600" font-family="Karla"
-                      href="https://playvital.com/collections/new-products">
-                        New Products
-                    </mj-navbar-link>
-                    <mj-navbar-link css-class="navebar-link" font-weight="600" font-family="Karla"
-                      href="https://af.uppromote.com/playvital/register?p=175715">
-                        Affiliate Program
-                    </mj-navbar-link>
-                    <mj-navbar-link css-class="navebar-link" font-weight="600" font-family="Karla"
-                      href="mailto:sns@playvital.com">
-                        Contact Us
-                    </mj-navbar-link>
-                </mj-navbar>
-                <mj-text font-family="Karla" align="right">
-                    © 2025 PlayVital
-                </mj-text>
             </mj-column>
         </mj-section>
 </mjml>
