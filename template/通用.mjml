@@ -10,6 +10,7 @@
           href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" />
         <mj-attributes>
             <mj-all font-family="Karla" />
+            <mj-navbar-link font-size="13px" />
         </mj-attributes>
         <mj-style>
             .navebar-link {
@@ -131,7 +132,7 @@
         <!-- 页脚 -->
         <mj-section padding="30px 0 0 0">
             <mj-column>
-                <mj-navbar hamburger="hamburger" ico-color="#ffffff">
+                <mj-navbar hamburger="hamburger">
                     <mj-navbar-link css-class="navebar-link" font-weight="600"
                       href="https://playvital.com/collections/new-products">
                         New Products
@@ -149,8 +150,9 @@
         </mj-section>
 
         <mj-section padding="0">
+          <mj-group>
             <mj-column>
-                <mj-text font-family="Karla" align="left">
+                <mj-text font-family="Karla" align="left" line-height="16px">
                     © 2025 PlayVital
                 </mj-text>
             </mj-column>
@@ -187,5 +189,6 @@
                     </mj-social-element>
                 </mj-social>
             </mj-column>
+          </mj-group>
         </mj-section>
 </mjml>
