@@ -9,7 +9,7 @@
         <mj-font name="Space Grotesk"
           href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" />
         <mj-attributes>
-            <mj-all font-family="Karla" />
+            <mj-all font-family="Karla" color="rgb(8, 10, 12)" />
             <mj-navbar-link font-size="13px" letter-spacing="1.3px" />
         </mj-attributes>
         <mj-style>
@@ -18,6 +18,11 @@
                 text-decoration-line: underline !important;
                 text-decoration-thickness: 2px !important;
                 text-underline-offset: 2px !important;
+            }
+
+            p {
+              font-size: 14px;
+              line-height: 1.5;
             }
         </mj-style>
     </mj-head>
@@ -31,18 +36,17 @@
                   alt="PlayVital logo" />
 
         <!--公司介绍-->
-                <mj-text font-size="18px" align="center" font-weight="800" letter-spacing="0.5px"
-                  line-height="22px">
+                <mj-text font-size="15px" align="center" font-weight="800" letter-spacing="0.5px"
+                  line-height="1.5">
                     PlayVital aims to produce premium and well-designed video
                     game accessories for gamers to change their gaming life.
                 </mj-text>
             </mj-column>
         </mj-section>
         <!--邮件正文-->
-        <mj-section padding="10px 5px">
+        <mj-section padding="10px 10px">
             <mj-column background-color="white" border-radius="20px">
-                <mj-text font-size="14px" color="black" font-weight="400"
-                  line-height="1.5">
+                <mj-text>
 
                     <h1>Hi friend 👋</h1>
                     <p>Your passion for creating contents truly inspires me, and
