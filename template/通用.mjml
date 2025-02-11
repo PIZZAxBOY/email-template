@@ -10,7 +10,7 @@
           href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" />
         <mj-attributes>
             <mj-all font-family="Karla" />
-            <mj-navbar-link font-size="13px" />
+            <mj-navbar-link font-size="13px" letter-spacing="1.3px" />
         </mj-attributes>
         <mj-style>
             .navebar-link {
@@ -30,7 +30,7 @@
                 <mj-image href="https://playvital.com" src="https://files.catbox.moe/tx35nm.png"
                   alt="PlayVital logo" />
 
-                <!--公司介绍-->
+        <!--公司介绍-->
                 <mj-text font-size="18px" align="center" font-weight="800" letter-spacing="0.5px"
                   line-height="22px">
                     PlayVital aims to produce premium and well-designed video
@@ -39,10 +39,10 @@
             </mj-column>
         </mj-section>
         <!--邮件正文-->
-        <mj-section>
-            <mj-column width="90%" background-color="white" border-radius="20px">
-                <mj-text font-size="16px" color="black" font-family="Karla" font-weight="400"
-                  line-height="20px">
+        <mj-section padding="10px 5px">
+            <mj-column background-color="white" border-radius="20px">
+                <mj-text font-size="14px" color="black" font-weight="400"
+                  line-height="1.5">
 
                     <h1>Hi friend 👋</h1>
                     <p>Your passion for creating contents truly inspires me, and
@@ -132,7 +132,7 @@
         <!-- 页脚 -->
         <mj-section padding="30px 0 0 0">
             <mj-column>
-                <mj-navbar hamburger="hamburger">
+                <mj-navbar>
                     <mj-navbar-link css-class="navebar-link" font-weight="600"
                       href="https://playvital.com/collections/new-products">
                         New Products
