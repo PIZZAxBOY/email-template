@@ -8,7 +8,24 @@
             <mj-all font-family="Georgia" color="#593e22" />
             <mj-navbar-link font-size="13px" />
         </mj-attributes>
+
+        <mj-style inline="inline">
+            .rounded-border {
+                background-color: white;
+                border: 1px solid #d6d2c9 !important;
+                border-radius: 5px !important;
+            }
+        </mj-style>
         <mj-style>
+
+
+
+            .rounded-border-outlook {
+                border: 1px solid #d6d2c9 !important
+            }
+
+
+
             h1 {
                 text-transform: uppercase;
                 font-weight: 800;
@@ -55,8 +72,8 @@
             </mj-column>
         </mj-section>
         <!-- 正文 -->
-        <mj-section padding="20px 20px">
-            <mj-column background-color="white" border-radius="8px">
+        <mj-section padding="10px 10px">
+            <mj-column css-class="rounded-border">
                 <mj-text>
                     <p><span class="first-letter">W</span>e hope this email finds you well! As the
                         Chinese Lunar New Year approaches,
@@ -102,7 +119,7 @@
 
                 <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/u5y96m.webp"
                   href="https://playvital.com/products/playvital-zealprotect-soft-tpu-slim-protective-case-with-tempered-glass-screen-protector-thumb-grips-abxy-direction-button-caps-for-nintendo-switch-pp-vv-rnsyv6060"
-                  alt="ppvv" border-radius="8px" />
+                  alt="ppvv" border-radius="5px" />
 
                 <mj-image
                   href="https://playvital.com/products/playvital-zealprotect-soft-tpu-slim-protective-case-with-tempered-glass-screen-protector-thumb-grips-abxy-direction-button-caps-for-nintendo-switch-pudding-rabbit-rnsyv6063"
@@ -127,7 +144,7 @@
         <!-- 页脚 -->
         <mj-section>
             <mj-column>
-                <mj-divider border-width="1px" border-color="rgb(89, 62, 34)" width="100%" />
+                <mj-divider border-width="1px" border-color="#d6d2c9" width="100%" />
                 <mj-navbar hamburger="hamburger" ico-color="rgb(89, 62, 34)">
                     <mj-navbar-link css-class="navebar-link" font-weight="600"
                       href="https://playvital.com/collections/new-products">
