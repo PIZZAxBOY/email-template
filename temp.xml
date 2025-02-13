@@ -13,8 +13,7 @@
       <text type="1">
         <name><![CDATA[address]]></name>
         <keyword><![CDATA[address]]></keyword>
-        <body><![CDATA[
-        <address>
+        <body><![CDATA[<address>
           Name: <br>
           Country: <br>
           State or Province:<br>
@@ -24,52 +23,75 @@
           Phone number: <br>
           Email address:<br>
         </address>
-        <p>[[CURSOR]]</p>
-    ]]></body>
+        <p>[[CURSOR]]</p>]]></body>
       </text>
       <text shortcut="2" type="1">
         <name><![CDATA[报价]]></name>
         <body><![CDATA[<div class="quick-text">
   <p>Hi [[SCRIPT=ToFirstOrLastname]],</p>
-  <p>Thanks for getting back to us. We're excited about the
-    possibility of partnering with you on <b>[[INPUT=平台|select|YouTube;Instagram;TikTok]]</b> showcasing
-    some of our awesome controller protective cases Nintendo Switch,
-    Xbox or PS5. We propose the following:</p>
-  <hr>
+  <p>
+    Thanks for getting back to us. We're excited about the possibility of
+    partnering with you on
+    <b>[[INPUT=平台|select|YouTube;Instagram;TikTok]]</b> showcasing some of our
+    awesome controller protective cases Nintendo Switch, Xbox or PS5. We propose
+    the following:
+  </p>
+  <hr />
   <h2>Deliverables</h2>
-  <p><b>[[INPUT=产出数量]]*[[SCRIPT=ContentType|[[INPUT=平台]]]]</b> on <b>[[INPUT=平台]]</b> showcasing
-    PlayVital cases (featuring key benefits, functionality, and
-    personal experience with them).</p>
+  <p>
+    <b>[[INPUT=产出数量]]*[[SCRIPT=ContentType|[[INPUT=平台]]]]</b> on
+    <b>[[INPUT=平台]]</b> showcasing PlayVital cases (featuring key benefits,
+    functionality, and personal experience with them).
+  </p>
   [[SCRIPT=videoLength|[[SCRIPT=ContentType|[[INPUT=平台]]]]]]
   <h2>Timeline</h2>
-  <p class="lst">Approximately <b>[[INPUT=产出时间]]</b> after receiving the products.<br>
+  <p class="lst">
+    Approximately <b>[[INPUT=产出时间]]</b> after receiving the products.<br />
   </p>
   <h2>Affiliate Program</h2>
-  <p>To make this partnership more rewarding. We'd like to invite you to join our <a href="https://af.uppromote.com/playvital/register?p=175715" target="_blank"><b>affiliate program</b></a>! This means your followers will not only discover awesome products through your reviews, but they'll also get a special <b>10%</b> discount using your unique coupon code. Plus, you'll earn a <b>15%</b> commission on every sale generated through your referrals!
+  <p>
+    To make this partnership more rewarding. We'd like to invite you to join our
+    <a
+      href="https://af.uppromote.com/playvital/register?p=175715"
+      target="_blank"
+      ><b>affiliate program</b></a
+    >! This means your followers will not only discover awesome products through
+    your reviews, but they'll also get a special <b>10%</b> discount using your
+    unique coupon code. Plus, you'll earn a <b>15%</b> commission on every sale
+    generated through your referrals!
   </p>
   <h2>Budget</h2>
-  <p>We are offering <b>[[INPUT=价格]]</b> commission for this collaboration.</p>
+  <p>
+    We are offering <b>[[INPUT=价格]]</b> commission for this collaboration.
+  </p>
   <h2>Payment</h2>
-  <p>We will process the payment via PayPal upon receiving demo video. </p>
+  <p>We will process the payment via PayPal upon receiving demo video.</p>
 
   <h2>Shipping</h2>
-  <p>We are shipping internationally, We will ship the sample cases
-    directly to your address. The estimate time depends on the
-    address.
+  <p>
+    We are shipping internationally, We will ship the sample cases directly to
+    your address. The estimate time depends on the address.
   </p>
   <h2>Sample Request</h2>
-  <p>You can apply the samples by filling out this <a href="https://tally.so/r/n0OyxA" target="_blank"><b>delivery
-        form</b></a>. We will arrange the shipping for you asap.</p>
+  <p>
+    You can apply the samples by filling out this
+    <a href="https://tally.so/r/n0OyxA" target="_blank"><b>delivery form</b></a
+    >. We will arrange the shipping for you asap.
+  </p>
   <div class="callout">
-      <p><span class="warning">Note:&nbsp</span>Please note that some of the products are still on pre-order. To
-        ensure the fastest delivery. We recommend you choose those are in
-        stock.</p>
+    <p>
+      <span class="warning">Note:&nbsp</span>Please note that some of the
+      products are still on pre-order. To ensure the fastest delivery. We
+      recommend you choose those are in stock.
+    </p>
   </div>
-  <hr>
-  <p>Let us know if there is any question or concern. Look forward to
-    hearing from you.</p>
+  <hr />
+  <p>
+    Let us know if there is any question or concern. Look forward to hearing
+    from you.
+  </p>
   <p>Thanks,</p>
-        ]]></body>
+</div>]]></body>
       </text>
       <text shortcut="3" type="1">
         <name><![CDATA[Callout]]></name>
@@ -77,8 +99,7 @@
         <body><![CDATA[<div class="callout">
   <p><span class="warning">Note:&nbsp</span>[[CURSOR]]</p>
 </div>
-<p></br></p>
-        ]]></body>
+<p></br></p>]]></body>
       </text>
       <text shortcut="" type="1">
         <name><![CDATA[form]]></name>
