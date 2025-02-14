@@ -21,8 +21,6 @@
                 border: 1px solid #d6d2c9 !important
             }
 
-
-
             h1 {
                 text-transform: uppercase;
                 font-weight: 800;
