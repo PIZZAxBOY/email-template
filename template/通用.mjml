@@ -11,8 +11,22 @@
         <mj-attributes>
             <mj-all font-family="Karla" color="rgb(8, 10, 12)" />
             <mj-navbar-link font-size="13px" letter-spacing="1.3px" />
+            <mj-image border-radius="8px" />
         </mj-attributes>
+        <mj-style inline="inline">
+            .rounded-border {
+                background-color: #fafafa;
+                border: 1px solid #d6d2c9 !important;
+                border-radius: 8px;
+                outline: 1px white solid;
+                outline-offset: -3px
+            }
+        </mj-style>
         <mj-style>
+            .rounded-border-outlook {
+                border: 1px solid #d6d2c9 !important
+            }
+
             .navebar-link {
                 text-decoration-color: rgb(90, 89, 255) !important;
                 text-decoration-line: underline !important;
@@ -20,9 +34,16 @@
                 text-underline-offset: 2px !important;
             }
 
+            h1 {
+                font-family: Georgia;
+                font-weight: 400;
+                font-size: 32px
+            }
+
             p {
-              font-size: 14px;
-              line-height: 1.5;
+                font-family: Georgia;
+                font-size: 14px;
+                line-height: 1.5;
             }
         </mj-style>
     </mj-head>
@@ -35,8 +56,8 @@
                 <mj-image href="https://playvital.com" src="https://files.catbox.moe/tx35nm.png"
                   alt="PlayVital logo" />
 
-        <!--公司介绍-->
-                <mj-text font-size="15px" align="center" font-weight="800" letter-spacing="0.5px"
+                <!--公司介绍-->
+                <mj-text font-size="16px" font-family="karla" align="center" font-weight="400"
                   line-height="1.5">
                     PlayVital aims to produce premium and well-designed video
                     game accessories for gamers to change their gaming life.
@@ -45,10 +66,10 @@
         </mj-section>
         <!--邮件正文-->
         <mj-section padding="10px 10px">
-            <mj-column background-color="white" border-radius="20px">
+            <mj-column css-class="rounded-border">
                 <mj-text>
 
-                    <h1>Hi friend 👋</h1>
+                    <h1>Hi friend,</h1>
                     <p>Your passion for creating contents truly inspires me, and
                         I know it resonates with your vast
                         audience. We'd love to explore potential collaborations
@@ -64,15 +85,17 @@
                         can collaborate in a way that feels
                         authentic and exciting for you and your audience. We've
                         curated a selection below, but feel free to
-                        explore our full catalog at Our official store.</p>
-
-                    <p>If anything sparks your interest, just <em>shoot</em> us a reply!
+                        explore our full catalog at <b><a
+                              href="https://playvital.com/collections/new-products"
+                              target="_blank">our official store</a></b>.</p>
+                    <p>If anything sparks your interest, just <b>shoot us a reply</b>!
                         We're happy to answer any questions and get
                         you hooked up.</p>
 
                     <p>Thanks for your time, and keep slaying!</p>
 
-                    <p>Regards,<br>
+                    <p>Best Regards,<br>
+                        ~<br>
                         Team PlayVital</p>
                 </mj-text>
             </mj-column>
@@ -80,31 +103,31 @@
         <!--产品展示-->
         <mj-section>
             <mj-column>
-                <mj-image fluid-on-mobile="true" border-radius="20px"
-                  src="https://files.catbox.moe/e9rwoi.webp" alt="p5-bear"
+                <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/e9rwoi.webp"
+                  alt="p5-bear"
                   href="https://playvital.com/products/playvital-cute-bear-controller-silicone-case-with-thumb-grips-for-ps5-wireless-controller-compatible-with-charging-station-black-purple-uybpfp005" />
 
                 <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/u5y96m.webp"
                   href="https://playvital.com/products/playvital-zealprotect-soft-tpu-slim-protective-case-with-tempered-glass-screen-protector-thumb-grips-abxy-direction-button-caps-for-nintendo-switch-pp-vv-rnsyv6060"
-                  alt="ppvv" border-radius="20px" />
+                  alt="ppvv" />
 
                 <mj-image
                   href="https://playvital.com/products/playvital-zealprotect-soft-tpu-slim-protective-case-with-tempered-glass-screen-protector-thumb-grips-abxy-direction-button-caps-for-nintendo-switch-pudding-rabbit-rnsyv6063"
                   fluid-on-mobile="true" src="https://files.catbox.moe/j3u4gg.jpg"
-                  alt="pudding-rabbit" border-radius="20px" />
+                  alt="pudding-rabbit" />
 
             </mj-column>
             <mj-column>
-                <mj-image fluid-on-mobile="true" border-radius="20px"
-                  src="https://files.catbox.moe/riwbv4.webp" alt="x3-gothic"
+                <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/riwbv4.webp"
+                  alt="x3-gothic"
                   href="https://playvital.com/collections/for-ps5-gothic-imp-series-silicone-cover" />
                 <mj-image
                   href="https://playvital.com/products/playvital-samurai-edition-ergonomic-silicone-skin-protective-case-for-nintendo-switch-pro-controller-soft-anti-slip-controller-grip-protector-for-nintendo-switch-pro-with-thumb-grip-caps-white-ebnpp001"
-                  fluid-on-mobile="true" border-radius="20px"
-                  src="https://files.catbox.moe/qyu254.webp" alt="ns-cover" />
+                  fluid-on-mobile="true" src="https://files.catbox.moe/qyu254.webp"
+                  alt="ns-cover" />
 
                 <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/mmedan.webp"
-                  alt="FHSDV004&YFSDM007" border-radius="20px"
+                  alt="FHSDV004&YFSDM007"
                   href="https://playvital.com/products/playvital-the-great-wave-professional-textured-soft-rubber-pads-handle-for-steam-deck?_pos=1&_sid=fd0917a8c&_ss=r" />
             </mj-column>
         </mj-section>
