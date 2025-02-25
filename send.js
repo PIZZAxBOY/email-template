@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer');
 const fs = require('fs');
 const readline = require('readline');
 const { convert } = require('html-to-text');
-const config = require('../obsidian/config');
+const config = require('../obsidian/config'); //设置config文件路径
 
 // 创建 readline 接口
 const rl = readline.createInterface({
