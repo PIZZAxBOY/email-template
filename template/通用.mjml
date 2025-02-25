@@ -14,14 +14,16 @@
             <mj-image border-radius="8px" />
         </mj-attributes>
         <mj-style inline="inline">
-            .rounded-border {
-                background-color: #fafafa;
-                border: 1px solid white !important;
-                border-radius: 8px;
-                outline: 1px #d6d2c9 solid;
-                outline-offset: 1px
-            }
-        </mj-style>
+          .rounded-border {
+              background-color: #fafafa;
+              border-top: 1.5px solid white !important;
+              border-left: 1.5px solid white !important;
+              border-right: 1px solid white !important;
+              border-bottom: 1px solid white!important;
+              border-radius: 8px;
+              outline: 1px #d6d2c9 solid;
+          }
+      </mj-style>
         <mj-style>
             .rounded-border-outlook {
                 border: 1px solid #d6d2c9 !important
