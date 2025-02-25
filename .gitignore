@@ -1,0 +1,12 @@
+# 配置文件（包含敏感信息）
+config.js
+
+# Node.js 依赖目录
+node_modules/
+
+# 日志文件
+*.log
+
+# 操作系统生成的文件
+.DS_Store
+Thumbs.db
