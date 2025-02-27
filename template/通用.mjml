@@ -4,13 +4,12 @@
             Level up your gaming experience with PlayVital's premium controller
             accessories! 🎮 Exclusive collaboration opportunity inside →
         </mj-preview>
-        <mj-font name="Karla"
-          href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" />
+        <mj-font name="Geist"
+          href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" />
         <mj-font name="Space Grotesk"
           href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" />
         <mj-attributes>
-            <mj-all font-family="Karla" color="rgb(8, 10, 12)" />
-            <mj-navbar-link font-size="13px" letter-spacing="1.3px" />
+            <mj-all font-family="Georgia" color="rgb(8, 10, 12)" />
             <mj-image border-radius="8px" />
         </mj-attributes>
         <mj-style inline="inline">
@@ -34,16 +33,15 @@
                 text-decoration-line: underline !important;
                 text-decoration-thickness: 2px !important;
                 text-underline-offset: 2px !important;
+                font-family: geist !important;
             }
 
             h1 {
-                font-family: Georgia;
                 font-weight: 400;
                 font-size: 32px
             }
 
             p {
-                font-family: Georgia;
                 font-size: 14px;
                 line-height: 1.5;
             }
@@ -59,7 +57,7 @@
                   alt="PlayVital logo" />
 
                 <!--公司介绍-->
-                <mj-text font-size="16px" font-family="karla" align="center" font-weight="400"
+                <mj-text font-size="16px" font-family="geist" align="center" font-weight="400"
                   line-height="1.5">
                     PlayVital aims to produce premium and well-designed video
                     game accessories for gamers to change their gaming life.
