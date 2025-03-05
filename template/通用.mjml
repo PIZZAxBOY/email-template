@@ -57,7 +57,7 @@
     </mj-head>
 
     </mj-head>
-    <mj-body background-color="#f6f8fc">
+    <mj-body background-color="rgb(244, 247, 247)">
         <!--header-->
         <mj-section>
             <mj-column>
