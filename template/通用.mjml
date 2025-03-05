@@ -187,7 +187,7 @@
         <mj-section padding="0">
             <mj-group>
                 <mj-column>
-                    <mj-text font-family="Karla" align="left" line-height="16px">
+                    <mj-text font-family="Geist" align="left" line-height="16px">
                         © 2025 PlayVital
                     </mj-text>
                 </mj-column>
