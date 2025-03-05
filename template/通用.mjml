@@ -13,16 +13,16 @@
             <mj-image border-radius="8px" />
         </mj-attributes>
         <mj-style inline="inline">
-          .rounded-border {
-              background-color: #fafafa;
-              border-top: 1.5px solid white !important;
-              border-left: 1.5px solid white !important;
-              border-right: 1px solid white !important;
-              border-bottom: 1px solid white!important;
-              border-radius: 8px;
-              outline: 1px #d6d2c9 solid;
-          }
-      </mj-style>
+            .rounded-border {
+                background-color: #fafafa;
+                border-top: 1.5px solid white !important;
+                border-left: 1.5px solid white !important;
+                border-right: 1px solid white !important;
+                border-bottom: 1px solid white !important;
+                border-radius: 8px;
+                outline: 1px #d6d2c9 solid;
+            }
+        </mj-style>
         <mj-style>
             .rounded-border-outlook {
                 border: 1px solid #d6d2c9 !important
@@ -44,6 +44,14 @@
             p {
                 font-size: 14px;
                 line-height: 1.5;
+            }
+
+            .fist-letter {
+              float: left;
+              font-size: 32px;
+              font-weight: 700;
+              margin-right: 5px;
+              line-height: 1.25;
             }
         </mj-style>
     </mj-head>
@@ -69,8 +77,7 @@
             <mj-column css-class="rounded-border">
                 <mj-text>
 
-                    <h1>Hi friend,</h1>
-                    <p>Your passion for creating contents truly inspires me, and
+                    <p><span class="fist-letter">W</span>e Hope this letter find you well! Your passion for creating contents truly inspires me, and
                         I know it resonates with your vast
                         audience. We'd love to explore potential collaborations
                         that would benefit both of us. We see
