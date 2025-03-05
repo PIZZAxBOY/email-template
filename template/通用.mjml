@@ -47,11 +47,11 @@
             }
 
             .fist-letter {
-              float: left;
-              font-size: 32px;
-              font-weight: 700;
-              margin-right: 5px;
-              line-height: 1.25;
+                float: left;
+                font-size: 32px;
+                font-weight: 700;
+                margin-right: 5px;
+                line-height: 1.25;
             }
         </mj-style>
     </mj-head>
@@ -77,7 +77,8 @@
             <mj-column css-class="rounded-border">
                 <mj-text>
 
-                    <p><span class="fist-letter">W</span>e Hope this letter find you well! Your passion for creating contents truly inspires me, and
+                    <p><span class="fist-letter">W</span>e Hope this letter find you well! Your
+                        passion for creating contents truly inspires me, and
                         I know it resonates with your vast
                         audience. We'd love to explore potential collaborations
                         that would benefit both of us. We see
@@ -126,12 +127,12 @@
             </mj-column>
             <mj-column>
                 <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/riwbv4.webp"
-                  alt="x3-gothic"
+                  alt="p5-gothic"
                   href="https://playvital.com/collections/for-ps5-gothic-imp-series-silicone-cover" />
-                <mj-image
-                  href="https://playvital.com/products/playvital-samurai-edition-ergonomic-silicone-skin-protective-case-for-nintendo-switch-pro-controller-soft-anti-slip-controller-grip-protector-for-nintendo-switch-pro-with-thumb-grip-caps-white-ebnpp001"
-                  fluid-on-mobile="true" src="https://files.catbox.moe/qyu254.webp"
-                  alt="ns-cover" />
+
+                <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/or9gx7.webp"
+                  alt="xbox series mono-eye controller cover"
+                  href="https://playvital.com/products/playvital-monoeye-monster-cute-silicone-cover-with-thumb-grips-caps-for-xbox-series-x-s-controller-neon-green-gttx3p003" />
 
                 <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/mmedan.webp"
                   alt="FHSDV004&YFSDM007"
