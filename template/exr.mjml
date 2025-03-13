@@ -40,7 +40,7 @@
         </mj-section>
         <!-- 正文 -->
         <mj-section padding="10px 10px">
-            <mj-column background-color="#fff8f3" border-radius="20px">
+            <mj-column background-color="#fff8f3" border-radius="10px">
                 <mj-text>
                     <p>Hi friend,</p>
                     <p>Hope you're doing great! </p>
