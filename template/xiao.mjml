@@ -1,7 +1,10 @@
 <mjml>
     <mj-head>
-        <mj-all name="Geist"
+        <mj-font name="Geist"
           href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" />
+        <mj-attributes>
+            <mj-all font-family="Geist" color="black" />
+        </mj-attributes>
         <mj-style>
             p,
             li {
@@ -14,35 +17,40 @@
             }
 
             ul {
-                list-style: "✅" inside;
                 padding-left: 0;
+                list-style: "🌟" inside; 
             }
 
             .bullet {
                 font-weight: 800;
-                color: #235be2;
+                color: #2762ee;
             }
 
             div.product-name {
                 font-size: 18px;
                 font-weight: 800;
             }
+
+            p.greeting {
+                color: rebeccapurple;
+                font-weight: 600;
+            }
         </mj-style>
     </mj-head>
-    <mj-body background-color="#ffffff">
+    <mj-body background-color="white"><!--全部的颜色-->
         <!-- banner -->
         <mj-section padding="0">
             <mj-column>
                 <mj-image
                   src="https://eurrdgq.stripocdn.email/content/guids/bannerImgGuid/images/image17418624925697672.png"
-                  alt="exr logo" padding="0" />
+                  alt="exr logo" padding="10px 10px" border-radius="20px" />
             </mj-column>
         </mj-section>
         <!-- 正文 -->
         <mj-section padding="10px 10px">
-            <mj-column background-color="#fff8f3" border-radius="10px">
+            <mj-column border-radius="10px" background-color="white"><!--正文-->
                 <mj-text>
-                    <p>Hi friend,</p>
+                    <p class="greeting">Hi friend! ✨</p>
                     <p>Hope you're doing great! </p>
                     <p>I'm Shawn from <strong>eXtremeRate</strong>, we are a company that makes
                         <strong>DIY
@@ -68,77 +76,84 @@
                     <p>Best regards, <br />
                         Shawn
                     </p>
+
+                </mj-text>
+                <mj-divider border-color="white" border-style="dotted" border-width="2px" />
+            </mj-column>
+        </mj-section>
+
+        <mj-section padding="10px 10px">
+            <mj-column>
+                <mj-text align="center">
+                    <p>Bellow are the to product that may catch your attention👇</p>
                 </mj-text>
             </mj-column>
         </mj-section>
         <!-- products -->
+        <mj-wrapper padding="10px 10px"> <!--容器-->
+            <mj-section border-radius="10px"> <!--容器颜色在这里改-->
+                <mj-group>
+                    <mj-column>
+                        <mj-image fluid-on-mobile="true" border-radius="10px"
+                          src="https://eurrdgq.stripocdn.email/content/guids/CABINET_fa7274f1547f13b240d1b25c2f4d07bf5dfe392d06444b19f08f3a0ea5844659/images/image.jpeg"
+                          alt="product 1" />
+                    </mj-column>
+                    <mj-column>
+                        <mj-text>
+                            <div class="product-name">Xbox Elite Controller Button Attachment</div>
+                            <ul>
+                                <li>Made of premium Aluminum</li>
+                                <li>Different color options to match the controller</li>
+                                <li>Redesigned ergonomic rear button shape </li>
+                            </ul>
+                        </mj-text>
+                        <mj-button background-color="black" color="white"
+                          href="https://extremerate.com/collections/xbox-one-elite-buttons"
+                          width="150px" border-radius="20px">
+                            Offcial link
+                        </mj-button>
+                    </mj-column>
+                </mj-group>
+            </mj-section>
+        </mj-wrapper>
+        <mj-section padding="10px">
+            <!-- divider -->
+        </mj-section>
         <mj-wrapper padding="10px 10px">
-            <mj-section background-color="#675da3" border-radius="10px">
-                <mj-column>
-                    <mj-image fluid-on-mobile="true" border-radius="10px"
-                      src="https://eurrdgq.stripocdn.email/content/guids/CABINET_fa7274f1547f13b240d1b25c2f4d07bf5dfe392d06444b19f08f3a0ea5844659/images/image.jpeg"
-                      alt="product 1" />
-                </mj-column>
-                <mj-column>
-                    <mj-text color="white">
-                        <div class="product-name">Xbox Elite Controller Button Attachment</div>
-                        <ul>
-                            <li>Made of premium Aluminum</li>
-                            <li>Different color options to match the controller</li>
-                            <li>Redesigned ergonomic rear button shape </li>
-                        </ul>
-                    </mj-text>
-                    <mj-button background-color="#333333"
-                      href="https://extremerate.com/collections/xbox-one-elite-buttons"
-                      width="150px" border-bottom="2px #2cb543 solid">
-                        Offcial link
-                    </mj-button>
-                    <mj-button background-color="#e69138"
-                      href="https://www.amazon.com/eXtremeRate-Component-Controller-Thumbsticks-Paddles-one/dp/B0CNT6J3XQ?ref_=ast_sto_dp&th=1"
-                      border-bottom="2px #2cb543 solid" width="150px">
-                        Amazon link
-                    </mj-button>
-                </mj-column>
-            </mj-section>
-            <mj-section padding="10px">
-                <!-- divider -->
-            </mj-section>
-            <mj-section background-color="#675da3" border-radius="10px">
-                <mj-column>
-                    <mj-image fluid-on-mobile="true"
-                      src="https://eurrdgq.stripocdn.email/content/guids/CABINET_fa7274f1547f13b240d1b25c2f4d07bf5dfe392d06444b19f08f3a0ea5844659/images/image_YSY.jpeg"
-                      alt="product 2" border-radius="10px" />
-                </mj-column>
-                <mj-column>
-                    <mj-text color="white">
-                        <div class="product-name">PS5 Controller Shell</div>
-                        <ul>
-                            <li>Customizable with different patterns</li>
-                            <li>Easy to install</li>
-                            <li>Protective and anti-scratch</li>
-                        </ul>
-                    </mj-text>
-                    <mj-button background-color="#333333"
-                      href="https://extremerate.com/collections/xbox-one-elite-buttons"
-                      border-bottom="2px #2cb543 solid" width="150px">
-                        Offcial link
-                    </mj-button>
-                    <mj-button background-color="#e69138"
-                      href="https://www.amazon.com/eXtremeRate-Component-Controller-Thumbsticks-Paddles-one/dp/B0CNT6J3XQ?ref_=ast_sto_dp&th=1"
-                      border-bottom="2px #2cb543 solid" width="150px">
-                        Amazon link
-                    </mj-button>
-                </mj-column>
+            <mj-section border-radius="10px" background-color="white"> <!--容器颜色2 在这里改-->
+                <mj-group>
+                    <mj-column>
+                        <mj-image fluid-on-mobile="true"
+                          src="https://eurrdgq.stripocdn.email/content/guids/CABINET_fa7274f1547f13b240d1b25c2f4d07bf5dfe392d06444b19f08f3a0ea5844659/images/image_YSY.jpeg"
+                          alt="product 2" border-radius="10px" />
+
+                    </mj-column>
+                    <mj-column>
+                        <mj-text>
+                            <div class="product-name">PS5 Controller Shell</div>
+                            <ul>
+                                <li>Customizable with different patterns</li>
+                                <li>Easy to install</li>
+                                <li>Protective and anti-scratch</li>
+                            </ul>
+                        </mj-text>
+                        <mj-button background-color="black" color="white"
+                          href="https://extremerate.com/collections/xbox-one-elite-buttons"
+                          width="150px" border-radius="20px">
+                            Offcial link
+                        </mj-button>
+                    </mj-column>
+                </mj-group>
             </mj-section>
         </mj-wrapper>
         <!-- footer 和社媒连接 -->
         <mj-section>
             <mj-column>
-                <mj-text align="center">
+                <mj-text align="center" padding="0">
                     <h3> Marketing Team | eXtremeRate
                     </h3>
                 </mj-text>
-                <mj-social icon-size="30px">
+                <mj-social icon-size="30px" padding="0">
                     <!-- Youtube -->
                     <mj-social-element
                       src="https://eurrdgq.stripocdn.email/content/guids/CABINET_fa7274f1547f13b240d1b25c2f4d07bf5dfe392d06444b19f08f3a0ea5844659/images/youtubecirclelargeff0000ffffff2.png"
