@@ -1,0 +1,216 @@
+<mjml>
+    <mj-head>
+        <mj-preview>***************************************************************************************************************************</mj-preview>
+        <mj-font name="Klee One"
+          href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" />
+        <mj-attributes>
+            <mj-all
+              font-family="'Hiragino sans', 'Yu Gothic', 'Meriyo', 'Hiragino Kaku Gothic ProN', 'noto sans JP', sans-serif "
+              color="rgb(8, 10, 12)" />
+            <mj-text
+              font-family="'Klee One', 'Hiragino sans', 'Yu Gothic', 'Meriyo', 'Hiragino Kaku Gothic ProN', 'noto sans JP', sans-serif">
+        </mj-attributes>
+        <mj-style inline="inline">
+            .rounded-border {
+                background-color: #fafafa;
+                border-top: 1.5px solid white !important;
+                border-left: 1.5px solid white !important;
+                border-right: 1px solid white !important;
+                border-bottom: 1px solid white !important;
+                border-radius: 8px;
+                outline: 1px #d6d2c9 solid;
+            }
+        </mj-style>
+        <mj-style>
+            .rounded-border-outlook {
+                border: 1px solid #d6d2c9 !important
+            }
+
+            .navebar-link {
+                text-decoration-color: rgb(90, 89, 255) !important;
+                text-decoration-line: underline !important;
+                text-decoration-thickness: 2px !important;
+                text-underline-offset: 2px !important;
+            }
+
+
+
+            h1 {
+                font-weight: 400;
+                font-size: 32px
+            }
+
+            p {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+
+            .fist-letter {
+                float: left;
+                font-size: 32px;
+                font-weight: 700;
+                margin-right: 5px;
+                line-height: 1.25;
+            }
+
+            .header-image {
+                border-radius: 0 !important;
+            }
+        </mj-style>
+    </mj-head>
+
+    </mj-head>
+    <mj-body background-color="rgb(244, 247, 247)">
+        <!--header-->
+        <mj-section padding-bottom="0">
+            <mj-column>
+                <mj-image src="https://files.catbox.moe/tvev45.png"
+                  alt="an image of PPVV Happy New Year" padding-top="0" />
+            </mj-column>
+        </mj-section>
+        <!--邮件正文-->
+        <mj-section padding="10px 10px">
+            <mj-column css-class="rounded-border">
+                <mj-text>
+
+                    <p>はじめまして。突然のご連絡失礼いたします。</p>
+                    <p>
+                        私たち<b>PlayVital</b>は、ゲームコントローラー向けのアクセサリーを開発・販売しているブランドです。</p>
+                    </p>
+                    <p><b>PlayVital</b>は、快適で楽しいゲーム体験を求めるゲーマーの皆様に向けて、プレミアムでデザイン性に優れたゲームアクセサリーを提供し、プレイ環境の向上を目指しております。
+                    </p>
+                    <p>製品は、コントローラーを傷や汚れから守るだけでなく、グリップ感を向上させ、快適なプレイ体験を提供することを目的としています。
+                    </p>
+
+                    <p>このたび、素晴らしいコンテンツを拝見し、ぜひ当ブランドの商品をご紹介いただければと思い、ご連絡いたしました。
+                    </p>
+                    <ul>
+                        <li>
+                            <a target="_blank"
+                              href="https://www.amazon.co.jp/-/en/stores/PlayVital/page/E31F7911-C992-4827-B2AB-921BBC6F64AE">PlayVital公式ストア</a>
+                        </li>
+                    </ul>
+
+                    <p>コラボレーションの内容や条件につきましては、ご希望に応じて柔軟に対応可能です。
+                    </p>
+
+                    <p>ご興味をお持ちいただけましたら、ぜひ詳細をお話しできれば幸いです。
+                    </p>
+
+                    <p>PlayVital<br>
+                        ~</p>
+                    <p>りり</p>
+                </mj-text>
+            </mj-column>
+        </mj-section>
+        <!--产品展示-->
+        <mj-section>
+            <mj-column>
+                <mj-image border-radius="8px" src="https://files.catbox.moe/uiuwuu.webp"
+                  alt="NSL-white" href="https://www.amazon.co.jp/gp/product/B0DP8WXQ59"
+                  fluid-on-mobile="true" />
+                <mj-image border-radius="8px" fluid-on-mobile="true"
+                  src="https://files.catbox.moe/e9rwoi.webp" alt="p5-bear"
+                  href="https://www.amazon.co.jp/PlayVital-controller-compatible-silicone-thumbstick/dp/B0D9RNSFJH" />
+
+                <mj-image border-radius="8px" fluid-on-mobile="true"
+                  src="https://files.catbox.moe/u5y96m.webp"
+                  href="https://www.amazon.co.jp/PlayVital-ZealProtect-Protective-Compatible-Protection/dp/B0DKHN6VFY"
+                  alt="ppvv" />
+
+                <mj-image border-radius="8px"
+                  href="https://www.amazon.co.jp/PlayVital-ZealProtect-Protective-Compatible-Direction/dp/B0DKJ4H2JF"
+                  fluid-on-mobile="true" src="https://files.catbox.moe/j3u4gg.jpg"
+                  alt="pudding-rabbit" />
+
+            </mj-column>
+            <mj-column>
+                <mj-image border-radius="8px" src="https://files.catbox.moe/dqlp4y.webp"
+                  alt="heaven-blue" fluid-on-mobile="true"
+                  href="https://www.amazon.co.jp/gp/product/B0DKHNTHBQ" />
+                <mj-image border-radius="8px" fluid-on-mobile="true"
+                  src="https://files.catbox.moe/riwbv4.webp" alt="p5-gothic"
+                  href="https://www.amazon.co.jp/PlayVital-Controller-Protective-Stickers-Compatible/dp/B0DRVBDWWG" />
+
+                <mj-image border-radius="8px" fluid-on-mobile="true"
+                  src="https://files.catbox.moe/or9gx7.webp"
+                  alt="xbox series mono-eye controller cover"
+                  href="https://www.amazon.co.jp/PlayVital-Silicone-Controller-Anti-Slip-Protection/dp/B0DSBPQBTS" />
+
+            </mj-column>
+        </mj-section>
+
+        <!--新品-->
+        <mj-hero background-color="#f6f8fc" mode="fluid-height" background-width="2000px"
+          background-height="1000px" background-url="https://files.catbox.moe/jj23v9.webp"
+          vertical-align="middle">
+            <mj-text color="white" font-family="sans-serif" font-size="30px" align="center">
+                MonoEye Series
+            </mj-text>
+            <mj-button border-radius="20px" background-color="white" font-weight="600"
+              font-family="Yu gothic" color="black"
+              href="https://www.amazon.co.jp/PlayVital-Silicone-Controller-Anti-Slip-Protection/dp/B0DSBPQBTS">
+                今すぐ検索 🔍
+            </mj-button>
+        </mj-hero>
+
+
+        <!-- 页脚 -->
+        <mj-section padding="30px 0 0 0">
+            <mj-column>
+                <mj-navbar>
+                    <mj-navbar-link css-class="navebar-link" font-weight="600"
+                      href="https://www.amazon.co.jp/gp/new-releases/videogames/10352719051/">
+                        新商品
+                    </mj-navbar-link>
+
+                    <mj-navbar-link css-class="navebar-link" font-weight="600"
+                      href="mailto:sns@playvital.com">
+                        お問い合わせ
+                    </mj-navbar-link>
+                </mj-navbar>
+            </mj-column>
+        </mj-section>
+
+        <mj-section padding="0">
+            <mj-group>
+                <mj-column>
+                    <mj-text align="left" line-height="16px" font-family="sans-serif">
+                        © 2025 PlayVital
+                    </mj-text>
+                </mj-column>
+                <mj-column>
+                    <mj-social icon-size="16px" align="right">
+                        <!--youtube-->
+                        <mj-social-element
+                          src="https://cdn.shopify.com/shopify-email/b44b9z24d10ct9dov9fozqqm8vqf.svg?width=60&height=60&format=png"
+                          href="https://www.youtube.com/@PlayVitalGaming">
+                        </mj-social-element>
+
+                        <!--TikTok-->
+                        <mj-social-element
+                          src="https://cdn.shopify.com/shopify-email/4s0eae5xdawkwa9aals5ya8qujky.svg?width=60&height=60&format=png"
+                          href="https://www.tiktok.com/@playvitalgaming">
+
+                        </mj-social-element>
+
+
+                        <!--instagram-->
+                        <mj-social-element
+                          src="https://cdn.shopify.com/shopify-email/mezbe8bg2srefo0ca2vqbbv13mjg.svg?width=60&height=60&format=png"
+                          href="https://www.instagram.com/playvitalgaming/">
+
+                        </mj-social-element>
+
+
+                        <!--twitter-->
+                        <mj-social-element
+                          src="https://cdn.shopify.com/shopify-email/1m71lepjigcxdvp7yvsp6fhrv3ih.svg?width=60&height=60&format=png"
+                          href="https://x.com/PlayVitalGaming">
+
+                        </mj-social-element>
+                    </mj-social>
+                </mj-column>
+            </mj-group>
+        </mj-section>
+</mjml>
