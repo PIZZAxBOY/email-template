@@ -10,8 +10,12 @@
           href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" />
         <mj-attributes>
             <mj-all font-family="Georgia" color="rgb(8, 10, 12)" />
+            <mj-image border-radius="8px" />
         </mj-attributes>
         <mj-style inline="inline">
+            /* 
+            style for the main letter to create a border highlight 
+             */
             .rounded-border {
                 background-color: #fafafa;
                 border-top: 1.5px solid white !important;
@@ -64,7 +68,7 @@
         <!--header-->
         <mj-section padding-bottom="0">
             <mj-column>
-                <mj-image src="https://files.catbox.moe/tvev45.png"
+                <mj-image border-radius="0" src="https://files.catbox.moe/tvev45.png"
                   alt="an image of PPVV Happy New Year" padding-top="0" />
             </mj-column>
         </mj-section>
@@ -117,36 +121,35 @@
         <!--产品展示-->
         <mj-section>
             <mj-column>
-                <mj-image border-radius="8px" fluid-on-mobile="true"
-                  src="https://files.catbox.moe/e9rwoi.webp" alt="p5-bear"
+                <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/e9rwoi.webp"
+                  alt="p5-bear"
                   href="https://playvital.com/products/playvital-cute-bear-controller-silicone-case-with-thumb-grips-for-ps5-wireless-controller-compatible-with-charging-station-black-purple-uybpfp005" />
 
-                <mj-image border-radius="8px" fluid-on-mobile="true"
-                  src="https://files.catbox.moe/u5y96m.webp"
+                <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/u5y96m.webp"
                   href="https://playvital.com/products/playvital-zealprotect-soft-tpu-slim-protective-case-with-tempered-glass-screen-protector-thumb-grips-abxy-direction-button-caps-for-nintendo-switch-pp-vv-rnsyv6060"
                   alt="ppvv" />
 
-                <mj-image border-radius="8px"
+                <mj-image
                   href="https://playvital.com/products/playvital-zealprotect-soft-tpu-slim-protective-case-with-tempered-glass-screen-protector-thumb-grips-abxy-direction-button-caps-for-nintendo-switch-pudding-rabbit-rnsyv6063"
                   fluid-on-mobile="true" src="https://files.catbox.moe/j3u4gg.jpg"
                   alt="pudding-rabbit" />
 
             </mj-column>
             <mj-column>
-                <mj-image border-radius="8px" fluid-on-mobile="true"
-                  src="https://files.catbox.moe/riwbv4.webp" alt="p5-gothic"
+                <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/riwbv4.webp"
+                  alt="p5-gothic"
                   href="https://playvital.com/collections/for-ps5-gothic-imp-series-silicone-cover" />
 
-                <mj-image border-radius="8px" fluid-on-mobile="true"
-                  src="https://files.catbox.moe/or9gx7.webp"
+                <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/or9gx7.webp"
                   alt="xbox series mono-eye controller cover"
                   href="https://playvital.com/products/playvital-monoeye-monster-cute-silicone-cover-with-thumb-grips-caps-for-xbox-series-x-s-controller-neon-green-gttx3p003" />
 
-                  <mj-image border-radius="8px" src="https://files.catbox.moe/dqlp4y.webp" href="https://playvital.com/products/playvital-zealprotect-hard-shell-protective-case-with-screen-protector-thumb-grip-caps-button-caps-for-nintendo-switch-lite-heaven-blue-pslyp3018"
+                <mj-image src="https://files.catbox.moe/dqlp4y.webp"
+                  href="https://playvital.com/products/playvital-zealprotect-hard-shell-protective-case-with-screen-protector-thumb-grip-caps-button-caps-for-nintendo-switch-lite-heaven-blue-pslyp3018"
                   alt="NSL-heaven-blue" fluid-on-mobile="true" />
 
-                <mj-image border-radius="8px" fluid-on-mobile="true"
-                  src="https://files.catbox.moe/mmedan.webp" alt="FHSDV004&YFSDM007"
+                <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/mmedan.webp"
+                  alt="FHSDV004&YFSDM007"
                   href="https://playvital.com/products/playvital-the-great-wave-professional-textured-soft-rubber-pads-handle-for-steam-deck?_pos=1&_sid=fd0917a8c&_ss=r" />
             </mj-column>
         </mj-section>

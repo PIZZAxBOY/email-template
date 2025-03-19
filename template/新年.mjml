@@ -56,7 +56,7 @@
         </mj-style>
     </mj-head>
     <mj-body background-color="#FAF5F0">
-        <!-- header -->
+        <!-- heading -->
         <mj-section background-url="https://files.catbox.moe/t0lqqm.png" background-size="60%"
           padding-bottom="0" padding-top="0">
             <mj-column>
@@ -73,8 +73,10 @@
                 <mj-text>
                     <p><span class="first-letter">W</span>e hope this email finds you well! During
                         this Chinese New Year,
-                        <em>PlayVital</em> is excited to celebrate this vibrant occasion with an exclusive
-                        campaign, and we’d love for you to be a part of it!</p>
+                        <em>PlayVital</em> is excited to celebrate this vibrant occasion with an
+                        exclusive
+                        campaign, and we’d love for you to be a part of it!
+                    </p>
                     <p>As a brand that specializes in <b>premium gaming accessories</b>, including
                         <b>controller protective cases for PS5</b>, <b>Xbox</b>, and <b>Nintendo
                             Switch</b>, we want to
@@ -115,7 +117,7 @@
 
                 <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/u5y96m.webp"
                   href="https://playvital.com/products/playvital-zealprotect-soft-tpu-slim-protective-case-with-tempered-glass-screen-protector-thumb-grips-abxy-direction-button-caps-for-nintendo-switch-pp-vv-rnsyv6060"
-                  alt="ppvv" border-radius="5px" />
+                  alt="ppvv" border-radius="8px" />
 
                 <mj-image
                   href="https://playvital.com/products/playvital-zealprotect-soft-tpu-slim-protective-case-with-tempered-glass-screen-protector-thumb-grips-abxy-direction-button-caps-for-nintendo-switch-pudding-rabbit-rnsyv6063"
@@ -178,7 +180,6 @@
                         <mj-social-element
                           src="https://cdn.shopify.com/shopify-email/4s0eae5xdawkwa9aals5ya8qujky.svg?width=60&height=60&format=png"
                           href="https://www.tiktok.com/@playvitalgaming">
-
                         </mj-social-element>
 
 
@@ -186,7 +187,6 @@
                         <mj-social-element
                           src="https://cdn.shopify.com/shopify-email/mezbe8bg2srefo0ca2vqbbv13mjg.svg?width=60&height=60&format=png"
                           href="https://www.instagram.com/playvitalgaming/">
-
                         </mj-social-element>
 
 
@@ -194,7 +194,6 @@
                         <mj-social-element
                           src="https://cdn.shopify.com/shopify-email/1m71lepjigcxdvp7yvsp6fhrv3ih.svg?width=60&height=60&format=png"
                           href="https://x.com/PlayVitalGaming">
-
                         </mj-social-element>
                     </mj-social>
             </mj-group>
