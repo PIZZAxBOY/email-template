@@ -75,7 +75,7 @@
         <!--公司介绍-->
         <mj-section padding-top="0">
             <mj-column>
-                <mj-text font-size="16px" font-family="geist" align="center" font-weight="400"
+                <mj-text font-size="16px" font-family="'Space Grotesk', 'noto sans', sans-serif" align="center" font-weight="400"
                   line-height="1.5" padding-top="0">
                     PlayVital aims to produce premium and well-designed video
                     game accessories for gamers to change their gaming life.
