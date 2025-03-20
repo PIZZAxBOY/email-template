@@ -4,11 +4,13 @@
         <mj-font name="Klee One"
           href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" />
         <mj-attributes>
+            <mj-image border-radius="8px" />
             <mj-all
               font-family="'Hiragino sans', 'Yu Gothic', 'Meriyo', 'Hiragino Kaku Gothic ProN', 'noto sans JP', sans-serif "
               color="rgb(8, 10, 12)" />
             <mj-text
               font-family="'Klee One', 'Hiragino sans', 'Yu Gothic', 'Meriyo', 'Hiragino Kaku Gothic ProN', 'noto sans JP', sans-serif">
+
         </mj-attributes>
         <mj-style inline="inline">
             .rounded-border {
@@ -106,37 +108,42 @@
         <!--产品展示-->
         <mj-section>
             <mj-column>
-                <mj-image border-radius="8px" src="https://files.catbox.moe/uiuwuu.webp"
-                  alt="NSL-white" href="https://www.amazon.co.jp/gp/product/B0DP8WXQ59"
-                  fluid-on-mobile="true" />
-                <mj-image border-radius="8px" fluid-on-mobile="true"
-                  src="https://files.catbox.moe/e9rwoi.webp" alt="p5-bear"
-                  href="https://www.amazon.co.jp/PlayVital-controller-compatible-silicone-thumbstick/dp/B0D9RNSFJH" />
+                <mj-image src="https://files.catbox.moe/uiuwuu.webp" alt="NSL-white"
+                  href="https://www.amazon.co.jp/gp/product/B0DP8WXQ59" fluid-on-mobile="true" />
 
-                <mj-image border-radius="8px" fluid-on-mobile="true"
-                  src="https://files.catbox.moe/u5y96m.webp"
+
+                <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/l6kgg5.webp"
+                  alt="xbox series mono-eye controller cover"
+                  href="https://www.amazon.co.jp/PlayVital-Silicone-Controller-Anti-Slip-Protection/dp/B0DSBQMDLM" />
+
+
+                <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/u5y96m.webp"
                   href="https://www.amazon.co.jp/PlayVital-ZealProtect-Protective-Compatible-Protection/dp/B0DKHN6VFY"
                   alt="ppvv" />
 
-                <mj-image border-radius="8px"
+                <mj-image
                   href="https://www.amazon.co.jp/PlayVital-ZealProtect-Protective-Compatible-Direction/dp/B0DKJ4H2JF"
                   fluid-on-mobile="true" src="https://files.catbox.moe/j3u4gg.jpg"
                   alt="pudding-rabbit" />
 
+
             </mj-column>
             <mj-column>
-                <mj-image border-radius="8px" src="https://files.catbox.moe/dqlp4y.webp"
-                  alt="heaven-blue" fluid-on-mobile="true"
-                  href="https://www.amazon.co.jp/gp/product/B0DKHNTHBQ" />
-                <mj-image border-radius="8px" fluid-on-mobile="true"
-                  src="https://files.catbox.moe/riwbv4.webp" alt="p5-gothic"
+                <mj-image src="https://files.catbox.moe/dqlp4y.webp" alt="heaven-blue"
+                  fluid-on-mobile="true" href="https://www.amazon.co.jp/gp/product/B0DKHNTHBQ" />
+                <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/riwbv4.webp"
+                  alt="p5-gothic"
                   href="https://www.amazon.co.jp/PlayVital-Controller-Protective-Stickers-Compatible/dp/B0DRVBDWWG" />
 
-                <mj-image border-radius="8px" fluid-on-mobile="true"
-                  src="https://files.catbox.moe/or9gx7.webp"
-                  alt="xbox series mono-eye controller cover"
-                  href="https://www.amazon.co.jp/PlayVital-Silicone-Controller-Anti-Slip-Protection/dp/B0DSBPQBTS" />
 
+                <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/e9rwoi.webp"
+                  alt="p5-bear"
+                  href="https://www.amazon.co.jp/PlayVital-controller-compatible-silicone-thumbstick/dp/B0D9RNSFJH" />
+
+
+                <mj-image src="https://files.catbox.moe/1mr3rd.webp" alt="mono-eye-green"
+                  fluid-on-mobile="true"
+                  href="https://www.amazon.co.jp/PlayVital-Silicone-Controller-Anti-Slip-Protection/dp/B0DSBQB23F" />
             </mj-column>
         </mj-section>
 
