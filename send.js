@@ -2,13 +2,26 @@ const nodemailer = require('nodemailer');
 const fs = require('fs');
 const readline = require('readline');
 const { convert } = require('html-to-text');
-const config = require('../obsidian/config'); //设置config文件路径
 
 // 创建 readline 接口
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
+
+// 读取配置文件
+const configPath = './config.json'; // 配置文件路径，可以根据需要调整
+let config;
+
+try {
+  const configContent = fs.readFileSync(configPath, 'utf8');
+  config = JSON.parse(configContent); // 解析 JSON 文件
+  console.log('配置文件已加载:', config);
+} catch (error) {
+  console.log('无法读取配置文件:', error.message);
+  rl.close();
+  process.exit(1);
+}
 
 // 显示可用的邮箱账号
 console.log('请选择发件邮箱:');

@@ -12,5 +12,11 @@
   "dependencies": {
     "html-to-text": "^9.0.5",
     "nodemailer": "^6.9.16"
+  },
+  "pkg": {
+    "assets": [
+      "./config.js",
+      "template/*.html"
+    ]
   }
 }
