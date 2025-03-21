@@ -69,13 +69,13 @@
         <mj-section padding-bottom="0">
             <mj-column>
                 <mj-image border-radius="0" src="https://files.catbox.moe/tvev45.png"
-                  alt="an image of PPVV Happy New Year" padding-top="0" />
+                  alt="PlayVital Logo" padding-top="0" />
             </mj-column>
         </mj-section>
         <!--公司介绍-->
         <mj-section padding-top="0">
             <mj-column>
-                <mj-text font-size="16px" font-family="geist" align="center" font-weight="400"
+                <mj-text font-size="16px" font-family="'Space Grotesk', 'noto sans', sans-serif" align="center" font-weight="400"
                   line-height="1.5" padding-top="0">
                     PlayVital aims to produce premium and well-designed video
                     game accessories for gamers to change their gaming life.
