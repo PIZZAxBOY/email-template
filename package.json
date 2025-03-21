@@ -15,7 +15,7 @@
   },
   "pkg": {
     "assets": [
-      "./config.js",
+      "./config.json",
       "template/*.html"
     ]
   }
