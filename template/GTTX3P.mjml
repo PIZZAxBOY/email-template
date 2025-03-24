@@ -140,17 +140,13 @@
                   alt="p5-gothic"
                   href="https://playvital.com/collections/for-ps5-gothic-imp-series-silicone-cover" />
 
-                <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/or9gx7.webp"
+                <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/1mr3rd.webp"
                   alt="xbox series mono-eye controller cover"
                   href="https://playvital.com/products/playvital-monoeye-monster-cute-silicone-cover-with-thumb-grips-caps-for-xbox-series-x-s-controller-neon-green-gttx3p003" />
 
                 <mj-image src="https://files.catbox.moe/dqlp4y.webp"
                   href="https://playvital.com/products/playvital-zealprotect-hard-shell-protective-case-with-screen-protector-thumb-grip-caps-button-caps-for-nintendo-switch-lite-heaven-blue-pslyp3018"
                   alt="NSL-heaven-blue" fluid-on-mobile="true" />
-
-                <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/mmedan.webp"
-                  alt="FHSDV004&YFSDM007"
-                  href="https://playvital.com/products/playvital-the-great-wave-professional-textured-soft-rubber-pads-handle-for-steam-deck?_pos=1&_sid=fd0917a8c&_ss=r" />
             </mj-column>
         </mj-section>
 
@@ -206,7 +202,7 @@
                           href="https://www.youtube.com/@PlayVitalGaming">
                         </mj-social-element>
 
-                        <!--TikTok-->
+                        <!--TikTok-->`
                         <mj-social-element
                           src="https://cdn.shopify.com/shopify-email/4s0eae5xdawkwa9aals5ya8qujky.svg?width=60&height=60&format=png"
                           href="https://www.tiktok.com/@playvitalgaming">
