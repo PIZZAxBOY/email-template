@@ -6,7 +6,7 @@
     <mj-font name="Geist"
       href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" />
     <mj-attributes>
-      <mj-all font-family="Georgia" font-size="15px" line-height="1.5" />
+      <mj-all font-family="Georgia, serif" font-size="15px" line-height="1.5" />
       <mj-image border-radius="8px" />
     </mj-attributes>
 
@@ -41,7 +41,7 @@
       }
 
       p {
-        font-size: 14px;
+        font-size: 15px;
       }
 
       .first-letter {
