@@ -1,0 +1,200 @@
+<mjml>
+  <mj-head>
+    <mj-preview>
+      *******************************************************************************************************************************************************************************
+    </mj-preview>
+    <mj-font name="Geist"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" />
+    <mj-attributes>
+      <mj-all font-family="Georgia" font-size="15px" line-height="1.5" />
+      <mj-image border-radius="8px" />
+    </mj-attributes>
+
+    <mj-style inline="inline">
+      .rounded-border {
+        background-color: #fafafa;
+        border-top: 1.5px solid white !important;
+        border-left: 1.5px solid white !important;
+        border-right: 1px solid white !important;
+        border-bottom: 1px solid white !important;
+        border-radius: 8px;
+        outline: 1px #d6d2c9 solid;
+      }
+    </mj-style>
+
+    <mj-style inline="inline">
+      .rounded-border-outlook {
+        border: 1px solid #d6d2c9 !important
+      }
+
+      .navebar-link {
+        text-decoration-color: rgb(90, 89, 255) !important;
+        text-decoration-line: underline !important;
+        text-decoration-thickness: 2px !important;
+        text-underline-offset: 2px !important;
+        font-family: geist !important;
+      }
+
+      h1 {
+        font-weight: 400;
+        font-size: 32px
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .first-letter {
+        float: left;
+        font-size: 32px;
+        font-weight: 700;
+        margin-right: 5px;
+        line-height: 1.25;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 0;
+        list-style: inside;
+      }
+
+      ul li {
+        margin-bottom: 5px;
+      }
+
+      .features {
+        margin-top: 0;
+        margin-bottom: 20px;
+        color: #e59d61;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="rgb(244, 247, 247)">
+    <!-- header -->
+    <mj-section>
+      <mj-column>
+        <mj-image src="https://files.catbox.moe/tx35nm.png" alt="playvital logo"
+          href="https://playvital.com/collections/new-products" />
+        <!-- 公司介绍 -->
+        <mj-text font-size="16px" font-family="Geist, sans-serif" align="center">
+          PlayVital aims to produce premium and well-designed video
+          game accessories for gamers to change their gaming life.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- 正文 -->
+    <mj-section padding="10px 10px">
+      <mj-column css-class="rounded-border">
+        <mj-text>
+          <p>
+            Hi friend,
+          </p>
+          <p>
+            I'm Tom from <strong>PlayVital</strong>, We're reaching out today because we're
+            incredibly excited to launch our <strong><a
+                href="https://playvital.com/search?type=product&q=ZNLSDP&options%5Bprefix%5D=last"
+                target="_blank">brand new PlayVital Cute Demon Protective Case
+                Set for Steam Deck</a></strong> and we think it would be a fantastic fit for your
+            channel/content and something your audience would love to see.
+          </p>
+          <p>
+            We'd love to <strong style="color: rgb(3, 153, 3)">explore a collaboration</strong> with
+            you to showcase this new Cute Demon
+            set. We
+            propose sending you the complete set, free of charge, for you to experience and
+            potentially feature in your content.
+          </p>
+          <p>
+            Would you be interested in learning more about this collaboration opportunity? If so,
+            please let me know, and I'd be happy to answer any questions you might have and discuss
+            the potential partnership further.
+          </p>
+          <p>PS: <strong>I have attached the product brief below please feel free to
+              check out.</strong></p>
+          <p>
+            Thank you for your time.
+          </p>
+          <p>
+            💛🧡
+          </p>
+          <p>
+            ~~<br />
+            Team PlayVital
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- product brief -->
+    <mj-section>
+      <mj-column>
+        <mj-image src="https://files.catbox.moe/rtz9ci.webp" fluid-on-mobile="true"
+          alt="three demons"
+          href="https://playvital.com/search?type=product&q=ZNLSDP&options%5Bprefix%5D=last" />
+        <mj-image src="https://files.catbox.moe/mcj9on.webp" fluid-on-mobile="true"
+          alt="SteamDeck Demon set" href="https://playvital.com/search?type=product&q=ZNLSDP&options%5Bprefix%5D=last
+" />
+      </mj-column>
+      <mj-column>
+        <mj-text font-family="Geist, sans-serif">
+          <h2 class="features">Features ✴️</h2>
+          <ul>
+            <li>
+              A durable, vibrant silicone protective case with unique demon horn accents😈.
+            </li>
+            <li>
+              Custom-designed trackpad stickers featuring a unique paw-print cross design.
+            </li>
+            <li>
+              A Back Button Enhancement Set for improved ergonomics and feel.
+            </li>
+            <li>
+              An eye-catching demon design on the back, adding tons of personality.✨
+            </li>
+          </ul>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0">
+      <mj-group>
+        <mj-column>
+          <mj-text font-family="Geist" align="left" line-height="16px">
+            © 2025 PlayVital
+          </mj-text>
+        </mj-column>
+        <mj-column>
+          <mj-social icon-size="16px" align="right">
+
+            <!--youtube-->
+            <mj-social-element
+              src="https://cdn.shopify.com/shopify-email/b44b9z24d10ct9dov9fozqqm8vqf.svg?width=60&height=60&format=png"
+              href="https://www.youtube.com/@PlayVitalGaming">
+            </mj-social-element>
+
+            <!--TikTok-->
+            <mj-social-element
+              src="https://cdn.shopify.com/shopify-email/4s0eae5xdawkwa9aals5ya8qujky.svg?width=60&height=60&format=png"
+              href="https://www.tiktok.com/@playvitalgaming">
+
+            </mj-social-element>
+
+
+            <!--instagram-->
+            <mj-social-element
+              src="https://cdn.shopify.com/shopify-email/mezbe8bg2srefo0ca2vqbbv13mjg.svg?width=60&height=60&format=png"
+              href="https://www.instagram.com/playvitalgaming/">
+
+            </mj-social-element>
+
+
+            <!--twitter-->
+            <mj-social-element
+              src="https://cdn.shopify.com/shopify-email/1m71lepjigcxdvp7yvsp6fhrv3ih.svg?width=60&height=60&format=png"
+              href="https://x.com/PlayVitalGaming">
+
+            </mj-social-element>
+          </mj-social>
+        </mj-column>
+      </mj-group>
+    </mj-section>
+  </mj-body>
+</mjml>
