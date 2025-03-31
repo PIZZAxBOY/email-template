@@ -69,7 +69,7 @@
       }
     </mj-style>
   </mj-head>
-  <mj-body background-color="rgb(244, 247, 247)">
+  <mj-body background-color="#f8f7f4">
     <!-- header -->
     <mj-section>
       <mj-column>
