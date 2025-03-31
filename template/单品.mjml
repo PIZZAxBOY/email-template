@@ -59,7 +59,7 @@
       }
 
       ul li {
-        margin-bottom: 5px;
+        margin-bottom: 15px;
       }
 
       .features {
@@ -131,14 +131,16 @@
         <mj-image src="https://files.catbox.moe/rtz9ci.webp" fluid-on-mobile="true"
           alt="three demons"
           href="https://playvital.com/search?type=product&q=ZNLSDP&options%5Bprefix%5D=last" />
-        <mj-image src="https://files.catbox.moe/h5bpco.webp" alt="pink demon"
-          href="https://playvital.com/search?type=product&q=ZNLSDP&options%5Bprefix%5D=last"
-          fluid-on-mobile="true" />
+
         <mj-image src="https://files.catbox.moe/mcj9on.webp" fluid-on-mobile="true"
           alt="SteamDeck Demon set" href="https://playvital.com/search?type=product&q=ZNLSDP&options%5Bprefix%5D=last
 " />
+        <mj-image src="https://files.catbox.moe/kq83kx.webp" alt="pp&vv steam deck thumb grip" fluid-on-mobile="true" />
       </mj-column>
       <mj-column>
+        <mj-image src="https://files.catbox.moe/h5bpco.webp" alt="pink demon"
+        href="https://playvital.com/search?type=product&q=ZNLSDP&options%5Bprefix%5D=last"
+        fluid-on-mobile="true" />
         <mj-text font-family="Geist, sans-serif">
           <h2 class="features">Features ✴️</h2>
           <ul>
