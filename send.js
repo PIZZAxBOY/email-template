@@ -2,6 +2,7 @@ const nodemailer = require('nodemailer');
 const fs = require('fs');
 const readline = require('readline');
 const { convert } = require('html-to-text');
+const ProgressBar = require('progress');
 
 // 创建 readline 接口
 const rl = readline.createInterface({
@@ -67,29 +68,58 @@ rl.question('请输入邮箱账号编号: ', (emailIndex) => {
     wordwrap: 130,
   });
 
-  rl.question('请输入收件人邮箱地址: ', (recipient) => {
-    if (!recipient || !/\S+@\S+\.\S+/.test(recipient)) {
-      console.log('请输入有效的邮箱地址！');
+  rl.question('请输入收件人邮箱地址（多个邮箱用逗号分隔）: ', (recipientsInput) => {
+    const recipients = recipientsInput.split(',')
+      .map(email => email.trim())
+      .filter(email => /\S+@\S+\.\S+/.test(email));
+
+    if (recipients.length === 0) {
+      console.log('请输入至少一个有效的邮箱地址！');
       rl.close();
       return;
     }
 
-    let mailOptions = {
-      from: selectedEmail.from,
-      to: recipient,
-      subject: selectedEmail.subject,
-      text: textContent,
-      html: htmlContent,
+    // 创建进度条
+    const bar = new ProgressBar('发送进度 [:bar] :percent :current/:total :etas', {
+      total: recipients.length,
+      width: 40,
+      complete: '=',
+      incomplete: ' ',
+    });
+
+    let completed = 0;
+
+    // 递归函数用于逐一发送邮件
+    const sendEmail = (recipientIndex) => {
+      if (recipientIndex >= recipients.length) {
+        console.log('\n所有邮件发送完成！');
+        console.log(`使用账号: ${selectedEmail.auth.user}`);
+        rl.close();
+        return;
+      }
+
+      const recipient = recipients[recipientIndex];
+      let mailOptions = {
+        from: selectedEmail.from,
+        to: recipient,
+        subject: selectedEmail.subject,
+        text: textContent,
+        html: htmlContent,
+      };
+
+      transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          console.log(`\n发送给 ${recipient} 失败: ${error.message}`);
+        } else {
+          completed++;
+          bar.tick();
+        }
+        // 无论成功失败，继续发送下一封
+        sendEmail(recipientIndex + 1);
+      });
     };
 
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        console.log('邮件发送失败:', error);
-      } else {
-        console.log('邮件已发送:', info.messageId);
-        console.log(`使用账号: ${selectedEmail.auth.user}`);
-      }
-      rl.close();
-    });
+    // 开始发送第一封邮件
+    sendEmail(0);
   });
 });
