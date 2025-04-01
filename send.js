@@ -10,12 +10,12 @@ const rl = readline.createInterface({
 });
 
 // 读取配置文件
-const configPath = './config.json'; // 配置文件路径，可以根据需要调整
+const configPath = './config.json';
 let config;
 
 try {
   const configContent = fs.readFileSync(configPath, 'utf8');
-  config = JSON.parse(configContent); // 解析 JSON 文件
+  config = JSON.parse(configContent);
   console.log('配置文件已加载:', config);
 } catch (error) {
   console.log('无法读取配置文件:', error.message);
@@ -43,63 +43,53 @@ rl.question('请输入邮箱账号编号: ', (emailIndex) => {
   // 创建邮件发送器
   let transporter = nodemailer.createTransport(selectedEmail);
 
-  // 读取 template 文件夹中的所有 HTML 文件
-  const templateDir = 'template';
-  const templates = fs.readdirSync(templateDir).filter(file => file.endsWith('.html'));
-
-  if (templates.length === 0) {
-    console.log('模板文件夹中没有找到 HTML 文件，请添加模板后重试！');
+  // 从选中的邮箱配置中读取模板文件路径
+  const templatePath = `./template/${selectedEmail.template}`;
+  
+  // 检查模板文件是否存在
+  if (!templatePath || typeof templatePath !== 'string') {
+    console.log('配置文件中未指定有效的模板路径！');
     rl.close();
-    process.exit(1);
+    return;
   }
 
-  // 显示模板索引
-  console.log('请选择一个模板文件:');
-  templates.forEach((file, index) => {
-    console.log(`${index + 1}: ${file}`);
+  let htmlContent;
+  try {
+    htmlContent = fs.readFileSync(templatePath, 'utf8');
+  } catch (error) {
+    console.log('无法读取模板文件:', error.message);
+    rl.close();
+    return;
+  }
+
+  // 将 HTML 转换为纯文本
+  const textContent = convert(htmlContent, {
+    wordwrap: 130,
   });
 
-  rl.question('请输入模板编号: ', (templateIndex) => {
-    const index = parseInt(templateIndex, 10) - 1;
-
-    if (isNaN(index) || index < 0 || index >= templates.length) {
-      console.log('无效的编号，请重新运行脚本并输入正确的编号！');
+  rl.question('请输入收件人邮箱地址: ', (recipient) => {
+    if (!recipient || !/\S+@\S+\.\S+/.test(recipient)) {
+      console.log('请输入有效的邮箱地址！');
       rl.close();
       return;
     }
 
-    const selectedTemplate = templates[index];
-    const htmlContent = fs.readFileSync(`${templateDir}/${selectedTemplate}`, 'utf8');
+    let mailOptions = {
+      from: selectedEmail.from,
+      to: recipient,
+      subject: selectedEmail.subject,
+      text: textContent,
+      html: htmlContent,
+    };
 
-    // 将 HTML 转换为纯文本
-    const textContent = convert(htmlContent, {
-      wordwrap: 130,
-    });
-
-    rl.question('请输入收件人邮箱地址: ', (recipient) => {
-      if (!recipient || !/\S+@\S+\.\S+/.test(recipient)) {
-        console.log('请输入有效的邮箱地址！');
-        rl.close();
-        return;
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.log('邮件发送失败:', error);
+      } else {
+        console.log('邮件已发送:', info.messageId);
+        console.log(`使用账号: ${selectedEmail.auth.user}`);
       }
-
-      let mailOptions = {
-        from: selectedEmail.from,
-        to: recipient,
-        subject: selectedEmail.subject,
-        text: textContent,
-        html: htmlContent,
-      };
-
-      transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-          console.log('邮件发送失败:', error);
-        } else {
-          console.log('邮件已发送:', info.messageId);
-          console.log(`使用账号: ${selectedEmail.auth.user}`);
-        }
-        rl.close();
-      });
+      rl.close();
     });
   });
 });
