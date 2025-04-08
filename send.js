@@ -80,10 +80,10 @@ rl.question('请输入邮箱账号编号: ', (emailIndex) => {
     }
 
     // 创建进度条
-    const bar = new ProgressBar('发送进度 [:bar] :percent :current/:total :etas', {
+    const bar = new ProgressBar('发送进度 [:bar] :percent :current/:total', {
       total: recipients.length,
       width: 40,
-      complete: '=',
+      complete: '#',
       incomplete: ' ',
     });
 
