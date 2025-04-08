@@ -7,7 +7,8 @@
       href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" />
     <mj-attributes>
       <mj-all font-family="Georgia, serif" font-size="15px" line-height="1.5" />
-      <mj-image border-radius="8px" />
+      <mj-image border-radius="8px" padding="5px 10px" />
+      <mj-class name="features" font-family="Geist, 'noto sans serif', sans-serif" />
     </mj-attributes>
 
     <mj-style inline="inline">
@@ -93,8 +94,8 @@
             I'm Tom from <strong>PlayVital</strong>, we're reaching out today because we're
             incredibly excited to launch our <strong><a
                 href="https://playvital.com/search?type=product&q=ZNLSDP&options%5Bprefix%5D=last"
-                target="_blank">brand new PlayVital Cute Demon Protective Case
-                Set for Steam Deck</a></strong> and we think it would be a fantastic fit for your
+                target="_blank">brand new Vertical Stand with Anti-Slip Pads for PS5</a></strong>
+            and we think it would be a fantastic fit for your
             channel/content and something your audience would love to see.
           </p>
           <p>
@@ -125,41 +126,44 @@
         </mj-text>
       </mj-column>
     </mj-section>
+
     <!-- product brief -->
+    <mj-section padding="0">
+      <mj-column>
+        <mj-image src="https://files.catbox.moe/0f6800.jpg" alt="vertical stand"
+          fluid-on-mobile="true" />
+      </mj-column>
+    </mj-section>
+
     <mj-section>
       <mj-column>
-        <mj-image src="https://files.catbox.moe/rtz9ci.webp" fluid-on-mobile="true"
-          alt="three demons"
-          href="https://playvital.com/search?type=product&q=ZNLSDP&options%5Bprefix%5D=last" />
-
-        <mj-image src="https://files.catbox.moe/mcj9on.webp" fluid-on-mobile="true"
-          alt="SteamDeck Demon set" href="https://playvital.com/search?type=product&q=ZNLSDP&options%5Bprefix%5D=last
-" />
-        <mj-image src="https://files.catbox.moe/kq83kx.webp" alt="pp&vv steam deck thumb grip" fluid-on-mobile="true" />
+        <mj-image src="https://files.catbox.moe/26h39o.jpg" fluid-on-mobile="true" alt="Collection: For PS5 & PS5 Pro & PS5 Slim Vertical Stand
+" href="https://playvital.com/collections/for-ps5-ps5-pro-ps5-slim-vertical-stand" />
+        <mj-image src="https://files.catbox.moe/6kh2pr.jpg" alt="For PS5 & PS5 Pro & PS5 Slim Vertical Stand" href="https://playvital.com/collections/for-ps5-ps5-pro-ps5-slim-vertical-stand"
+          fluid-on-mobile="true" />
       </mj-column>
+
       <mj-column>
-        <mj-image src="https://files.catbox.moe/h5bpco.webp" alt="pink demon"
-        href="https://playvital.com/search?type=product&q=ZNLSDP&options%5Bprefix%5D=last"
-        fluid-on-mobile="true" />
-        <mj-text font-family="Geist, sans-serif">
-          <h2 class="features">Features ✴️</h2>
+        <mj-text mj-class="features">
+          <h2>Features ✴️</h2>
           <ul>
             <li>
-              A durable, vibrant silicone protective case with unique demon horn accents😈.
+              Secure, stable vertical design with precise bolt alignment 
             </li>
             <li>
-              Custom-designed trackpad stickers featuring a unique paw-print cross design.
+              Space-saving and elevated for improved airflow and cooling 🌬️
             </li>
             <li>
-              A Back Button Enhancement Set for improved ergonomics and feel.
+              Protects console from scratches and damage🛡️
             </li>
             <li>
-              An eye-catching demon design on the back, adding tons of personality.✨
+              Anti-slip pads for added stability during gameplay🧲
             </li>
           </ul>
         </mj-text>
       </mj-column>
     </mj-section>
+
     <mj-section padding="0">
       <mj-group>
         <mj-column>
