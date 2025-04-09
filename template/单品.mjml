@@ -130,37 +130,48 @@
     <!-- product brief -->
     <mj-section padding="0">
       <mj-column>
-        <mj-image src="https://files.catbox.moe/0f6800.jpg" alt="vertical stand"
+        <mj-image src="https://files.catbox.moe/98vbfb.jpg" href="https://playvital.com/collections/for-ps5-cyber-spider-design-silicone-case"  alt="cyber spider for PS5"
           fluid-on-mobile="true" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0">
+      <mj-column width="40%">
+        <mj-image src="https://files.catbox.moe/irskoq.jpg" fluid-on-mobile="true"
+          alt="cyber spider for PS5"
+          href="https://playvital.com/collections/for-ps5-cyber-spider-design-silicone-case" />
+        <mj-image src="https://files.catbox.moe/0ho04f.jpg" alt="cyber spider for PS5"
+          href="https://playvital.com/collections/for-ps5-cyber-spider-design-silicone-case"
+          fluid-on-mobile="true" />
+      </mj-column>
+
+      <mj-column width="60%">
+        <mj-text mj-class="features">
+          <h2>Features ✴️</h2>
+          <ul>
+            <li>
+              Striking spider claw & mecha design with circuit-like spiderweb accents🕷️
+            </li>
+            <li>
+              Tailored fit for full access to buttons and ports
+            </li>
+            <li>
+              Premium anti-slip silicone for comfort and control👐
+            </li>
+            <li>
+              Protects against scratches, bumps, and drops🛡️
+            </li>
+            <li>
+              Charging dock compatible with precise cutouts ⚡
+            </li>
+          </ul>
+        </mj-text>
       </mj-column>
     </mj-section>
 
     <mj-section>
       <mj-column>
-        <mj-image src="https://files.catbox.moe/26h39o.jpg" fluid-on-mobile="true" alt="Collection: For PS5 & PS5 Pro & PS5 Slim Vertical Stand
-" href="https://playvital.com/collections/for-ps5-ps5-pro-ps5-slim-vertical-stand" />
-        <mj-image src="https://files.catbox.moe/6kh2pr.jpg" alt="For PS5 & PS5 Pro & PS5 Slim Vertical Stand" href="https://playvital.com/collections/for-ps5-ps5-pro-ps5-slim-vertical-stand"
-          fluid-on-mobile="true" />
-      </mj-column>
-
-      <mj-column>
-        <mj-text mj-class="features">
-          <h2>Features ✴️</h2>
-          <ul>
-            <li>
-              Secure, stable vertical design with precise bolt alignment 
-            </li>
-            <li>
-              Space-saving and elevated for improved airflow and cooling 🌬️
-            </li>
-            <li>
-              Protects console from scratches and damage🛡️
-            </li>
-            <li>
-              Anti-slip pads for added stability during gameplay🧲
-            </li>
-          </ul>
-        </mj-text>
+        <mj-spacer />
       </mj-column>
     </mj-section>
 
