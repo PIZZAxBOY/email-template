@@ -63,10 +63,10 @@
         margin-bottom: 15px;
       }
 
-      .features {
+      h2 {
         margin-top: 0;
         margin-bottom: 20px;
-        color: #e59d61;
+        color: orange;
       }
     </mj-style>
   </mj-head>
@@ -75,7 +75,7 @@
     <mj-section>
       <mj-column>
         <mj-image src="https://files.catbox.moe/tx35nm.png" alt="playvital logo"
-          href="https://playvital.com/collections/new-products" />
+          href="https://playvital.com/" />
         <!-- 公司介绍 -->
         <mj-text font-size="16px" font-family="Geist, sans-serif" align="center">
           PlayVital aims to produce premium and well-designed video
@@ -93,8 +93,8 @@
           <p>
             I'm Tom from <strong>PlayVital</strong>, we're reaching out today because we're
             incredibly excited to launch our <strong><a
-                href="https://playvital.com/collections/for-ps5-cyber-spider-design-silicone-case"
-                target="_blank">Cyber Spider Design Silicone Case for PS5 Controller</a></strong>
+                href="https://playvital.com/search?type=product&q=Universal+Illuminated+LED+Thumbstick+Grips&options%5Bprefix%5D=last"
+                target="_blank">Universal Illuminated LED Thumbstick Grips</a></strong>
             and we think it would be a fantastic fit for your
             channel/content and something your audience would love to see.
           </p>
@@ -128,21 +128,15 @@
     </mj-section>
 
     <!-- product brief -->
-    <mj-section padding="0">
-      <mj-column>
-        <mj-image src="https://files.catbox.moe/98vbfb.jpg" href="https://playvital.com/collections/for-ps5-cyber-spider-design-silicone-case"  alt="cyber spider for PS5"
-          fluid-on-mobile="true" />
-      </mj-column>
-    </mj-section>
 
     <mj-section padding="0">
       <mj-column width="40%">
-        <mj-image src="https://files.catbox.moe/irskoq.jpg" fluid-on-mobile="true"
-          alt="cyber spider for PS5"
-          href="https://playvital.com/collections/for-ps5-cyber-spider-design-silicone-case" />
-        <mj-image src="https://files.catbox.moe/0ho04f.jpg" alt="cyber spider for PS5"
-          href="https://playvital.com/collections/for-ps5-cyber-spider-design-silicone-case"
+        <mj-image src="https://files.catbox.moe/4i9t3h.jpg" alt="cyber spider for PS5"
+          href="https://playvital.com/products/playvital-cute-universal-illuminated-led-thumbstick-grips-for-ps5-ps4-xbox-series-x-s-xbox-one-switch-pro-controller-spooky-ghost-with-pumpkin?_pos=7&_sid=0beabb139&_ss=r"
           fluid-on-mobile="true" />
+        <mj-image src="https://files.catbox.moe/lp33cy.jpg" fluid-on-mobile="true"
+          alt="Universal Illuminated LED Thumbstick Grips"
+          href="https://playvital.com/products/playvital-cute-universal-illuminated-led-thumbstick-grips-for-ps5-ps4-xbox-series-x-s-xbox-one-switch-pro-controller-moonlight-cat-pjm6004?_pos=2&_sid=0beabb139&_ss=r" />
       </mj-column>
 
       <mj-column width="60%">
@@ -150,19 +144,16 @@
           <h2>Features ✴️</h2>
           <ul>
             <li>
-              Striking spider claw & mecha design with circuit-like spiderweb accents🕷️
+              Cute animal shape raises joystick height and makes your controller unique🪅
             </li>
             <li>
-              Tailored fit for full access to buttons and ports
+              Glowing design lights up when you move the joystick, adding a cool visual effect🪩
             </li>
             <li>
-              Premium anti-slip silicone for comfort and control👐
+              50°C soft silicone offers a comfy grip for long play sessions🪖
             </li>
             <li>
-              Protects against scratches, bumps, and drops🛡️
-            </li>
-            <li>
-              Charging dock compatible with precise cutouts ⚡
+              Simple to attach, they protect your joysticks and make your controller last longer🛡️
             </li>
           </ul>
         </mj-text>
