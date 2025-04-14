@@ -204,7 +204,7 @@
 
     <mj-section padding="0">
       <mj-column>
-        <mj-social icon-size="16px" inner-padding="20px">
+        <mj-social icon-size="20px" inner-padding="20px">
 
           <!--youtube-->
           <mj-social-element
