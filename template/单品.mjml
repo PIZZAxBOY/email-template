@@ -59,8 +59,8 @@
         list-style: inside;
       }
 
-      ul li {
-        margin-bottom: 15px;
+      li {
+        margin: 10px 0px;
       }
 
       h2 {
@@ -92,8 +92,9 @@
           </p>
           <p>
             I'm Tom from <strong>PlayVital</strong>, we're reaching out today because we're
-            incredibly excited to launch our <strong>brand new PlayVital ABSOLUTE TPU Protective
-              Case for ROG Ally</strong>
+            incredibly excited to launch our <strong>brand new <a
+                href="https://playvital.com/collections/tgs-spring-lesser-panda-series">Spring
+                Lesser Panda Series</a></strong>
             and we think it would be a fantastic fit for your
             channel/content and something your audience would love to see.
           </p>
@@ -125,34 +126,77 @@
         </mj-text>
       </mj-column>
     </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-spacer />
+      </mj-column>
+    </mj-section>
 
     <!-- product brief -->
 
-    <mj-section padding="0">
-      <mj-column width="40%">
-        <mj-image src="https://files.catbox.moe/5fv5cm.png"
-          alt="PlayVital ABSOLUTE TPU Protective Case for ROG Ally" fluid-on-mobile="true" />
-        <mj-image src="https://files.catbox.moe/pesxt7.png" fluid-on-mobile="true"
-          alt="PlayVital ABSOLUTE TPU Protective Case for ROG Ally" />
-      </mj-column>
+    <mj-hero background-width="600px" background-height="300px"
+      background-url="https://files.catbox.moe/gslxon.jpg" mode="fluid-height"
+      vertical-align="bottom">
+      <mj-button background-color="white" color="black"
+        font-family="'Noto sans serif', Geist, sans-serif" border-radius="20px"
+        href="https://playvital.com/collections/tgs-spring-lesser-panda-series">
+        Explore Now
+      </mj-button>
 
-      <mj-column width="60%">
+      </mj-text>
+    </mj-hero>
+
+    <mj-section padding="0">
+
+      <mj-column>
         <mj-text mj-class="features">
           <h2>Features ✴️</h2>
           <ul>
             <li>
-              <strong>Rugged Armor</strong>: Shield your ROG Ally from bumps, scratches, and everyday wear with this
-              robust protective shell. </li>
-            <li>
-              <strong>Enhanced Cooling Design</strong>: Strategically placed, large ventilation cutouts ensure
-              optimal airflow, preventing overheating during intense gaming sessions. </li>
-            <li>
-              <strong>Shock-Absorbent Construction</strong>: Built with durable materials to cushion your device
-              against accidental drops and impacts.
+              <strong>Premium Protection</strong>:
+              <ol>
+                <li>Durable silicone material guards against drops,
+                  scratches, and daily wear. </li>
+                <li>
+                  Full-coverage design shields face buttons and controller body.
+                </li>
+              </ol>
             </li>
             <li>
-              <strong>Raised Edge Protection</strong>: Provides a buffer to help protect the screen and device body
-              when placed face down. </li>
+              <strong>Kawaii Spring Panda Theme</strong>
+              <ol>
+                <li>
+                  Adorable panda-themed details: ears on front, heart icon, wreath, tail, and paw
+                  prints.
+                </li>
+                <li>
+                  Includes matching paw-print thumb grips and panda touchpad sticker.
+                </li>
+              </ol>
+            </li>
+            <li>
+              <strong>Seamless Functionality</strong>
+              <ol>
+                <li>
+                  Precision cutouts for full access to buttons, triggers, and ports (no removal
+                  needed).
+                </li>
+                <li>
+                  Compatible with PS5 charging stand.
+                </li>
+              </ol>
+            </li>
+            <li>
+              <strong>Style Meets Practicality</strong>
+              <ol>
+                <li>
+                  Combines playful aesthetics with rugged protection.
+                </li>
+                <li>
+                  Lightweight, snug fit maintains controller portability and usability.
+                </li>
+              </ol>
+            </li>
           </ul>
         </mj-text>
       </mj-column>
