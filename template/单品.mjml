@@ -53,12 +53,6 @@
         line-height: 1.25;
       }
 
-      ul {
-        margin: 0;
-        padding-left: 0;
-        list-style: inside;
-      }
-
       li {
         margin: 10px 0px;
       }
@@ -70,19 +64,17 @@
       }
     </mj-style>
   </mj-head>
+
   <mj-body background-color="#f8f7f4">
+
     <!-- header -->
     <mj-section>
       <mj-column>
         <mj-image src="https://files.catbox.moe/tx35nm.png" alt="playvital logo"
           href="https://playvital.com/" />
-        <!-- 公司介绍 -->
-        <mj-text font-size="16px" font-family="Geist, sans-serif" align="center">
-          PlayVital aims to produce premium and well-designed video
-          game accessories for gamers to change their gaming life.
-        </mj-text>
       </mj-column>
     </mj-section>
+
     <!-- 正文 -->
     <mj-section padding="10px 10px">
       <mj-column css-class="rounded-border">
@@ -133,16 +125,14 @@
     </mj-section>
 
     <!-- product brief -->
-
     <mj-hero background-width="600px" background-height="300px"
       background-url="https://files.catbox.moe/gslxon.jpg" mode="fluid-height"
-      vertical-align="bottom">
-      <mj-button background-color="white" color="black"
+      vertical-align="middle" padding-top="100px">
+      <mj-button background-color="rgba(255, 255, 255, 0.7)" color="black"
         font-family="'Noto sans serif', Geist, sans-serif" border-radius="20px"
         href="https://playvital.com/collections/tgs-spring-lesser-panda-series">
         Explore Now
       </mj-button>
-
       </mj-text>
     </mj-hero>
 
@@ -151,53 +141,46 @@
       <mj-column>
         <mj-text mj-class="features">
           <h2>Features ✴️</h2>
+
+          <h3>🛡️ Premium Protection</h3>
           <ul>
+            <li>Durable silicone material guards against drops,
+              scratches, and daily wear. </li>
             <li>
-              <strong>Premium Protection</strong>:
-              <ol>
-                <li>Durable silicone material guards against drops,
-                  scratches, and daily wear. </li>
-                <li>
-                  Full-coverage design shields face buttons and controller body.
-                </li>
-              </ol>
-            </li>
-            <li>
-              <strong>Kawaii Spring Panda Theme</strong>
-              <ol>
-                <li>
-                  Adorable panda-themed details: ears on front, heart icon, wreath, tail, and paw
-                  prints.
-                </li>
-                <li>
-                  Includes matching paw-print thumb grips and panda touchpad sticker.
-                </li>
-              </ol>
-            </li>
-            <li>
-              <strong>Seamless Functionality</strong>
-              <ol>
-                <li>
-                  Precision cutouts for full access to buttons, triggers, and ports (no removal
-                  needed).
-                </li>
-                <li>
-                  Compatible with PS5 charging stand.
-                </li>
-              </ol>
-            </li>
-            <li>
-              <strong>Style Meets Practicality</strong>
-              <ol>
-                <li>
-                  Combines playful aesthetics with rugged protection.
-                </li>
-                <li>
-                  Lightweight, snug fit maintains controller portability and usability.
-                </li>
-              </ol>
+              Full-coverage design shields face buttons and controller body.
             </li>
           </ul>
+          <h3>🐻‍❄️ Kawaii Spring Panda Theme</h3>
+          <ul>
+            <li>
+              Adorable panda-themed details: ears on front, heart icon, wreath, tail, and paw
+              prints.
+            </li>
+            <li>
+              Includes matching paw-print thumb grips and panda touchpad sticker.
+            </li>
+          </ul>
+          <h3>🐳 Seamless Functionality</h3>
+          <ul>
+            <li>
+              Precision cutouts for full access to buttons, triggers, and ports (no removal
+              needed).
+            </li>
+            <li>
+              Compatible with PS5 charging stand.
+            </li>
+          </ul>
+
+          <h3>🪀 Style Meets Practicality</h3>
+          <ul>
+            <li>
+              Combines playful aesthetics with rugged protection.
+            </li>
+            <li>
+              Lightweight, snug fit maintains controller portability and usability.
+            </li>
+          </ul>
+
         </mj-text>
       </mj-column>
     </mj-section>
@@ -209,46 +192,50 @@
     </mj-section>
 
     <mj-section padding="0">
-      <mj-group>
-        <mj-column>
-          <mj-text font-family="Geist" align="left" line-height="16px">
-            © 2025 PlayVital
-          </mj-text>
-        </mj-column>
-        <mj-column>
-          <mj-social icon-size="16px" align="right">
+      <mj-column>
+        <mj-divider border-width="1px" border-color="#dedede" />
+        <mj-text color="#a5a5a5" font-size="13px" font-family="Geist, sans-serif" align="center"
+          padding-top="30px">
+          PlayVital aims to produce premium and well-designed video
+          game accessories for gamers to change their gaming life.
+        </mj-text>
+      </mj-column>
+    </mj-section>
 
-            <!--youtube-->
-            <mj-social-element
-              src="https://cdn.shopify.com/shopify-email/b44b9z24d10ct9dov9fozqqm8vqf.svg?width=60&height=60&format=png"
-              href="https://www.youtube.com/@PlayVitalGaming">
-            </mj-social-element>
+    <mj-section padding="0">
+      <mj-column>
+        <mj-social icon-size="16px" inner-padding="20px">
 
-            <!--TikTok-->
-            <mj-social-element
-              src="https://cdn.shopify.com/shopify-email/4s0eae5xdawkwa9aals5ya8qujky.svg?width=60&height=60&format=png"
-              href="https://www.tiktok.com/@playvitalgaming">
+          <!--youtube-->
+          <mj-social-element
+            src="https://cdn.shopify.com/shopify-email/b44b9z24d10ct9dov9fozqqm8vqf.svg?width=60&height=60&format=png"
+            href="https://www.youtube.com/@PlayVitalGaming">
+          </mj-social-element>
 
-            </mj-social-element>
+          <!--TikTok-->
+          <mj-social-element
+            src="https://cdn.shopify.com/shopify-email/4s0eae5xdawkwa9aals5ya8qujky.svg?width=60&height=60&format=png"
+            href="https://www.tiktok.com/@playvitalgaming">
 
-
-            <!--instagram-->
-            <mj-social-element
-              src="https://cdn.shopify.com/shopify-email/mezbe8bg2srefo0ca2vqbbv13mjg.svg?width=60&height=60&format=png"
-              href="https://www.instagram.com/playvitalgaming/">
-
-            </mj-social-element>
+          </mj-social-element>
 
 
-            <!--twitter-->
-            <mj-social-element
-              src="https://cdn.shopify.com/shopify-email/1m71lepjigcxdvp7yvsp6fhrv3ih.svg?width=60&height=60&format=png"
-              href="https://x.com/PlayVitalGaming">
+          <!--instagram-->
+          <mj-social-element
+            src="https://cdn.shopify.com/shopify-email/mezbe8bg2srefo0ca2vqbbv13mjg.svg?width=60&height=60&format=png"
+            href="https://www.instagram.com/playvitalgaming/">
 
-            </mj-social-element>
-          </mj-social>
-        </mj-column>
-      </mj-group>
+          </mj-social-element>
+
+
+          <!--twitter-->
+          <mj-social-element
+            src="https://cdn.shopify.com/shopify-email/1m71lepjigcxdvp7yvsp6fhrv3ih.svg?width=60&height=60&format=png"
+            href="https://x.com/PlayVitalGaming">
+
+          </mj-social-element>
+        </mj-social>
+      </mj-column>
     </mj-section>
   </mj-body>
 </mjml>
