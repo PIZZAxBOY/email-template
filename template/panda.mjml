@@ -87,8 +87,8 @@
           <p>
             I'm Tom from <strong>PlayVital</strong>, we're reaching out today because we're
             incredibly excited to launch our <strong>brand new <a
-                href="https://playvital.com/search?type=product&q=ZNLSDP&options%5Bprefix%5D=last">Cute
-                Demon Series for Steam Deck</a></strong>
+                href="https://playvital.com/collections/tgs-spring-lesser-panda-series">Spring
+                Lesser Panda Series for PS5</a></strong>
             and we think it would be a fantastic fit for your
             channel/content and something your audience would love to see.
           </p>
@@ -127,7 +127,7 @@
 
     <!-- product brief -->
     <mj-hero background-width="600px" background-height="300px"
-      background-url="https://files.catbox.moe/rtz9ci.webp" mode="fluid-height"
+      background-url="https://files.catbox.moe/gslxon.jpg" mode="fluid-height"
       vertical-align="middle">
     </mj-hero>
 
@@ -136,7 +136,7 @@
       <mj-column>
         <mj-button background-color="rgba(0, 0, 0, 0.5)" color="rgb(255, 255, 255)"
           font-family="'Noto sans serif', Geist, sans-serif" border-radius="20px"
-          href="https://playvital.com/search?type=product&q=ZNLSDP&options%5Bprefix%5D=last">
+          href="https://playvital.com/collections/tgs-spring-lesser-panda-series">
           Explore Now
         </mj-button>
         <mj-text mj-class="features">
@@ -145,24 +145,31 @@
           <h3>🛡️ Premium Protection</h3>
           <ul>
             <li>Durable silicone material guards against drops,
-              scratches, and daily wear. </li>
+              scratches, and daily wear. 
+            </li>
+            <li>
+              Full-coverage design shields face buttons and controller body.
+            </li>
           </ul>
 
-          <h3>😈 Unique demon horn accents </h3>
+          <h3>🐻‍❄️ Kawaii Spring Panda Theme</h3>
           <ul>
             <li>
-              Custom-designed trackpad stickers featuring a unique paw-print cross design.
+              Adorable panda-themed details: ears on front, heart icon, wreath, tail, and paw prints. 
             </li>
             <li>
-              An eye-catching demon design on the back, adding tons of personality.
+              Includes matching paw-print thumb grips and panda touchpad sticker. 
             </li>
           </ul>
 
-          <h3>🐳 Backbutton Enhancement</h3>
+          <h3>🐳 Seamless Functionality</h3>
           <ul>
             <li>
               Precision cutouts for full access to buttons, triggers, and ports (no removal
               needed).
+            </li>
+            <li>
+              Compatible with PS5 charging stand. 
             </li>
           </ul>
 
@@ -171,8 +178,10 @@
             <li>
               Combines playful aesthetics with rugged protection.
             </li>
+            <li>
+              Lightweight, snug fit maintains controller portability and usability. 
+            </li>
           </ul>
-
         </mj-text>
       </mj-column>
     </mj-section>
