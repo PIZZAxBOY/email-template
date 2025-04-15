@@ -128,19 +128,18 @@
 
     <!-- product brief -->
     <mj-hero background-width="600px" background-height="300px"
-      background-url="https://files.catbox.moe/rtz9ci.webp" mode="fluid-height" vertical-align="middle">
-
-      </mj-text>
+      background-url="https://files.catbox.moe/rtz9ci.webp" mode="fluid-height"
+      vertical-align="middle">
     </mj-hero>
 
     <mj-section padding="0">
 
       <mj-column>
         <mj-button background-color="rgba(0, 0, 0, 0.5)" color="rgb(255, 255, 255)"
-        font-family="'Noto sans serif', Geist, sans-serif" border-radius="20px"
-        href="https://playvital.com/search?type=product&q=ZNLSDP&options%5Bprefix%5D=last">
-        Explore Now
-      </mj-button>
+          font-family="'Noto sans serif', Geist, sans-serif" border-radius="20px"
+          href="https://playvital.com/search?type=product&q=ZNLSDP&options%5Bprefix%5D=last">
+          Explore Now
+        </mj-button>
         <mj-text mj-class="features">
           <h2>Features ✴️</h2>
 
