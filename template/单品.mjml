@@ -128,19 +128,19 @@
 
     <!-- product brief -->
     <mj-hero background-width="600px" background-height="300px"
-      background-url="https://files.catbox.moe/gslxon.jpg" mode="fluid-height"
-      vertical-align="middle" padding-top="100px">
-      <mj-button background-color="rgba(255, 255, 255, 0.7)" color="black"
-        font-family="'Noto sans serif', Geist, sans-serif" border-radius="20px"
-        href="https://playvital.com/collections/tgs-spring-lesser-panda-series">
-        Explore Now
-      </mj-button>
+      background-url="https://files.catbox.moe/rtz9ci.webp" mode="fluid-height" vertical-align="middle">
+
       </mj-text>
     </mj-hero>
 
     <mj-section padding="0">
 
       <mj-column>
+        <mj-button background-color="rgba(0, 0, 0, 0.5)" color="rgb(255, 255, 255)"
+        font-family="'Noto sans serif', Geist, sans-serif" border-radius="20px"
+        href="https://playvital.com/search?type=product&q=ZNLSDP&options%5Bprefix%5D=last">
+        Explore Now
+      </mj-button>
         <mj-text mj-class="features">
           <h2>Features ✴️</h2>
 
@@ -148,28 +148,23 @@
           <ul>
             <li>Durable silicone material guards against drops,
               scratches, and daily wear. </li>
-            <li>
-              Full-coverage design shields face buttons and controller body.
-            </li>
           </ul>
-          <h3>🐻‍❄️ Kawaii Spring Panda Theme</h3>
+
+          <h3>😈 Unique demon horn accents </h3>
           <ul>
             <li>
-              Adorable panda-themed details: ears on front, heart icon, wreath, tail, and paw
-              prints.
+              Custom-designed trackpad stickers featuring a unique paw-print cross design.
             </li>
             <li>
-              Includes matching paw-print thumb grips and panda touchpad sticker.
+              An eye-catching demon design on the back, adding tons of personality.
             </li>
           </ul>
-          <h3>🐳 Seamless Functionality</h3>
+
+          <h3>🐳 Backbutton Enhancement</h3>
           <ul>
             <li>
               Precision cutouts for full access to buttons, triggers, and ports (no removal
               needed).
-            </li>
-            <li>
-              Compatible with PS5 charging stand.
             </li>
           </ul>
 
@@ -177,9 +172,6 @@
           <ul>
             <li>
               Combines playful aesthetics with rugged protection.
-            </li>
-            <li>
-              Lightweight, snug fit maintains controller portability and usability.
             </li>
           </ul>
 
