@@ -94,7 +94,7 @@
 </div>]]></body>
       </text>
       <text shortcut="3" type="1">
-        <name><![CDATA[Callout]]></name>
+        <name><![CDATA[package arrived]]></name>
         <body><![CDATA[<p>
   Hi [[SCRIPT=ToFiestOrLastname]],
 </p>
