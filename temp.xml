@@ -96,7 +96,7 @@
       <text shortcut="3" type="1">
         <name><![CDATA[package arrived]]></name>
         <body><![CDATA[<p>
-  Hi [[SCRIPT=ToFiestOrLastname]],
+  Hi [[SCRIPT=ToFirstOrLastname]],
 </p>
 
 <p>
