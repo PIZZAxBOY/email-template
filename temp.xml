@@ -95,11 +95,24 @@
       </text>
       <text shortcut="3" type="1">
         <name><![CDATA[Callout]]></name>
-        <keyword><![CDATA[note]]></keyword>
-        <body><![CDATA[<div class="callout">
-  <p><span class="warning">Note:&nbsp</span>[[CURSOR]]</p>
-</div>
-<p></br></p>]]></body>
+        <body><![CDATA[<p>
+  Hi [[SCRIPT=ToFiestOrLastname]],
+</p>
+
+<p>
+  We noticed that your package has arrived at the destination. Please feel free to pick it up at your convenience.
+</p>
+<p>
+  Let us know if there is any question or concern
+</p>
+
+<p>
+  Have a nice day!
+</p>
+
+<p>
+  Best,
+</p>]]></body>
       </text>
       <text shortcut="" type="1">
         <name><![CDATA[form]]></name>
