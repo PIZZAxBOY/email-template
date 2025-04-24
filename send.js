@@ -18,6 +18,7 @@ try {
   const configContent = fs.readFileSync(configPath, 'utf8');
   config = JSON.parse(configContent);
   console.log('配置文件已加载:', config);
+  console.log('\n-----------------------------------------\n                   📧                   \n-----------------------------------------\n')
 } catch (error) {
   console.log('无法读取配置文件:', error.message);
   rl.close();
@@ -25,13 +26,12 @@ try {
 }
 
 // 显示可用的邮箱账号
-console.log('请选择发件邮箱:');
 config.emails.forEach((email, index) => {
   console.log(`${index + 1}: ${email.name} (${email.auth.user})`);
 });
 
 // 让用户选择邮箱账号
-rl.question('请输入邮箱账号编号: ', (emailIndex) => {
+rl.question('请选择模版邮件: ', (emailIndex) => {
   const selectedEmailIndex = parseInt(emailIndex, 10) - 1;
 
   if (isNaN(selectedEmailIndex) || selectedEmailIndex < 0 || selectedEmailIndex >= config.emails.length) {
