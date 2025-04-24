@@ -31,7 +31,7 @@ config.emails.forEach((email, index) => {
 });
 
 // 让用户选择邮箱账号
-rl.question('请选择模版邮件: ', (emailIndex) => {
+rl.question('\n请选择模版邮件: ', (emailIndex) => {
   const selectedEmailIndex = parseInt(emailIndex, 10) - 1;
 
   if (isNaN(selectedEmailIndex) || selectedEmailIndex < 0 || selectedEmailIndex >= config.emails.length) {
