@@ -40,7 +40,7 @@
   <h2>Deliverables</h2>
   <p>
     <b>[[INPUT=产出数量]]*[[SCRIPT=ContentType|[[INPUT=平台]]]]</b> on
-    <b>[[INPUT=平台]]</b> showcasing PlayVital cases (featuring key benefits,
+    <b>[[INPUT=平台]]</b> showcasing PlayVital products (featuring key benefits,
     functionality, and personal experience with them).
   </p>
   [[SCRIPT=videoLength|[[SCRIPT=ContentType|[[INPUT=平台]]]]]]
