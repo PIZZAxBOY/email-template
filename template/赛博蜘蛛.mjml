@@ -1,0 +1,232 @@
+<mjml>
+  <mj-head>
+    <mj-preview>
+      **********************************************************************************
+      **********************************************************************************
+      **********************************************************************************
+    </mj-preview>
+    <mj-font name="Geist"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" />
+    <mj-attributes>
+      <mj-all font-family="Georgia, serif" font-size="15px" line-height="1.5" />
+      <mj-image border-radius="8px" padding="5px 10px" />
+      <mj-class name="features" font-family="Geist, 'noto sans serif', sans-serif" />
+    </mj-attributes>
+
+    <mj-style inline="inline">
+      .rounded-border {
+        background-color: #fafafa;
+        border-top: 1.5px solid white !important;
+        border-left: 1.5px solid white !important;
+        border-right: 1px solid white !important;
+        border-bottom: 1px solid white !important;
+        border-radius: 8px;
+        outline: 1px #d6d2c9 solid;
+      }
+    </mj-style>
+
+    <mj-style inline="inline">
+      .rounded-border-outlook {
+        border: 1px solid #d6d2c9 !important
+      }
+
+      .navebar-link {
+        text-decoration-color: rgb(90, 89, 255) !important;
+        text-decoration-line: underline !important;
+        text-decoration-thickness: 2px !important;
+        text-underline-offset: 2px !important;
+        font-family: geist !important;
+      }
+
+      h1 {
+        font-weight: 400;
+        font-size: 32px
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      .first-letter {
+        float: left;
+        font-size: 32px;
+        font-weight: 700;
+        margin-right: 5px;
+        line-height: 1.25;
+      }
+
+      li {
+        margin: 10px 0px;
+      }
+
+      h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        color: orange;
+      }
+    </mj-style>
+  </mj-head>
+
+  <mj-body background-color="#f8f7f4">
+
+    <!-- header -->
+    <mj-section>
+      <mj-column>
+        <mj-image src="https://files.catbox.moe/tx35nm.png" alt="playvital logo"
+          href="https://playvital.com/" />
+      </mj-column>
+    </mj-section>
+
+    <!-- 正文 -->
+    <mj-section padding="10px 10px">
+      <mj-column css-class="rounded-border">
+        <mj-text>
+          <p>
+            Hi friend,
+          </p>
+          <p>
+            I'm Tom from <strong>PlayVital</strong>, we're reaching out today because we're
+            incredibly excited to launch our <strong>brand new <a
+                href="https://playvital.com/collections/tgs-spring-lesser-panda-series">Spring
+                Lesser Panda Series for PS5</a></strong>
+            and we think it would be a fantastic fit for your
+            channel/content and something your audience would love to see.
+          </p>
+          <p>
+            We'd love to <strong style="color: rgb(3, 153, 3)">explore a collaboration</strong> with
+            you to showcase the new products. We
+            propose sending you the <strong style="color: maroon">complete set, free of
+              charge</strong>, for you to experience and
+            potentially feature in your content.
+          </p>
+          <p>
+            Would you be interested in learning more about this collaboration opportunity? If so,
+            please let me know, and I'd be happy to answer any questions you might have and discuss
+            the potential partnership further.
+          </p>
+          <p>PS: <strong>I have attached the product brief below please feel free to
+              check out.</strong></p>
+          <p>
+            Thank you for your time.
+          </p>
+          <p>
+            💛🧡
+          </p>
+          <p>
+            ~~<br />
+            Team PlayVital
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-image src="https://files.catbox.moe/98vbfb.jpg" alt="cyber spider series for ps5" />
+      </mj-column>
+    </mj-section>
+
+    <!-- product brief -->
+
+
+    <mj-section padding="0">
+
+      <mj-column>
+        <mj-button background-color="rgba(0, 0, 0, 0.5)" color="rgb(255, 255, 255)"
+          font-family="'Noto sans serif', Geist, sans-serif" border-radius="20px"
+          href="https://playvital.com/collections/for-ps5-cyber-spider-design-silicone-case">
+          Explore Now
+        </mj-button>
+        <mj-text mj-class="features">
+          <h2>Features ✴️</h2>
+
+          <h3>🛡️ Premium Protection</h3>
+          <ul>
+            <li>Durable silicone material guards against drops,
+              scratches, and daily wear.
+            </li>
+            <li>
+              Full-coverage design shields face buttons and controller body.
+            </li>
+          </ul>
+
+          <h3>🕷️ Striking spider claw & mecha design with circuit-like spiderweb accents</h3>
+
+          <h3>🐳 Seamless Functionality</h3>
+          <ul>
+            <li>
+              Precision cutouts for full access to buttons, triggers, and ports (no removal
+              needed).
+            </li>
+            <li>
+              Compatible with PS5 charging stand.
+            </li>
+          </ul>
+
+          <h3>🪀 Style Meets Practicality</h3>
+          <ul>
+            <li>
+              Combines playful aesthetics with rugged protection.
+            </li>
+            <li>
+              Lightweight, snug fit maintains controller portability and usability.
+            </li>
+          </ul>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-spacer />
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0">
+      <mj-column>
+        <mj-divider border-width="1px" border-color="#dedede" />
+        <mj-text color="#a5a5a5" font-size="13px" font-family="Geist, sans-serif" align="center"
+          padding-top="30px">
+          PlayVital aims to produce premium and well-designed video
+          game accessories for gamers to change their gaming life.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0">
+      <mj-column>
+        <mj-social icon-size="20px" inner-padding="20px">
+
+          <!--youtube-->
+          <mj-social-element
+            src="https://cdn.shopify.com/shopify-email/b44b9z24d10ct9dov9fozqqm8vqf.svg?width=60&height=60&format=png"
+            href="https://www.youtube.com/@PlayVitalGaming">
+          </mj-social-element>
+
+          <!--TikTok-->
+          <mj-social-element
+            src="https://cdn.shopify.com/shopify-email/4s0eae5xdawkwa9aals5ya8qujky.svg?width=60&height=60&format=png"
+            href="https://www.tiktok.com/@playvitalgaming">
+
+          </mj-social-element>
+
+
+          <!--instagram-->
+          <mj-social-element
+            src="https://cdn.shopify.com/shopify-email/mezbe8bg2srefo0ca2vqbbv13mjg.svg?width=60&height=60&format=png"
+            href="https://www.instagram.com/playvitalgaming/">
+
+          </mj-social-element>
+
+
+          <!--twitter-->
+          <mj-social-element
+            src="https://cdn.shopify.com/shopify-email/1m71lepjigcxdvp7yvsp6fhrv3ih.svg?width=60&height=60&format=png"
+            href="https://x.com/PlayVitalGaming">
+
+          </mj-social-element>
+        </mj-social>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
