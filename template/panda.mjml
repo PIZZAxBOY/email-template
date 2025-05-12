@@ -119,10 +119,21 @@
         </mj-text>
       </mj-column>
     </mj-section>
-    
+
+    <mj-section padding-bottom="0">
+      <mj-column>
+        <mj-image src="https://files.catbox.moe/gslxon.jpg"
+          alt="spring lesser pander controller case" />
+      </mj-column>
+    </mj-section>
     <mj-section>
       <mj-column>
-        <mj-image src="https://files.catbox.moe/gslxon.jpg" alt="spring lesser pander controller case" />
+        <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/s48qbz.jpg"
+          alt="green panda" />
+      </mj-column>
+      <mj-column>
+        <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/w0t0r8.jpg"
+          alt="green panda details" />
       </mj-column>
     </mj-section>
 
@@ -143,7 +154,7 @@
           <h3>🛡️ Premium Protection</h3>
           <ul>
             <li>Durable silicone material guards against drops,
-              scratches, and daily wear. 
+              scratches, and daily wear.
             </li>
             <li>
               Full-coverage design shields face buttons and controller body.
@@ -153,10 +164,11 @@
           <h3>🐻‍❄️ Kawaii Spring Panda Theme</h3>
           <ul>
             <li>
-              Adorable panda-themed details: ears on front, heart icon, wreath, tail, and paw prints. 
+              Adorable panda-themed details: ears on front, heart icon, wreath, tail, and paw
+              prints.
             </li>
             <li>
-              Includes matching paw-print thumb grips and panda touchpad sticker. 
+              Includes matching paw-print thumb grips and panda touchpad sticker.
             </li>
           </ul>
 
@@ -167,7 +179,7 @@
               needed).
             </li>
             <li>
-              Compatible with PS5 charging stand. 
+              Compatible with PS5 charging stand.
             </li>
           </ul>
 
@@ -177,7 +189,7 @@
               Combines playful aesthetics with rugged protection.
             </li>
             <li>
-              Lightweight, snug fit maintains controller portability and usability. 
+              Lightweight, snug fit maintains controller portability and usability.
             </li>
           </ul>
         </mj-text>
