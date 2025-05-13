@@ -120,9 +120,20 @@
       </mj-column>
     </mj-section>
 
-    <mj-section>
+    <mj-section padding-bottom="0">
       <mj-column>
         <mj-image src="https://files.catbox.moe/98vbfb.jpg" alt="cyber spider series for ps5" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/irskoq.jpg"
+          alt="cyber spider details" />
+      </mj-column>
+      <mj-column>
+        <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/0ho04f.jpg"
+          alt="cyber spider details" />
       </mj-column>
     </mj-section>
 
