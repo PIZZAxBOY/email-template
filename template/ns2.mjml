@@ -1,0 +1,192 @@
+<mjml>
+  <mj-head>
+    <mj-preview>
+      **********************************************************************************
+      **********************************************************************************
+      **********************************************************************************
+    </mj-preview>
+    <mj-font name="Geist"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" />
+    <mj-attributes>
+      <mj-all font-family="Georgia, serif" font-size="15px" line-height="1.5" />
+      <mj-image border-radius="8px" padding="5px 10px" />
+      <mj-class name="features" font-family="Geist, 'noto sans serif', sans-serif" />
+    </mj-attributes>
+
+
+    <mj-style inline="inline">
+      .rounded-border-outlook {
+        border: 1px solid #d6d2c9 !important
+      }
+
+      .navebar-link {
+        text-decoration-color: rgb(90, 89, 255) !important;
+        text-decoration-line: underline !important;
+        text-decoration-thickness: 2px !important;
+        text-underline-offset: 2px !important;
+        font-family: geist !important;
+      }
+
+      h1 {
+        font-weight: 400;
+        font-size: 32px
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      .first-letter {
+        float: left;
+        font-size: 32px;
+        font-weight: 700;
+        margin-right: 5px;
+        line-height: 1.25;
+      }
+
+      li {
+        margin: 10px 0px;
+      }
+
+      h2 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: orange;
+      }
+    </mj-style>
+  </mj-head>
+
+  <mj-body background-color="#f8f7f4">
+
+
+    <!-- 正文 -->
+    <mj-section padding="10px 0">
+      <mj-column> 
+        <mj-text>
+          <h2 style="font-family: geist, sans-serif">
+            🪂 Big News 
+          </h2>
+          <p>
+            Hello hello!
+          </p>
+          <p>
+            PlayVital just dropped our <strong style="color: maroon;">next-gen Nintendo Switch 2 accessories</strong>, designed to blend
+            style, durability, and seamless gameplay—and we’d love for you to be among the first to experience
+            them!
+          </p>
+          <p>
+            From ultra-slim protective cases with grip-enhancing textures to vibrant, customizable skins that
+            make every console uniquely yours, this lineup is all about elevating gameplay and aesthetics.
+            Perfect for your audience who craves both functionality and flair!
+          </p>
+          <p>
+            Want to test them out? We’re offering <strong>FREE samples + a collaboration
+            opportunity</strong> to showcase your
+            honest review! 🛠️ 
+          </p>
+          <p>
+            Whether it’s a unboxing, a durability test, or a style guide, let’s create
+            something awesome together.
+          </p>
+          <p>PS: <strong style="color: maroon">I have attached the product brief below please feel free to
+              check out.</strong>
+          </p>
+          <p>
+            Thank you for your time.
+          </p>
+          <p>
+            💛🧡💜
+          </p>
+          <p>
+            ~~<br />
+            Team PlayVital
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0"> 
+      <mj-column>
+        <mj-text mj-class="features" padding="0 25px">
+          <h2>
+            🎠 Products 
+          </h2>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="15px">
+      <mj-column width="60%">
+        <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/2pizf2.jpg" 
+          alt="Yamato-style kitten" />
+        <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/2aivwp.jpg"
+          alt="Yamato-style kitten 2" />
+      </mj-column>
+      <mj-column width="40%">
+        <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/tjb629.jpg"
+          alt="controller grip caps for ns2" />
+        <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/q2qxws.jpg"
+          alt= "controller grip caps for ns2" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-spacer />
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0">
+      <mj-column>
+        <mj-divider border-width="1px" border-color="#dedede" />
+        <mj-text color="#a5a5a5" font-size="13px" font-family="Geist, sans-serif" align="center"
+          padding-top="30px">
+          PlayVital aims to produce premium and well-designed video
+          game accessories for gamers to change their gaming life.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0">
+      <mj-column>
+        <mj-social icon-size="20px" inner-padding="20px">
+
+          <!--youtube-->
+          <mj-social-element
+            src="https://cdn.shopify.com/shopify-email/b44b9z24d10ct9dov9fozqqm8vqf.svg?width=60&height=60&format=png"
+            href="https://www.youtube.com/@PlayVitalGaming">
+          </mj-social-element>
+
+          <!--TikTok-->
+          <mj-social-element
+            src="https://cdn.shopify.com/shopify-email/4s0eae5xdawkwa9aals5ya8qujky.svg?width=60&height=60&format=png"
+            href="https://www.tiktok.com/@playvitalgaming">
+
+          </mj-social-element>
+
+          <!--instagram-->
+          <mj-social-element
+            src="https://cdn.shopify.com/shopify-email/mezbe8bg2srefo0ca2vqbbv13mjg.svg?width=60&height=60&format=png"
+            href="https://www.instagram.com/playvitalgaming/">
+
+          </mj-social-element>
+
+
+          <!--twitter-->
+          <mj-social-element
+            src="https://cdn.shopify.com/shopify-email/1m71lepjigcxdvp7yvsp6fhrv3ih.svg?width=60&height=60&format=png"
+            href="https://x.com/PlayVitalGaming">
+
+          </mj-social-element>
+        </mj-social>
+      </mj-column>
+    </mj-section>
+    <!-- header -->
+    <mj-section>
+      <mj-column>
+        <mj-image src="https://files.catbox.moe/tx35nm.png" alt="playvital logo"
+          href="https://playvital.com/" />
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
