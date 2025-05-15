@@ -1,9 +1,8 @@
 :root {
-    font-family: Karla, "noto sans sc";
-    color: white;
-    --border-radius: 10px
+  font-family: Karla, "noto sans sc";
+  color: white;
+  --border-radius: 10px;
 }
-
 
 body {
   margin: 0;
@@ -11,87 +10,77 @@ body {
 }
 
 .account-management {
-    display: grid;
-    gap: 1rem;
+  display: grid;
+  gap: 1rem;
 }
 
 /* iframe 的样式 */
 #preview-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 40vw;
-    height: 80vh;
-    margin: 0 20px;
-    background-color: #151b238c;
-    border-radius: var(--border-radius);
-    padding-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+  height: 80vh;
+  margin: 0 20px;
+  background-color: #151b238c;
+  border-radius: var(--border-radius);
+  padding-bottom: 1.5rem;
 }
 
 #preview-wrapper h2 {
-    width: fit-content;
-    margin: 10px auto;
+  width: fit-content;
+  margin: 10px auto;
 }
 
 iframe {
-    border: none;
-    border-radius: var(--border-radius);
-    width: 90%;
-    height: 90%;
+  border: none;
+  border-radius: var(--border-radius);
+  width: 90%;
+  height: 90%;
 }
-
-
-
-
 
 .main-content {
-    padding: 2rem;
-    width: 95vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
+  padding: 2rem;
+  width: 95vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
 }
 
-
-
-
-
-
 nav {
-    display: flex;
-    justify-content: end;
-    padding: .8rem 1rem;
-    margin: 0 0 1rem 0;
-    background-color: #151b23;
+  display: flex;
+  justify-content: end;
+  padding: 0.8rem 1rem;
+  margin: 0 0 1rem 0;
+  background-color: #151b23;
 }
 
 /* 用户头像按钮样式 */
 
 .user-switch {
-    border: 1px solid #0000;
-    border-radius: 2rem;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: .5rem;
-    cursor: pointer;
-    padding: .1rem .4rem;
-    background-color: black;
-    color: white;
-    transition: all .2s ease;
+  border: 1px solid #0000;
+  border-radius: 2rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.1rem 0.4rem;
+  background-color: black;
+  color: white;
+  transition: all 0.2s ease;
 }
 
 .user-switch:hover {
-    box-shadow: 7px 5px 25px -14px #C3D900;
+  box-shadow: 7px 5px 25px -14px #c3d900;
 }
 
 .user-switch:active {
-    transform: scale(0.97);
-    box-shadow: 7px 5px 35px -13px #C3D900;
+  transform: scale(0.97);
+  box-shadow: 7px 5px 35px -13px #c3d900;
 }
 
-
 .user-switch img {
-    border-radius: 2rem;
+  border-radius: 2rem;
 }
