@@ -15,10 +15,15 @@
 
 
     <mj-style inline="inline">
-      .rounded-border-outlook {
-        border: 1px solid #d6d2c9 !important
+
+      a {
+        background-color: rgb(90, 89, 255);
+        color: white
       }
 
+      .products {
+        color: #e1a77b;
+      }
       .navebar-link {
         text-decoration-color: rgb(90, 89, 255) !important;
         text-decoration-line: underline !important;
@@ -51,7 +56,7 @@
       h2 {
         margin-top: 20px;
         margin-bottom: 10px;
-        color: orange;
+        color: #ff9c6a;
       }
     </mj-style>
   </mj-head>
@@ -75,18 +80,24 @@
             them!
           </p>
           <p>
-            From ultra-slim protective cases with grip-enhancing textures to vibrant, customizable skins that
+          From <strong>ultra-slim protective cases with grip-enhancing textures</strong> to <strong>
+            vibrant, customizable skins</strong> that
             make every console uniquely yours, this lineup is all about elevating gameplay and aesthetics.
             Perfect for your audience who craves both functionality and flair!
           </p>
           <p>
-            Want to test them out? We’re offering <strong>FREE samples + a collaboration
+            Want to test them out? We’re offering <strong style="color: #bb5c66">samples + a collaboration
             opportunity</strong> to showcase your
             honest review! 🛠️ 
           </p>
           <p>
             Whether it’s a unboxing, a durability test, or a style guide, let’s create
             something awesome together.
+          </p>
+          <p>
+          <strong>To request samples</strong>, simply fill out this <a href="https:
+            //tally.so/r/mepkZx">🚚delivery form</a>, we will arrange
+            a shipping for you asap.
           </p>
           <p>PS: <strong style="color: maroon">I have attached the product brief below please feel free to
               check out.</strong>
@@ -108,19 +119,23 @@
     <mj-section padding="0"> 
       <mj-column>
         <mj-text mj-class="features" padding="0 25px">
-          <h2>
+          <h2 class="products">
             🎠 Products 
           </h2>
         </mj-text>
       </mj-column>
     </mj-section>
-
-    <mj-section padding="15px">
-      <mj-column width="60%">
+    <mj-section padding="0 15px">
+      <mj-column>
         <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/2pizf2.jpg" 
           alt="Yamato-style kitten" />
-        <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/2aivwp.jpg"
-          alt="Yamato-style kitten 2" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0 15px">
+      <mj-column width="60%">
+        <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/4c83a6.jpg"
+          alt="ns2 dark version" />
       </mj-column>
       <mj-column width="40%">
         <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/tjb629.jpg"
