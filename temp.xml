@@ -37,18 +37,18 @@
     the following:
   </p>
   <hr />
-  <h2>Deliverables</h2>
+  <div>## Deliverables</div>
   <p>
     <b>[[INPUT=产出数量]]*[[SCRIPT=ContentType|[[INPUT=平台]]]]</b> on
     <b>[[INPUT=平台]]</b> showcasing PlayVital products (featuring key benefits,
     functionality, and personal experience with them).
   </p>
   [[SCRIPT=videoLength|[[SCRIPT=ContentType|[[INPUT=平台]]]]]]
-  <h2>Timeline</h2>
+  <div>## Timeline</div>
   <p class="lst">
     Approximately <b>[[INPUT=产出时间]]</b> after receiving the products.<br />
   </p>
-  <h2>Affiliate Program</h2>
+  <div>## Affiliate Program</div>
   <p>
     To make this partnership more rewarding. We'd like to invite you to join our
     <a
@@ -60,19 +60,19 @@
     unique coupon code. Plus, you'll earn a <b>15%</b> commission on every sale
     generated through your referrals!
   </p>
-  <h2>Budget</h2>
+  <div>## Budget</div>
   <p>
     We are offering <b>[[INPUT=价格]]</b> commission for this collaboration.
   </p>
-  <h2>Payment</h2>
+  <div>## Payment</div>
   <p>We will process the payment via PayPal upon reviewing the demo video.</p>
 
-  <h2>Shipping</h2>
+  <div>## Shipping</div>
   <p>
     We are shipping internationally, We will ship the sample cases directly to
     your address. The estimate time depends on the address.
   </p>
-  <h2>Sample Request</h2>
+  <div>## Sample Request</div>
   <p>
     You can apply the samples by filling out this
     <a href="https://tally.so/r/n0OyxA" target="_blank"><b>delivery form</b></a
@@ -126,9 +126,9 @@
         <body><![CDATA[<p>Hi [[SCRIPT=ToFirstOrLastname]], </p>
 
 <p>Thank you for reaching out. We would absolutely love to work with you! 🤗 We are primarily interested in promoting our newest arrivals.
-<h2>
-  To Get Start...
-</h2>
+<div>
+  ## To Get Start...
+</div>
 <ol>
   <li>
     Head to our <a href="https://playvital.com/collections/new-products" title="Latest products" target="_blank">official store</a>
@@ -144,7 +144,7 @@
   </li>
 </ol>
 
-<h2>One more thing:</h2>
+<div>## One more thing:</div>
 <p>To make this partnership even more rewarding, we'd like to invite you to join our <a href=" https://af.uppromote.com/playvital/register?p=175715" target="_blank">affiliate program</a>! This means your followers will not only discover awesome products through your reviews, but they'll also get a special <b>10%</b> discount using your unique coupon code. Plus, you'll earn a <b>15%</b> commission on every sale generated through your referrals!</p>
 
 <p>Let us know if there is any question or concern!</p>
