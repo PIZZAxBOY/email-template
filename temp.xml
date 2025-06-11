@@ -112,7 +112,7 @@
       <text shortcut="" type="1">
         <name><![CDATA[form]]></name>
         <keyword><![CDATA[form]]></keyword>
-        <body><![CDATA[<a href="https://tally.so/r/n0OyxA" target="_blank">Delivery Info Form</a>
+        <body><![CDATA[[Delivery Info Form](https://tally.so/r/n0OyxA)
         ]]></body>
       </text>
       <text type="1">
@@ -150,8 +150,8 @@
         <name><![CDATA[negative]]></name>
         <keyword><![CDATA[refuse]]></keyword>
         <body><![CDATA[<p>Hi [[SCRIPT=ToFirstOrLastname]],</p><p>Thank you for your support! Unfortunately, we can't provide products at this time due to specific requirements
-      for influencers. You can join our <a href="https://af.uppromote.com/playvital/register" target="_blank">Affiliate
-        Program</a> for a 10% commission on every order with a unique code for your followers. Thank you for your
+      for influencers. You can join our [Affiliate
+        Program](https://af.uppromote.com/playvital/register) for a 10% commission on every order with a unique code for your followers. Thank you for your
       interest and support - we hope to collaborate in the future.</p>
     <p>Best,</p>]]></body>
       </text>
