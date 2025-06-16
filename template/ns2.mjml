@@ -8,7 +8,7 @@
     <mj-font name="Geist"
       href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" />
     <mj-attributes>
-      <mj-all font-family="Georgia, serif" font-size="15px" line-height="1.5" />
+      <mj-all font-family="Geist, 'noto sans serif', sans-serif" font-size="13px" line-height="1.5" />
       <mj-image border-radius="8px" padding="5px 10px" />
       <mj-class name="features" font-family="Geist, 'noto sans serif', sans-serif" />
     </mj-attributes>
