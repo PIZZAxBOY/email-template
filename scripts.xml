@@ -49,7 +49,7 @@ switch (variable) {
 var platform = await this.mQuicktext.get_input(["平台"]);
 let message = `
   <div>## Video Length</div>
-  <p>We're flexible, but ideally <b>[[INPUT=视频时长(分钟)]] min</b>. This allows enough time for an engaging and 
+  <p>We're flexible, but ideally **[[INPUT=视频时长(分钟)]] min**. This allows enough time for an engaging and 
   informative review without being too lengthy for your viewers. <br>
   </p>
 `;
