@@ -69,13 +69,6 @@
 
   <mj-body background-color="#f8f7f4">
 
-    <!-- header -->
-    <mj-section>
-      <mj-column>
-        <mj-image src="https://i.postimg.cc/J4C4zJbJ/logo.webp" alt="playvital logo"
-          href="https://playvital.com/" />
-      </mj-column>
-    </mj-section>
 
     <!-- 正文 -->
     <mj-section padding="10px 10px">
@@ -234,6 +227,13 @@
 
           </mj-social-element>
         </mj-social>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-image src="https://i.postimg.cc/J4C4zJbJ/logo.webp" alt="playvital logo"
+          href="https://playvital.com/" />
       </mj-column>
     </mj-section>
   </mj-body>
