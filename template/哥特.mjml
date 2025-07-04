@@ -72,7 +72,7 @@
     <!-- header -->
     <mj-section>
       <mj-column>
-        <mj-image src="https://files.catbox.moe/tx35nm.png" alt="playvital logo"
+        <mj-image src="https://i.postimg.cc/J4C4zJbJ/logo.webp" alt="playvital logo"
           href="https://playvital.com/" />
       </mj-column>
     </mj-section>
@@ -87,7 +87,7 @@
           <p>
             I'm Tom from <strong>PlayVital</strong>, we're reaching out today because we're
             incredibly excited to launch our <strong>brand new <a
-                href="https://playvital.com/search?type=product&q=gothic&options%5Bprefix%5D=last">Cute
+                href="https://playvital.com/search?type=product&q=gothic&options%5Bprefix%5D=last" target="_blank">Cute
                 Gothic Imp Series</a></strong>
             and we think it would be a fantastic fit for your
             channel/content and something your audience would love to see.
@@ -127,7 +127,7 @@
 
     <!-- product brief -->
     <mj-hero background-width="600px" background-height="300px"
-      background-url="https://files.catbox.moe/a0zomt.jpg" mode="fluid-height"
+      background-url="https://i.postimg.cc/Pr7yDX5m/GTKPFP-400p.jpg" mode="fluid-height"
       vertical-align="middle">
     </mj-hero>
 
