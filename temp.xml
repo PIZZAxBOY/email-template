@@ -106,8 +106,8 @@
         <body><![CDATA[[Delivery Info Form](https://tally.so/r/n0OyxA)
         ]]></body>
       </text>
-      <text type="1">
-        <name><![CDATA[Positive]]></name>
+      <text shortcut="4" type="1">
+        <name><![CDATA[agree]]></name>
         <keyword><![CDATA[agree]]></keyword>
         <body><![CDATA[<p>Hi [[SCRIPT=ToFirstOrLastname]], </p>
 
@@ -137,8 +137,8 @@
 
 <p>Wishing you all the best☺️</p>]]></body>
       </text>
-      <text shortcut="4" type="1">
-        <name><![CDATA[negative]]></name>
+      <text shortcut="5" type="1">
+        <name><![CDATA[refuse]]></name>
         <keyword><![CDATA[refuse]]></keyword>
         <body><![CDATA[<p>Hi [[SCRIPT=ToFirstOrLastname]],</p><p>Thank you for your support! Unfortunately, we can't provide products at this time due to specific requirements
       for influencers. You can join our [Affiliate
