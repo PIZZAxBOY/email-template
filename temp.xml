@@ -138,7 +138,7 @@
       <text shortcut="5" type="1">
         <name><![CDATA[refuse]]></name>
         <keyword><![CDATA[refuse]]></keyword>
-        <body><![CDATA[<p>Hi [[SCRIPT=ToFirstOrLastname]],</p><p>Thank you for your support! Unfortunately, we can't provide products at this time due to specific requirements
+        <body><![CDATA[</p><p>Thank you for your support! Unfortunately, we can't provide products at this time due to specific requirements
       for influencers. You can join our [Affiliate
         Program](https://af.uppromote.com/playvital/register) for a 10% commission on every order with a unique code for your followers. Thank you for your
       interest and support - we hope to collaborate in the future.</p>
