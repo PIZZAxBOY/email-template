@@ -2,25 +2,6 @@
 <quicktext version="2">
 	<filetype>scripts</filetype>
 	<script>
-		<name><![CDATA[ToFirstOrLastname]]></name>
-		<body><![CDATA[var data = this.mQuicktext.process_to(mVariables);
-
-// use lastname if firstname is not available
-if(typeof data['firstname'] == 'undefined') {
-  data['firstname'] = [];
-}
-for(var i = 0; i < data['lastname'].length; i++) {
-  if(typeof data['firstname'][i] == 'undefined' || data['firstname'][i] == '') {
-    data['firstname'][i] = data['lastname'][i];
-  }
-}
-
-if(typeof data['firstname'] != 'undefined') {
-  if(mVariables.length < 1) mVariables[0] = ", ";
-  return data['firstname'].join(mVariables[0].replace(/\\n/g, "\n").replace(/\\t/g, "\t"));
-} else return "";]]></body>
-	</script>
-	<script>
 		<name><![CDATA[ContentType]]></name>
 		<body><![CDATA[let variable = this.mVariables[0];
 let choice = ""

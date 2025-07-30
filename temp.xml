@@ -6,7 +6,7 @@
     <texts>
       <text shortcut="1" type="1">
         <name><![CDATA[名字]]></name>
-        <body><![CDATA[<p>Hi! [[SCRIPT=ToFirstOrLastname]],</p><p>[[CURSOR]]</p>]]></body>
+        <body><![CDATA[<p>Hi! [[TO=displayname]],</p><p>[[CURSOR]]</p>]]></body>
       </text>
       <text type="1">
         <name><![CDATA[address]]></name>
@@ -26,7 +26,7 @@
       <text shortcut="2" type="1">
         <name><![CDATA[报价]]></name>
         <body><![CDATA[<div class="quick-text">
-  <p>Hi [[SCRIPT=ToFirstOrLastname]],</p>
+  <p>Hi [[TO=displayname]],</p>
   <p>
     Thanks for getting back to us. We're excited about the possibility of
     partnering with you on
@@ -82,7 +82,7 @@
       <text shortcut="3" type="1">
         <name><![CDATA[package arrived]]></name>
         <body><![CDATA[<p>
-  Hi [[SCRIPT=ToFirstOrLastname]],
+  Hi [[TO=displayname]],
 </p>
 
 <p>
@@ -138,7 +138,7 @@
       <text shortcut="5" type="1">
         <name><![CDATA[refuse]]></name>
         <keyword><![CDATA[refuse]]></keyword>
-        <body><![CDATA[</p><p>Thank you for your support! Unfortunately, we can't provide products at this time due to specific requirements
+        <body><![CDATA[</p>[[TO=displayname]]<p>Thank you for your support! Unfortunately, we can't provide products at this time due to specific requirements
       for influencers. You can join our [Affiliate
         Program](https://af.uppromote.com/playvital/register) for a 10% commission on every order with a unique code for your followers. Thank you for your
       interest and support - we hope to collaborate in the future.</p>
