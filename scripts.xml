@@ -27,7 +27,7 @@ switch (variable) {
 	<script>
 		<name><![CDATA[videoLength]]></name>
 		<body><![CDATA[var variable = this.quicktext.variables[0];
-var platform = await this.mQuicktext.get_input(["平台"]);
+var platform = await this.quicktext.get_input(["平台"]);
 let message = `
   <div>## Video Length</div>
   <p>We're flexible, but ideally **[[INPUT=视频时长(分钟)]] min**. This allows enough time for an engaging and
