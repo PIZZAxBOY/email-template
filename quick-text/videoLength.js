@@ -1,5 +1,5 @@
-let type = await this.quicktext.getTag("input", "产出类型");
 let platform = await this.quicktext.getTag("input", "平台");
+let type = output;
 
 console.log(type);
 
