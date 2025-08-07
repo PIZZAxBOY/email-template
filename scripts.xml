@@ -3,7 +3,7 @@
 	<filetype>scripts</filetype>
 	<script>
 		<name><![CDATA[ContentType]]></name>
-		<body><![CDATA[let variable = this.mVariables[0];
+		<body><![CDATA[let variable = this.quicktext.variables[0];
 let choice = ""
 // 空值检查
 if (!variable) {
@@ -26,7 +26,7 @@ switch (variable) {
 	</script>
 	<script>
 		<name><![CDATA[videoLength]]></name>
-		<body><![CDATA[var variable = this.mVariables[0];
+		<body><![CDATA[var variable = this.quicktext.variables[0];
 var platform = await this.mQuicktext.get_input(["平台"]);
 let message = `
   <div>## Video Length</div>
