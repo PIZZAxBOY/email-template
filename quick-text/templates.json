@@ -3,7 +3,7 @@
     "texts": [
       [
         {
-          "name": "名字",
+          "name": "name",
           "text": "<p>Hi! [[SCRIPT=ToFirstOrLastname]],[[CURSOR]]</p>",
           "shortcut": "1",
           "type": "text/html",
@@ -12,17 +12,8 @@
           "attachments": ""
         },
         {
-          "name": "address",
-          "text": "<address>\n  Name: <br />\n  Country: <br />\n  State or Province:<br />\n  City:<br />\n  Detailed address:<br />\n  ZIP code: <br />\n  Phone number: <br />\n  Email address:<br />\n</address>\n<p>[[CURSOR]]</p>\n",
-          "shortcut": "",
-          "type": "text/html",
-          "keyword": "address",
-          "subject": "",
-          "attachments": ""
-        },
-        {
-          "name": "报价",
-          "text": "<div class=\"quick-text\">\n  <p>Hi [[TO=displayname]],</p>\n  <p>\n    Thanks for getting back to us. We're excited about the possibility of\n    partnering with you on\n    **[[INPUT=平台|select|YouTube;Instagram;TikTok]]** showcasing some of our\n    awesome accessories. We propose\n    the following:\n  </p>\n  <div>## Deliverables</div>\n  <p>\n    **[[INPUT=产出数量]]*[[SCRIPT=ContentType]]** on\n    **[[INPUT=平台]]** showcasing PlayVital products (featuring key benefits,\n    functionality, and personal experience with them).\n  </p>\n  [[SCRIPT=videoLength]]\n  <div>## Timeline</div>\n  <p class=\"lst\">\n    Approximately **[[INPUT=产出时间]]** after receiving the products.<br />\n  </p>\n  <div>## Affiliate Program</div>\n  <p>\n    To make this partnership more rewarding. We'd like to invite you to join our\n    [affiliate program](https://af.uppromote.com/playvital/register?p=175715)\n    ! This means your followers will not only discover awesome products through\n    your reviews, but they'll also get a special **10%** discount using your\n    unique coupon code. Plus, you'll earn a **15%** commission on every sale\n    generated through your referrals!\n  </p>\n  <div>## Budget</div>\n  <p>\n    We are offering **[[INPUT=价格]]** commission for this collaboration.\n  </p>\n  <div>## Payment</div>\n  <p>We will process the payment via PayPal upon reviewing the demo video.</p>\n\n  <div>## Shipping</div>\n  <p>\n    We are shipping internationally, We will ship the sample cases directly to\n    your address. The estimate time depends on the address.\n  </p>\n  <div>## Sample Request</div>\n  <p>\n    You can apply the samples by filling out this\n    [delivery form](https://tally.so/r/mepkZx). We will arrange the shipping for you asap.\n  </p>\n  <p>\n    ---<br />\n    Let us know if there is any question or concern. Look forward to hearing\n    from you.\n  </p>\n  <p>Thanks,</p>\n</div>",
+          "name": "collabDetails",
+          "text": "<p>Hi [[SCRIPT=ToFirstOrLastname]],</p>\n<p>\n  Thanks for getting back to us. We're excited about the possibility of\n  partnering with you on **[[INPUT=平台|select|YouTube;Instagram;TikTok]]**\n  showcasing some of our awesome accessories. We propose the following:\n</p>\n<div>## Deliverables</div>\n<p>\n  **[[INPUT=产出数量]]*[[SCRIPT=ContentType|output]]** on **[[INPUT=平台]]**\n  showcasing PlayVital products (featuring key benefits, functionality, and\n  personal experience with them).\n</p>\n[[SCRIPT=videoLength]]\n<div>## Timeline</div>\n<p class=\"lst\">\n  Approximately **[[INPUT=产出时间]]** after receiving the products.<br />\n</p>\n<div>## Affiliate Program</div>\n<p>\n  To make this partnership more rewarding. We'd like to invite you to join our\n  [affiliate program](https://af.uppromote.com/playvital/register?p=175715) !\n  This means your followers will not only discover awesome products through your\n  reviews, but they'll also get a special **10%** discount using your unique\n  coupon code. Plus, you'll earn a **15%** commission on every sale generated\n  through your referrals!\n</p>\n<div>## Budget</div>\n<p>We are offering **[[INPUT=价格]]** commission for this collaboration.</p>\n<div>## Payment</div>\n<p>We will process the payment via PayPal upon reviewing the demo video.</p>\n\n<div>## Shipping</div>\n<p>\n  We are shipping internationally, We will ship the sample cases directly to\n  your address. The estimate time depends on the address.\n</p>\n<div>## Sample Request</div>\n<p>\n  You can apply the samples by filling out this [delivery\n  form](https://tally.so/r/mepkZx). We will arrange the shipping for you asap.\n</p>\n<p>\n  ---<br />\n  Let us know if there is any question or concern. Look forward to hearing from\n  you.\n</p>\n<p>Thanks,</p>",
           "shortcut": "2",
           "type": "text/html",
           "keyword": "",
@@ -30,20 +21,11 @@
           "attachments": ""
         },
         {
-          "name": "package arrived",
-          "text": "<p>Hi [[TO=displayname]],</p>\n\n<p>\n  We noticed that your package has arrived at the destination. Please feel free\n  to pick it up at your convenience.\n</p>\n<p>Let us know if there is any question or concern.</p>\n\n<p>Have a nice day!</p>\n\n<p>Best,</p>",
+          "name": "packageArrived",
+          "text": "<p>Hi [[SCRIPT=ToFirstOrLastname]],</p>\n\n<p>\n  We noticed that your package has arrived at the destination. Please feel free\n  to pick it up at your convenience.\n</p>\n<p>Let us know if there is any question or concern.</p>\n\n<p>Have a nice day!</p>\n\n<p>Best,</p>",
           "shortcut": "3",
           "type": "text/html",
           "keyword": "",
-          "subject": "",
-          "attachments": ""
-        },
-        {
-          "name": "form",
-          "text": "[Delivery Info Form]([[CURSOR]])",
-          "shortcut": "",
-          "type": "text/html",
-          "keyword": "form",
           "subject": "",
           "attachments": ""
         },
@@ -58,10 +40,28 @@
         },
         {
           "name": "refuse",
-          "text": "<p>Hi! [[TO=displayname]]</p>\n<p>\n  Thank you for your support! Unfortunately, we can't provide products at this\n  time due to specific requirements for influencers. You can join our [Affiliate\n  Program](https://af.uppromote.com/playvital/register) for a 10% commission on\n  every order with a unique code for your followers. Thank you for your interest\n  and support - we hope to collaborate in the future.\n</p>\n<p>Best,</p>",
+          "text": "<p>Hi! [[SCRIPT=ToFirstOrLastname]]</p>\n<p>\n  Thank you for your support! Unfortunately, we can't provide products at this\n  time due to specific requirements for influencers. You can join our [Affiliate\n  Program](https://af.uppromote.com/playvital/register) for a 10% commission on\n  every order with a unique code for your followers. Thank you for your interest\n  and support - we hope to collaborate in the future.\n</p>\n<p>Best,</p>",
           "shortcut": "5",
           "type": "text/html",
           "keyword": "refuse",
+          "subject": "",
+          "attachments": ""
+        },
+        {
+          "name": "address",
+          "text": "<address>\n  Name: <br />\n  Country: <br />\n  State or Province:<br />\n  City:<br />\n  Detailed address:<br />\n  ZIP code: <br />\n  Phone number: <br />\n  Email address:<br />\n</address>\n<p>[[CURSOR]]</p>\n",
+          "shortcut": "",
+          "type": "text/html",
+          "keyword": "address",
+          "subject": "",
+          "attachments": ""
+        },
+        {
+          "name": "form",
+          "text": "[Delivery Info Form]([[CURSOR]])",
+          "shortcut": "",
+          "type": "text/html",
+          "keyword": "form",
           "subject": "",
           "attachments": ""
         }

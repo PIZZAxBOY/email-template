@@ -18,12 +18,13 @@ if (platform === "instagram") {
     "shorts;Integration;dedicated video",
   );
 }
+
+output = type; // output 设置为 type
+
 // 空值检查
 if (!platform) {
   return "No input provided!";
 }
-
-output = type; // output 设置为 type
 
 // 转为小写进行比较
 

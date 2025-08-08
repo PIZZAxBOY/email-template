@@ -6,13 +6,13 @@
       "protected": false
     },
     {
-      "name": "ContentType",
-      "script": "platform = await this.quicktext.getTag(\"input\", \"平台\");\nconsole.log(`平台为：${platform}`);\nlet choice = \"\";\n// 空值检查\nif (!platform) {\n  return \"No input provided!\";\n}\n\n// 转为小写进行比较\nplatform = platform.toLowerCase();\n\nswitch (platform) {\n  case \"youtube\":\n    choice = \"[[INPUT=产出类型|select|shorts;Integration;dedicated video]]\";\n    return choice;\n  case \"instagram\":\n    choice = \"[[INPUT=产出类型|select|reel;post]]\";\n    return choice;\n  default:\n    return \"TikTok video\";\n}",
+      "name": "contentType",
+      "script": "let platform = await this.quicktext.getTag(\"input\", \"平台\");\nconsole.log(`平台为：${platform}`);\nplatform = platform.toLowerCase();\nlet type;\n\nif (platform === \"instagram\") {\n  type = await this.quicktext.getTag(\n    \"input\",\n    \"产出类型\",\n    \"select\",\n    \"post;reel\",\n  );\n} else if (platform === \"youtube\") {\n  type = await this.quicktext.getTag(\n    \"input\",\n    \"产出类型\",\n    \"select\",\n    \"shorts;Integration;dedicated video\",\n  );\n}\n// 空值检查\nif (!platform) {\n  return \"No input provided!\";\n}\n\noutput = type; // output 设置为 type\n\n// 转为小写进行比较\n\nswitch (platform) {\n  case \"youtube\":\n    return type;\n  case \"instagram\":\n    return type;\n  default:\n    output = \"tiktok\";\n    return \"TikTok video\";\n}",
       "protected": false
     },
     {
       "name": "videoLength",
-      "script": "let type = await this.quicktext.getTag(\"input\", \"产出类型\");\nlet platform = await this.quicktext.getTag(\"input\", \"平台\");\n\nconsole.log(type);\n\nlet message = `\n  <div>## Video Length</div>\n  <p>We're flexible, but ideally **[[INPUT=视频时长(分钟)]] min**. This allows enough time for an engaging and\n  informative review without being too lengthy for your viewers. <br>\n  </p>\n`;\n\ntype = type.toLowerCase();\nplatform = platform.toLowerCase();\n\nswitch (platform) {\n  case \"youtube\":\n    return message;\n  case \"instagram\":\n    if (type === \"reel\") {\n      return message;\n    }\n    return \"\"; // 如果不是 Reels，则返回空字符串\n  default:\n    return message;\n}\n",
+      "script": "let platform = await this.quicktext.getTag(\"input\", \"平台\");\nlet type = output;\n\nconsole.log(type);\n\nlet message = `\n  <div>## Video Length</div>\n  <p>We're flexible, but ideally **[[INPUT=视频时长(分钟)]] min**. This allows enough time for an engaging and\n  informative review without being too lengthy for your viewers. <br>\n  </p>\n`;\n\ntype = type.toLowerCase();\nplatform = platform.toLowerCase();\n\nswitch (platform) {\n  case \"youtube\":\n    return message;\n  case \"instagram\":\n    if (type === \"reel\") {\n      return message;\n    }\n    return \"\"; // 如果不是 Reels，则返回空字符串\n  default:\n    return message;\n}",
       "protected": false
     }
   ]
