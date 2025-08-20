@@ -5,20 +5,27 @@
       **********************************************************************************
       **********************************************************************************
     </mj-preview>
-    <mj-font name="Geist"
-      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" />
+    <mj-font
+      name="Geist"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+    />
     <mj-attributes>
-      <mj-all font-family="Geist, 'noto sans serif', sans-serif" font-size="13px" line-height="1.5" />
+      <mj-all
+        font-family="Geist, 'noto sans serif', sans-serif"
+        font-size="13px"
+        line-height="1.5"
+      />
       <mj-image border-radius="8px" padding="5px 10px" />
-      <mj-class name="features" font-family="Geist, 'noto sans serif', sans-serif" />
+      <mj-class
+        name="features"
+        font-family="Geist, 'noto sans serif', sans-serif"
+      />
     </mj-attributes>
 
-
     <mj-style inline="inline">
-
       a {
         background-color: rgb(90, 89, 255);
-        color: white
+        color: white;
       }
 
       .products {
@@ -34,7 +41,7 @@
 
       h1 {
         font-weight: 400;
-        font-size: 32px
+        font-size: 32px;
       }
 
       p {
@@ -62,51 +69,55 @@
   </mj-head>
 
   <mj-body background-color="#f8f7f4">
-
-
     <!-- 正文 -->
     <mj-section padding="10px 0">
-      <mj-column> 
+      <mj-column>
         <mj-text>
-          <h2 style="font-family: geist, sans-serif">
-            🪂 Big News 
-          </h2>
+          <h2 style="font-family: geist, sans-serif">🪂 Big News</h2>
+          <p>Hello hello!</p>
           <p>
-            Hello hello!
-          </p>
-          <p>
-            PlayVital just dropped our <strong style="color: maroon;">next-gen Nintendo Switch 2 accessories</strong>, designed to blend
-            style, durability, and seamless gameplay—and we’d love for you to be among the first to experience
-            them!
+            PlayVital just dropped our
+            <strong style="color: maroon"
+              >next-gen Nintendo Switch 2 accessories</strong
+            >, designed to blend style, durability, and seamless gameplay—and
+            we’d love for you to be among the first to experience them!
           </p>
           <p>
-          From <strong>ultra-slim protective cases with grip-enhancing textures</strong> to <strong>
-            vibrant, customizable skins</strong> that
-            make every console uniquely yours, this lineup is all about elevating gameplay and aesthetics.
-            Perfect for your audience who craves both functionality and flair!
+            From
+            <strong
+              >ultra-slim protective cases with grip-enhancing textures</strong
+            >
+            to <strong> vibrant, customizable skins</strong> that make every
+            console uniquely yours, this lineup is all about elevating gameplay
+            and aesthetics. Perfect for your audience who craves both
+            functionality and flair!
           </p>
           <p>
-            Want to test them out? We’re offering <strong style="color: maroon">samples + a collaboration
-            opportunity</strong> to showcase your
-            honest review! 🛠️ 
+            Want to test them out? We’re offering
+            <strong style="color: maroon"
+              >samples + a collaboration opportunity</strong
+            >
+            to showcase your honest review! 🛠️
           </p>
           <p>
-            Whether it’s a unboxing, a durability test, or a style guide, let’s create
-            something awesome together.
+            Whether it’s a unboxing, a durability test, or a style guide, let’s
+            create something awesome together.
           </p>
           <p>
-          <strong>To request samples</strong>, simply fill out this <a href="https://tally.so/r/mepkZx">🚚delivery form</a>, and send over the links to the products. We will arrange
-            a shipping for you asap.
-          </p>
-          <p>PS: <strong style="color: maroon">I have attached the product brief below please feel free to
-              check out.</strong>
-          </p>
-          <p>
-            Thank you for your time.
+            <strong>To request samples</strong>, simply fill out this
+            <a href="https://tally.so/r/mepkZx">🚚delivery form</a>, and send
+            over the links to the products. We will arrange a shipping for you
+            asap.
           </p>
           <p>
-            💛🧡💜
+            PS:
+            <strong style="color: maroon"
+              >I have attached the product brief below please feel free to check
+              out.</strong
+            >
           </p>
+          <p>Thank you for your time.</p>
+          <p>💛🧡💜</p>
           <p>
             ~~<br />
             Team PlayVital
@@ -115,43 +126,59 @@
       </mj-column>
     </mj-section>
 
-    <mj-section padding="0"> 
+    <mj-section padding="0">
       <mj-column>
         <mj-text mj-class="features" padding="0 25px">
-          <h2 class="products">
-            🎠 Products 
-          </h2>
+          <h2 class="products">🎠 Products</h2>
         </mj-text>
       </mj-column>
     </mj-section>
     <mj-section padding="0 15px">
       <mj-column>
-        <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/44g410.jpg" 
-          alt="zuoyou" href="https://playvital.com/products/playvital-ranger-silicone-grip-with-hard-console-cover-for-nintendo-switch-2-protective-case-with-folding-stand-thumb-grips-caps-for-for-nintendo-switch-2-2025-clear-white"/>
+        <mj-image
+          fluid-on-mobile="true"
+          src="https://files.catbox.moe/44g410.jpg"
+          alt="zuoyou"
+          href="https://playvital.com/products/playvital-ranger-silicone-grip-with-hard-console-cover-for-nintendo-switch-2-protective-case-with-folding-stand-thumb-grips-caps-for-for-nintendo-switch-2-2025-clear-white"
+        />
       </mj-column>
     </mj-section>
     <mj-section padding="0 15px">
       <mj-column>
-        <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/2pizf2.jpg" 
-          alt="Yamato-style kitten" />
+        <mj-image
+          fluid-on-mobile="true"
+          src="https://files.catbox.moe/2pizf2.jpg"
+          alt="Yamato-style kitten"
+        />
       </mj-column>
     </mj-section>
 
     <mj-section padding="0 15px">
       <mj-column width="60%">
-        <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/j3mi9g.jpg" alt="xiaoying for ns2" />
-        <mj-image fluid-on-mobile="true" src="https://files.catbox.moe/4c83a6.jpg"
-          alt="ns2 dark version" />
+        <mj-image
+          fluid-on-mobile="true"
+          src="https://files.catbox.moe/j3mi9g.jpg"
+          alt="xiaoying for ns2"
+        />
+        <mj-image
+          fluid-on-mobile="true"
+          src="https://files.catbox.moe/4c83a6.jpg"
+          alt="ns2 dark version"
+        />
       </mj-column>
       <mj-column width="40%">
-        <mj-image fluid-on-mobile="true" 
+        <mj-image
+          fluid-on-mobile="true"
           src="https://files.catbox.moe/tjb629.jpg"
-          alt="controller grip caps for ns2-seal" 
-          href="https://playvital.com/products/playvital-4-pcs-cute-thumb-grip-caps-for-nintendo-switch-2-cutie-seal-squad"/>
-        <mj-image fluid-on-mobile="true" 
-          src="https://files.catbox.moe/q2qxws.jpg" 
+          alt="controller grip caps for ns2-seal"
+          href="https://playvital.com/products/playvital-4-pcs-cute-thumb-grip-caps-for-nintendo-switch-2-cutie-seal-squad"
+        />
+        <mj-image
+          fluid-on-mobile="true"
+          src="https://files.catbox.moe/q2qxws.jpg"
           href="https://playvital.com/products/playvital-4-pcs-cute-thumb-grip-caps-for-nintendo-switch-2-cutie-penguin"
-          alt= "controller grip caps for ns2-penguin" />
+          alt="controller grip caps for ns2-penguin"
+        />
       </mj-column>
     </mj-section>
 
@@ -164,10 +191,15 @@
     <mj-section padding="0">
       <mj-column>
         <mj-divider border-width="1px" border-color="#dedede" />
-        <mj-text color="#a5a5a5" font-size="13px" font-family="Geist, sans-serif" align="center"
-          padding-top="30px">
-          PlayVital aims to produce premium and well-designed video
-          game accessories for gamers to change their gaming life.
+        <mj-text
+          color="#a5a5a5"
+          font-size="13px"
+          font-family="Geist, sans-serif"
+          align="center"
+          padding-top="30px"
+        >
+          PlayVital aims to produce premium and well-designed video game
+          accessories for gamers to change their gaming life.
         </mj-text>
       </mj-column>
     </mj-section>
@@ -175,33 +207,32 @@
     <mj-section padding="0">
       <mj-column>
         <mj-social icon-size="20px" inner-padding="20px">
-
           <!--youtube-->
           <mj-social-element
             src="https://cdn.shopify.com/shopify-email/b44b9z24d10ct9dov9fozqqm8vqf.svg?width=60&height=60&format=png"
-            href="https://www.youtube.com/@PlayVitalGaming">
+            href="https://www.youtube.com/@PlayVitalGaming"
+          >
           </mj-social-element>
 
           <!--TikTok-->
           <mj-social-element
             src="https://cdn.shopify.com/shopify-email/4s0eae5xdawkwa9aals5ya8qujky.svg?width=60&height=60&format=png"
-            href="https://www.tiktok.com/@playvitalgaming">
-
+            href="https://www.tiktok.com/@playvitalgaming"
+          >
           </mj-social-element>
 
           <!--instagram-->
           <mj-social-element
             src="https://cdn.shopify.com/shopify-email/mezbe8bg2srefo0ca2vqbbv13mjg.svg?width=60&height=60&format=png"
-            href="https://www.instagram.com/playvitalgaming/">
-
+            href="https://www.instagram.com/playvitalgaming/"
+          >
           </mj-social-element>
-
 
           <!--twitter-->
           <mj-social-element
             src="https://cdn.shopify.com/shopify-email/1m71lepjigcxdvp7yvsp6fhrv3ih.svg?width=60&height=60&format=png"
-            href="https://x.com/PlayVitalGaming">
-
+            href="https://x.com/PlayVitalGaming"
+          >
           </mj-social-element>
         </mj-social>
       </mj-column>
@@ -209,8 +240,11 @@
     <!-- header -->
     <mj-section>
       <mj-column>
-        <mj-image src="https://files.catbox.moe/tx35nm.png" alt="playvital logo"
-          href="https://playvital.com/" />
+        <mj-image
+          src="https://files.catbox.moe/tx35nm.png"
+          alt="playvital logo"
+          href="https://playvital.com/"
+        />
       </mj-column>
     </mj-section>
   </mj-body>
