@@ -137,18 +137,9 @@
       <mj-column>
         <mj-image
           fluid-on-mobile="true"
-          src="https://files.catbox.moe/44g410.jpg"
-          alt="zuoyou"
-          href="https://playvital.com/products/playvital-ranger-silicone-grip-with-hard-console-cover-for-nintendo-switch-2-protective-case-with-folding-stand-thumb-grips-caps-for-for-nintendo-switch-2-2025-clear-white"
-        />
-      </mj-column>
-    </mj-section>
-    <mj-section padding="0 15px">
-      <mj-column>
-        <mj-image
-          fluid-on-mobile="true"
           src="https://files.catbox.moe/2pizf2.jpg"
-          alt="Yamato-style kitten"
+          alt="PlayVital Cherry Blossoms Kitten Protective Cover for Nintendo Switch 2"
+          href="https://www.playvital.com/collections/for-nintendo-switch-2-cherry-blossoms-kitten-protective-cover"
         />
       </mj-column>
     </mj-section>
@@ -158,26 +149,34 @@
         <mj-image
           fluid-on-mobile="true"
           src="https://files.catbox.moe/j3mi9g.jpg"
-          alt="xiaoying for ns2"
+          alt="magic wings for ns2"
+          href="https://www.playvital.com/collections/for-nintendo-switch-2-magic-wings-protective-case"
         />
         <mj-image
           fluid-on-mobile="true"
           src="https://files.catbox.moe/4c83a6.jpg"
-          alt="ns2 dark version"
+          alt="PlayVital METEOR Ergonomic Non-Slip TPU Protective Case"
+          href="https://www.playvital.com/collections/for-nintendo-switch-2-meteor-protective-case"
         />
       </mj-column>
       <mj-column width="40%">
         <mj-image
+            fluid-on-mobile="true"
+            src="https://files.catbox.moe/brzpom.jpg"
+            alt="PlayVital Solid Color Series Hard Shell Protective Case with Foldable Stand"
+            href="https://www.playvital.com/collections/for-nintendo-switch-2-solid-color-series-hard-case"
+        />
+        <mj-image
           fluid-on-mobile="true"
           src="https://files.catbox.moe/tjb629.jpg"
-          alt="controller grip caps for ns2-seal"
+          alt="Cutie Seal Squad"
           href="https://playvital.com/products/playvital-4-pcs-cute-thumb-grip-caps-for-nintendo-switch-2-cutie-seal-squad"
         />
         <mj-image
           fluid-on-mobile="true"
           src="https://files.catbox.moe/q2qxws.jpg"
           href="https://playvital.com/products/playvital-4-pcs-cute-thumb-grip-caps-for-nintendo-switch-2-cutie-penguin"
-          alt="controller grip caps for ns2-penguin"
+          alt="Cutie Penguin"
         />
       </mj-column>
     </mj-section>
