@@ -13,7 +13,7 @@
         },
         {
           "name": "collabDetails",
-          "text": "<p>Hi [[SCRIPT=ToFirstOrLastname]],</p>\n<p>\n  Thanks for getting back to us. We're excited about the possibility of\n  partnering with you on **[[INPUT=平台|select|YouTube;Instagram;TikTok]]**\n  showcasing some of our awesome accessories. We propose the following:\n</p>\n<div>## Deliverables</div>\n<p>\n  **[[INPUT=产出数量]]*[[SCRIPT=ContentType|output]]** on **[[INPUT=平台]]**\n  showcasing PlayVital products (featuring key benefits, functionality, and\n  personal experience with them).\n</p>\n[[SCRIPT=videoLength]]\n<div>## Timeline</div>\n<p class=\"lst\">\n  Approximately **[[INPUT=产出时间]]** after receiving the products.<br />\n</p>\n<div>## Affiliate Program</div>\n<p>\n  To make this partnership more rewarding. We'd like to invite you to join our\n  [affiliate program](https://af.uppromote.com/playvital/register?p=175715) !\n  This means your followers will not only discover awesome products through your\n  reviews, but they'll also get a special **10%** discount using your unique\n  coupon code. Plus, you'll earn a **15%** commission on every sale generated\n  through your referrals!\n</p>\n<div>## Budget</div>\n<p>We are offering **[[INPUT=价格]]** commission for this collaboration.</p>\n<div>## Payment</div>\n<p>We will process the payment via PayPal upon reviewing the demo video.</p>\n\n<div>## Shipping</div>\n<p>\n  We are shipping internationally, We will ship the sample cases directly to\n  your address. The estimate time depends on the address.\n</p>\n<div>## Sample Request</div>\n<p>\n  You can apply the samples by filling out this [delivery\n  form](https://tally.so/r/mepkZx). We will arrange the shipping for you asap.\n</p>\n<p>\n  ---<br />\n  Let us know if there is any question or concern. Look forward to hearing from\n  you.\n</p>\n<p>Thanks,</p>",
+          "text": "<p>Hi [[SCRIPT=ToFirstOrLastname]],</p>\n<p>\n  Thanks for getting back to us. We're excited about the possibility of\n  partnering with you on **[[INPUT=平台|select|YouTube;Instagram;TikTok]]**\n  showcasing some of our awesome accessories. We propose the following:\n</p>\n<div>## Deliverables</div>\n<p>\n  **[[INPUT=产出数量]]*[[SCRIPT=contentType|output]]** on **[[INPUT=平台]]**\n  showcasing PlayVital products (featuring key benefits, functionality, and\n  personal experience with them).\n</p>\n[[SCRIPT=videoLength]]\n<div>## Timeline</div>\n<p class=\"lst\">\n  Approximately **[[INPUT=产出时间]]** after receiving the products.<br />\n</p>\n<div>## Affiliate Program</div>\n<p>\n  To make this partnership more rewarding. We'd like to invite you to join our\n  [affiliate program](https://af.uppromote.com/playvital/register?p=175715) !\n  This means your followers will not only discover awesome products through your\n  reviews, but they'll also get a special **10%** discount using your unique\n  coupon code. Plus, you'll earn a **15%** commission on every sale generated\n  through your referrals!\n</p>\n<div>## Budget</div>\n<p>We are offering **[[INPUT=价格]]** commission for this collaboration.</p>\n<div>## Payment</div>\n<p>We will process the payment via PayPal upon reviewing the demo video.</p>\n\n<div>## Shipping</div>\n<p>\n  We are shipping internationally, We will ship the sample cases directly to\n  your address. The estimate time depends on the address.\n</p>\n<div>## Sample Request</div>\n<p>\n  You can apply the samples by filling out this [delivery\n  form](https://tally.so/r/mepkZx). We will arrange the shipping for you asap.\n</p>\n<p>\n  ---<br />\n  Let us know if there is any question or concern. Look forward to hearing from\n  you.\n</p>\n<p>Thanks,</p>",
           "shortcut": "2",
           "type": "text/html",
           "keyword": "",
@@ -62,6 +62,15 @@
           "shortcut": "",
           "type": "text/html",
           "keyword": "form",
+          "subject": "",
+          "attachments": ""
+        },
+        {
+          "name": "brazil",
+          "text": "<p>Hi friend, thank you for reaching out and for your interest in working with us. Unfortunately, we are unable to provide products for you due to the strict customs policy in Brazil.</p>\n\n<p>Thank you for understanding!</p>",
+          "shortcut": "6",
+          "type": "text/html",
+          "keyword": "",
           "subject": "",
           "attachments": ""
         }
