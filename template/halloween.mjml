@@ -5,7 +5,6 @@
         background-url="https://litter.catbox.moe/kwla6we5d67dm6oi.png"
         padding="50px 20px"
         full-width="full-width"
-        padding-bottom="10px"
       />
       <mj-column
         padding="0.1px"
