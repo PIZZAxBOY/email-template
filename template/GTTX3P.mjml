@@ -63,7 +63,6 @@
         </mj-style>
     </mj-head>
 
-    </mj-head>
     <mj-body background-color="rgb(244, 247, 247)">
         <!--header-->
         <mj-section padding-bottom="0">

@@ -1,0 +1,106 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-section
+        background-url="https://litter.catbox.moe/kwla6we5d67dm6oi.png"
+        padding="50px 20px"
+        full-width="full-width"
+        padding-bottom="10px"
+      />
+      <mj-column
+        padding="0.1px"
+        border-radius="8px"
+        inner-border-radius="8px"
+      />
+      <mj-all
+        font-family="'Geist','Microsoft Yahei', 'PingFang SC', sans-serif"
+      />
+    </mj-attributes>
+    <mj-preview>
+      Halloweeen collaboration invitation with PlayVital
+      ********************************************************************************************************************
+    </mj-preview>
+    <mj-style inline="inline">
+      a {
+        text-decoration: none;
+        text-decoration-line: none;
+        color: black;
+      }
+      table {
+        border-collapse: separate !important;
+      }
+
+      h2 {
+        color: #f36944;
+      }
+      p {
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      span {
+        font-size: 15px;
+        line-height: 1.5;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#063665">
+    <mj-section>
+      <mj-column
+        background-color="#E6EAEF"
+        inner-border-bottom="4px solid #C3C6D1"
+      >
+        <mj-text
+          ><h2 align="center">No tricks. All treats.</h2>
+          <p>Hello again!</p>
+          <p>
+            Our team at PlayVital has been hard at work preparing all different
+            Halloween products for you to try out. If there is anything that
+            interest you. Please feel free to reach out to us. There is a treat
+            waiting for you🍬
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column
+        background-color="#f36944"
+        inner-border-bottom="4px solid#c25436"
+      >
+        <mj-text>
+          <img
+            align="left"
+            src="https://litter.catbox.moe/4wcl4gazwojdsyg8.png"
+          />
+          <span style="float: right"
+            ><a
+              target="_blank"
+              href="https://www.playvital.com/products/playvital-zealprotect-soft-protective-case-for-nintendo-switch-flexible-cover-for-switch-with-tempered-glass-screen-protector-thumb-grips-abxy-direction-button-caps-candy-rainbow-unicorn-rnsyv6020"
+              >Triplets Pumpkin Cats →</a
+            ></span
+          >
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column
+        background-color="#E599F7"
+        inner-border-bottom="4px solid #9C36B5"
+      >
+        <mj-text>
+          <img
+            align="left"
+            src="https://litter.catbox.moe/0eybnnnw9pkhr6gp.png"
+          />
+          <span style="float: right"
+            ><a
+              target="_blank"
+              href="https://www.playvital.com/collections/for-xbox-series-x-s-gothic-imp-series-cute-controller-cover"
+              >Gothic Imp Series →</a
+            ></span
+          >
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
