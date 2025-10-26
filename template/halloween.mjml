@@ -2,15 +2,12 @@
   <mj-head>
     <mj-attributes>
       <mj-section
-        background-url="https://litter.catbox.moe/kwla6we5d67dm6oi.png"
-        padding="50px 20px"
+        background-url="https://files.catbox.moe/c4a1l3.png"
+        background-size="200px"
         full-width="full-width"
+        padding="40px 20px"
       />
-      <mj-column
-        padding="0.1px"
-        border-radius="8px"
-        inner-border-radius="8px"
-      />
+      <mj-column padding="0px" border-radius="8px" inner-border-radius="8px" />
       <mj-all
         font-family="'Geist','Microsoft Yahei', 'PingFang SC', sans-serif"
       />
@@ -23,7 +20,8 @@
       a {
         text-decoration: none;
         text-decoration-line: none;
-        color: black;
+        color: darkblue;
+        font-weight: 800;
       }
       table {
         border-collapse: separate !important;
@@ -65,19 +63,31 @@
       <mj-column
         background-color="#f36944"
         inner-border-bottom="4px solid#c25436"
+        padding-top="10px"
       >
         <mj-text>
           <img
-            align="left"
-            src="https://litter.catbox.moe/4wcl4gazwojdsyg8.png"
+            src="https://files.catbox.moe/qd2e06.png"
+            style="vertical-align: middle; width: 30px"
           />
-          <span style="float: right"
-            ><a
+          <span style="float: right; line-height: 2">
+            <a
               target="_blank"
               href="https://www.playvital.com/products/playvital-zealprotect-soft-protective-case-for-nintendo-switch-flexible-cover-for-switch-with-tempered-glass-screen-protector-thumb-grips-abxy-direction-button-caps-candy-rainbow-unicorn-rnsyv6020"
-              >Triplets Pumpkin Cats →</a
-            ></span
-          >
+            >
+              Triplets Pumpkin Cats →
+            </a>
+          </span>
+        </mj-text>
+        <mj-text>
+          <p>
+            Folks, the Font Awesome Pro+ subscription just got even more useful.
+            As promised, we're continuing to add new packs on a regular basis,
+            and our newest Pro+ icon pack is ready to work. With a
+            Bauhaus-inspired blend of sharp corners and smooth curves, the
+            Utility Icon Pack fits seamlessly into any project and gets the job
+            done.
+          </p>
         </mj-text>
       </mj-column>
     </mj-section>
@@ -85,19 +95,31 @@
       <mj-column
         background-color="#E599F7"
         inner-border-bottom="4px solid #9C36B5"
+        padding-top="10px"
       >
         <mj-text>
           <img
             align="left"
-            src="https://litter.catbox.moe/0eybnnnw9pkhr6gp.png"
+            src="https://files.catbox.moe/v956dv.png"
+            style="vertical-align: middle; width: 30px"
           />
-          <span style="float: right"
+          <span style="float: right; line-height: 2"
             ><a
               target="_blank"
               href="https://www.playvital.com/collections/for-xbox-series-x-s-gothic-imp-series-cute-controller-cover"
               >Gothic Imp Series →</a
             ></span
           >
+        </mj-text>
+        <mj-text>
+          <p>
+            Folks, the Font Awesome Pro+ subscription just got even more useful.
+            As promised, we're continuing to add new packs on a regular basis,
+            and our newest Pro+ icon pack is ready to work. With a
+            Bauhaus-inspired blend of sharp corners and smooth curves, the
+            Utility Icon Pack fits seamlessly into any project and gets the job
+            done.
+          </p>
         </mj-text>
       </mj-column>
     </mj-section>
