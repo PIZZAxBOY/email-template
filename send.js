@@ -38,8 +38,8 @@ rl.question("\n请选择模版邮件: ", (emailIndex) => {
 
   if (
     isNaN(selectedEmailIndex) ||
-      selectedEmailIndex < 0 ||
-      selectedEmailIndex >= config.emails.length
+    selectedEmailIndex < 0 ||
+    selectedEmailIndex >= config.emails.length
   ) {
     console.log("无效的邮箱账号编号，请重新运行脚本！");
     rl.close();
@@ -78,9 +78,9 @@ rl.question("\n请选择模版邮件: ", (emailIndex) => {
     "请输入收件人邮箱地址（多个邮箱用逗号分隔）: ",
     (recipientsInput) => {
       const recipients = recipientsInput
-      .split(",")
-      .map((email) => email.trim())
-      .filter((email) => /\S+@\S+\.\S+/.test(email));
+        .split(",")
+        .map((email) => email.trim())
+        .filter((email) => /\S+@\S+\.\S+/.test(email));
 
       if (recipients.length === 0) {
         console.log("请输入至少一个有效的邮箱地址！");
