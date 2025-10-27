@@ -1,19 +1,19 @@
 <mjml>
   <mj-head>
     <mj-attributes>
-      <mj-section
+      <mj-body background-color="#063665" />
+      <mj-section padding="10px 30px" />
+      <mj-column padding="0px" border-radius="8px" inner-border-radius="8px" />
+      <mj-wrapper
+        full-width="full-width"
         background-url="https://files.catbox.moe/c4a1l3.png"
         background-size="200px"
-        full-width="full-width"
-        padding="40px 20px"
       />
-      <mj-column padding="0px" border-radius="8px" inner-border-radius="8px" />
       <mj-all
-        font-family="'Geist','Microsoft Yahei', 'PingFang SC', sans-serif"
+        font-family="Geist,'Microsoft Yahei', 'PingFang SC', sans-serif"
       />
     </mj-attributes>
     <mj-preview>
-      Halloweeen collaboration invitation with PlayVital
       ********************************************************************************************************************
     </mj-preview>
     <mj-style inline="inline">
@@ -23,6 +23,7 @@
         color: darkblue;
         font-weight: 800;
       }
+
       table {
         border-collapse: separate !important;
       }
@@ -30,8 +31,9 @@
       h2 {
         color: #f36944;
       }
+
+      li,
       p {
-        font-size: 15px;
         line-height: 1.5;
       }
 
@@ -41,86 +43,149 @@
       }
     </mj-style>
   </mj-head>
-  <mj-body background-color="#063665">
-    <mj-section>
-      <mj-column
-        background-color="#E6EAEF"
-        inner-border-bottom="4px solid #C3C6D1"
-      >
-        <mj-text
-          ><h2 align="center">No tricks. All treats.</h2>
-          <p>Hello again!</p>
-          <p>
-            Our team at PlayVital has been hard at work preparing all different
-            Halloween products for you to try out. If there is anything that
-            interest you. Please feel free to reach out to us. There is a treat
-            waiting for you🍬
-          </p>
-        </mj-text>
-      </mj-column>
-    </mj-section>
-    <mj-section>
-      <mj-column
-        background-color="#f36944"
-        inner-border-bottom="4px solid#c25436"
-        padding-top="10px"
-      >
-        <mj-text>
-          <img
-            src="https://files.catbox.moe/qd2e06.png"
-            style="vertical-align: middle; width: 30px"
-          />
-          <span style="float: right; line-height: 2">
-            <a
-              target="_blank"
-              href="https://www.playvital.com/products/playvital-zealprotect-soft-protective-case-for-nintendo-switch-flexible-cover-for-switch-with-tempered-glass-screen-protector-thumb-grips-abxy-direction-button-caps-candy-rainbow-unicorn-rnsyv6020"
+  <mj-body>
+    <mj-wrapper>
+      <mj-section>
+        <mj-column
+          background-color="#E6EAEF"
+          inner-border-bottom="4px solid #C3C6D1"
+        >
+          <mj-text
+            ><h2 align="center">No tricks. All treats.</h2>
+            <p>Hello again!</p>
+            <p>
+              Our team at PlayVital has been hard at work brewing up some
+              fantastic Halloween goodies just for you!
+            </p>
+            <p>
+              Interested in partnering for Halloween? We'd love to work with
+              you!
+            </p>
+            <ol>
+              <li>Check out our Halloween Collection below</li>
+              <li>Choose your favorate products and copy the URL</li>
+              <li>
+                Fill out the
+                <a href="https://tally.so/r/n0OyxA">delivery form</a>
+              </li>
+              <li>
+                <a href="mailto:sns@playvital.com">Contact us</a> to explore
+                more partnership possibilities!
+              </li>
+            </ol>
+            <p>A special <strong>treat</strong> is waiting for you 🍬</p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column
+          background-color="#f36944"
+          inner-border-bottom="4px solid#c25436"
+        >
+          <mj-text>
+            <img
+              src="https://files.catbox.moe/qd2e06.png"
+              style="vertical-align: middle; width: 30px"
+            />
+            <span style="float: right; line-height: 2">
+              <a
+                target="_blank"
+                href="https://www.playvital.com/products/playvital-zealprotect-soft-protective-case-for-nintendo-switch-flexible-cover-for-switch-with-tempered-glass-screen-protector-thumb-grips-abxy-direction-button-caps-candy-rainbow-unicorn-rnsyv6020"
+              >
+                Switch Triplets Pumpkin Cats →
+              </a>
+            </span>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column
+          background-color="#E599F7"
+          inner-border-bottom="4px solid #9C36B5"
+        >
+          <mj-text>
+            <img
+              align="left"
+              src="https://files.catbox.moe/v956dv.png"
+              style="vertical-align: middle; width: 30px"
+            />
+            <span style="float: right; line-height: 2"
+              ><a
+                target="_blank"
+                href="https://www.playvital.com/collections/for-xbox-series-x-s-gothic-imp-series-cute-controller-cover"
+                >Xbox Gothic Imp Series →</a
+              ></span
             >
-              Triplets Pumpkin Cats →
-            </a>
-          </span>
-        </mj-text>
-        <mj-text>
-          <p>
-            Folks, the Font Awesome Pro+ subscription just got even more useful.
-            As promised, we're continuing to add new packs on a regular basis,
-            and our newest Pro+ icon pack is ready to work. With a
-            Bauhaus-inspired blend of sharp corners and smooth curves, the
-            Utility Icon Pack fits seamlessly into any project and gets the job
-            done.
-          </p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column
+          background-color="#C6E2FF"
+          inner-border-bottom="4px solid #98cbff"
+        >
+          <mj-text>
+            <img
+              align="left"
+              src="https://files.catbox.moe/csvwwp.png"
+              style="vertical-align: middle; width: 30px"
+            />
+            <span style="float: right; line-height: 2"
+              ><a
+                target="_blank"
+                href="https://www.playvital.com/collections/for-steam-deck-cute-demon-protective-case"
+                >Steam Deck Cute Demon Series →</a
+              ></span
+            >
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+    <mj-section padding="0">
+      <mj-column>
+        <mj-text
+          color="#fff"
+          font-size="13px"
+          font-family="Geist, sans-serif"
+          align="center"
+          padding-top="30px"
+        >
+          PlayVital aims to produce premium and well-designed video game
+          accessories for gamers to change their gaming life.
         </mj-text>
       </mj-column>
     </mj-section>
-    <mj-section>
-      <mj-column
-        background-color="#E599F7"
-        inner-border-bottom="4px solid #9C36B5"
-        padding-top="10px"
-      >
-        <mj-text>
-          <img
-            align="left"
-            src="https://files.catbox.moe/v956dv.png"
-            style="vertical-align: middle; width: 30px"
-          />
-          <span style="float: right; line-height: 2"
-            ><a
-              target="_blank"
-              href="https://www.playvital.com/collections/for-xbox-series-x-s-gothic-imp-series-cute-controller-cover"
-              >Gothic Imp Series →</a
-            ></span
+    <mj-section padding="0">
+      <mj-column>
+        <mj-social icon-size="20px" inner-padding="20px">
+          <!--youtube-->
+          <mj-social-element
+            src="https://cdn.shopify.com/shopify-email/i2ojtawkiy29kyapy4tlp8jz84cn.svg?width=60&height=60&format=png"
+            href="https://www.youtube.com/@PlayVitalGaming"
           >
-        </mj-text>
-        <mj-text>
-          <p>
-            Folks, the Font Awesome Pro+ subscription just got even more useful.
-            As promised, we're continuing to add new packs on a regular basis,
-            and our newest Pro+ icon pack is ready to work. With a
-            Bauhaus-inspired blend of sharp corners and smooth curves, the
-            Utility Icon Pack fits seamlessly into any project and gets the job
-            done.
-          </p>
-        </mj-text>
+          </mj-social-element>
+
+          <!--TikTok-->
+          <mj-social-element
+            src="https://cdn.shopify.com/shopify-email/lfirqxpri6fh9kgs4nct1owssbkz.svg?width=60&height=60&format=png"
+            href="https://www.tiktok.com/@playvitalgaming"
+          >
+          </mj-social-element>
+
+          <!--instagram-->
+          <mj-social-element
+            src="https://cdn.shopify.com/shopify-email/v36ptd62x37dmtlv8sdvafha79sm.svg?width=60&height=60&format=png"
+            href="https://www.instagram.com/playvitalgaming/"
+          >
+          </mj-social-element>
+
+          <!--twitter-->
+          <mj-social-element
+            src="https://cdn.shopify.com/shopify-email/zcbt8hl9okbbamivpfr99j3u0duv.svg?width=60&height=60&format=png"
+            href="https://x.com/PlayVitalGaming"
+          >
+          </mj-social-element>
+        </mj-social>
       </mj-column>
     </mj-section>
   </mj-body>
