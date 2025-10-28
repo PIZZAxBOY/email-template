@@ -1,4 +1,4 @@
-# email
+# template-sender
 
 To install dependencies:
 
