@@ -1,23 +1,24 @@
 {
   "name": "email",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
   "author": "",
-  "license": "ISC",
+  "main": "send.js",
   "dependencies": {
     "html-to-text": "^9.0.5",
     "nodemailer": "^7.0.10",
     "progress": "^2.0.3"
   },
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
   "pkg": {
     "assets": [
       "./config.json",
       "template/*.html"
     ]
+  },
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
