@@ -21,11 +21,11 @@ async function main() {
   // 选择模板
   const templateChoices = config.emails.map((email, index) => ({
     value: index,
-    label: `${email.template} (${email.name})`,
+    label: `${email.name} ${colors.cyan(email.auth.user)}`,
   }));
 
   const selectedEmailIndex = await p.select({
-    message: "Choose the template",
+    message: "Choose a template",
     options: templateChoices,
   });
 
