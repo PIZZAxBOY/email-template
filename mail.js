@@ -138,12 +138,15 @@ async function main() {
   );
 
   if (failed > 0) {
-    p.log.error(
-      `${failures.map((f) => `• ${colors.red(f.recipient)}`).join("\n")}`,
+    p.log.warning(
+      `${colors.bgYellow(colors.black("Failed recipients"))}: ${failures.map((f) => `${f.recipient}`).join(",")}`,
     );
   } else {
-    p.log.success(`All done! ${completed} emails sent successfully.`);
+    p.log.success(
+      `${colors.green("All done!")} ${completed} emails sent successfully.`,
+    );
   }
+  p.outro("End...");
 }
 
 // 运行主函数
