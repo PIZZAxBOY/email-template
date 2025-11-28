@@ -4,7 +4,31 @@ import { convert } from "html-to-text";
 import * as p from "@clack/prompts";
 import colors from "picocolors";
 
+// 获取终端尺寸
+function getTerminalSize() {
+  return {
+    rows: 1,
+    cols: process.stdout.cols || 80,
+  };
+}
+
+// 在终端右下角显示状态信息
+function displayStatus(message) {
+  const { rows, cols } = getTerminalSize();
+  // 保存当前光标位置
+  process.stderr.write("\x1b[s");
+  // 移动到右下角（行数-1，列数-消息长度）
+  const row = rows;
+  const col = Math.max(1, cols - message.length);
+  process.stderr.write(`\x1b[${row};${col}H`);
+  process.stderr.write(`󰀆 : ${colors.italic(colors.yellow(message))}`);
+  // 恢复光标位置
+  process.stderr.write("\x1b[u");
+}
+
 async function main() {
+  // 清空终端
+  process.stdout.write("\x1b[2J\x1b[0;0H");
   p.intro("📧 Mailer");
 
   // 读取配置文件
@@ -35,6 +59,8 @@ async function main() {
   }
 
   const selectedEmail = config.emails[selectedEmailIndex];
+
+  displayStatus(`${selectedEmail.auth.user}`);
 
   // 创建邮件发送器
   let transporter = createTransport(selectedEmail);
@@ -149,7 +175,6 @@ async function main() {
   p.outro("End...");
 }
 
-// 运行主函数
 main().catch((error) => {
   p.cancel("Error: " + error.message);
   process.exit(1);
