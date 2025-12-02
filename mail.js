@@ -150,7 +150,7 @@ async function main() {
 
   // 完成后显示总结
   s.stop(
-    `${selectedEmail.template} | ${colors.green("\uebb3")}: ${completed}, ${colors.red("\ue654")}: ${failed}`,
+    `${selectedEmail.template} | ${colors.green("\uebb3")}  ${completed} ${colors.red("\ue654")}  ${failed}`,
   );
 
   if (failed > 0) {
