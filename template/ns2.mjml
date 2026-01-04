@@ -97,7 +97,7 @@
             <strong style="color: maroon"
               >samples + a collaboration opportunity</strong
             >
-            to showcase your honest review! 
+            to showcase your honest review!
           </p>
           <p>
             Whether it’s a unboxing, a durability test, or a style guide, let’s
@@ -167,10 +167,10 @@
       </mj-column>
       <mj-column width="40%">
         <mj-image
-            fluid-on-mobile="true"
-            src="https://files.catbox.moe/brzpom.jpg"
-            alt="PlayVital Solid Color Series Hard Shell Protective Case with Foldable Stand"
-            href="https://www.playvital.com/collections/for-nintendo-switch-2-solid-color-series-hard-case"
+          fluid-on-mobile="true"
+          src="https://files.catbox.moe/brzpom.jpg"
+          alt="PlayVital Solid Color Series Hard Shell Protective Case with Foldable Stand"
+          href="https://www.playvital.com/collections/for-nintendo-switch-2-solid-color-series-hard-case"
         />
         <mj-image
           fluid-on-mobile="true"
