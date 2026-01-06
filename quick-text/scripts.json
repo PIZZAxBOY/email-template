@@ -14,6 +14,12 @@
       "name": "videoLength",
       "script": "let platform = await this.quicktext.getTag(\"input\", \"平台\");\nlet type = output;\n\nconsole.log(type);\n\nlet message = `\n  <div>## Video Length</div>\n  <p>We're flexible, but ideally **[[INPUT=视频时长(分钟)]] min**. This allows enough time for an engaging and\n  informative review without being too lengthy for your viewers. <br>\n  </p>\n`;\n\ntype = type.toLowerCase();\nplatform = platform.toLowerCase();\n\nswitch (platform) {\n  case \"youtube\":\n    return message;\n  case \"instagram\":\n    if (type === \"reel\") {\n      return message;\n    }\n    return \"\"; // 如果不是 Reels，则返回空字符串\n  default:\n    return message;\n}",
       "protected": false
+    },
+    {
+      "name": "signature",
+      "script": "return `\n\nbest,\nPlayVital`",
+      "protected": false
     }
   ]
 }
+

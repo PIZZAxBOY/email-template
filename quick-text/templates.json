@@ -1,5 +1,11 @@
 {
   "templates": {
+    "groups": [
+      {
+        "name": "casual",
+        "protected": false
+      }
+    ],
     "texts": [
       [
         {
@@ -31,57 +37,41 @@
         },
         {
           "name": "interested",
-          "text": "<p>Hi [[SCRIPT=ToFirstOrLastname]],</p>\n\n<p>\n  Thank you for reaching out. We would absolutely love to work with you! 🤗 We\n  are primarily interested in promoting our newest arrivals.\n</p>\n<p>## To Get Start...</p>\n\n<div>\n  1. Head to our [official\n  store](https://playvital.com/collections/new-products)\n</div>\n<div>2. Choose your favorite products and copy the URL</div>\n<div>3. Fill out the [Delivery Form](https://tally.so/r/n0OyxA)</div>\n<div>4. The products will be shipped soon!</div>\n\n<p>## One more thing:</p>\n\n<p>\n  To make this partnership even more rewarding, we'd like to invite you to join\n  our [affiliate program](https://af.uppromote.com/playvital/register?p=175715)!\n  This means your followers will not only discover awesome products through your\n  reviews, but they'll also get a special **10%** discount using your unique\n  coupon code. Plus, you'll earn a **15%** commission on every sale generated\n  through your referrals!\n</p>\n\n<p>Let us know if there is any question or concern!</p>\n\n<p>Wishing you all the best☺  </p>",
+          "text": "Hi [[SCRIPT=ToFirstOrLastname]],\n\nThank you for reaching out. We would absolutely love to work with you! 🤗 We are primarily interested in promoting our newest arrivals.\n\n## To Get Start...\n\n1. Head to our [official store](https://playvital.com/collections/new-products)\n2. Choose your favorite products and copy the URL\n3. Fill out the [Delivery Form](https://tally.so/r/n0OyxA)\n4. The products will be shipped soon!\n\n## One more thing:\n\nTo make this partnership even more rewarding, we'd like to invite you to join our [affiliate program](https://af.uppromote.com/playvital/register?p=175715)!\nThis means your followers will not only discover awesome products through your reviews, but they'll also get a special **10%** discount using your unique coupon code. Plus, you'll earn a **15%** commission on every sale generated through your referrals!\n\nLet us know if there is any question or concern!\n\nWishing you all the best☺  ",
           "shortcut": "4",
-          "type": "text/html",
+          "type": "text/plain",
           "keyword": "yes",
           "subject": "",
           "attachments": ""
         },
         {
           "name": "not interested",
-          "text": "<p>Hi! [[SCRIPT=ToFirstOrLastname]]</p>\n<p>\n  Thank you for your support! Unfortunately, we can't provide products at this\n  time due to specific requirements for influencers. You can join our [Affiliate\n  Program](https://af.uppromote.com/playvital/register) for a 10% commission on\n  every order with a unique code for your followers. Thank you for your interest\n  and support! We hope to collaborate in the future.\n</p>\n<p>Best,</p>",
+          "text": "Hi! [[SCRIPT=ToFirstOrLastname]]\n\nThank you for your support! Unfortunately, we can't provide products at this time due to specific requirements for influencers. You can join our [Affiliate Program](https://af.uppromote.com/playvital/register) for a 10% commission on every order with a unique code for your followers. Thank you for your interest and support! We hope to collaborate in the future. [[SCRIPT=signature]]",
           "shortcut": "5",
-          "type": "text/html",
+          "type": "text/plain",
           "keyword": "no",
           "subject": "",
           "attachments": ""
         },
         {
-          "name": "address",
-          "text": "<address>\n  Name: <br />\n  Country: <br />\n  State or Province:<br />\n  City:<br />\n  Detailed address:<br />\n  ZIP code: <br />\n  Phone number: <br />\n  Email address:<br />\n</address>\n<p>[[CURSOR]]</p>\n",
-          "shortcut": "",
-          "type": "text/html",
-          "keyword": "address",
-          "subject": "",
-          "attachments": ""
-        },
-        {
-          "name": "form",
-          "text": "[Delivery Info Form]([[CURSOR]])",
-          "shortcut": "",
-          "type": "text/html",
-          "keyword": "form",
-          "subject": "",
-          "attachments": ""
-        },
-        {
           "name": "brazil",
-          "text": "<p>Hi friend, thank you for reaching out and for your interest in working with us. Unfortunately, we are unable to provide products for you due to the strict customs policy in Brazil.</p>\n\n<p>Thank you for understanding!</p>",
+          "text": "Hi friend,\n\nThank you for reaching out and for your interest in working with us. Unfortunately, we are unable to provide products for you due to the strict customs policy in Brazil.\n\nThank you for understanding![[SCRIPT=signature]]",
           "shortcut": "6",
+          "type": "text/plain",
+          "keyword": "",
+          "subject": "",
+          "attachments": ""
+        },
+        {
+          "name": "social links",
+          "text": "<p>Hi [[SCRIPT=ToFirstOrLastname]]</p><p>Could you send over links to your social platforms? We will review them and get back to you asap.</p><p>best,</p>",
+          "shortcut": "7",
           "type": "text/html",
           "keyword": "",
           "subject": "",
           "attachments": ""
         }
       ]
-    ],
-    "groups": [
-      {
-        "name": "casual",
-        "protected": false
-      }
     ]
   }
 }
-
