@@ -46,7 +46,7 @@
         },
         {
           "name": "not interested",
-          "text": "Hi! [[SCRIPT=ToFirstOrLastname]]\n\nThank you for your support! Unfortunately, we can't provide products at this time due to specific requirements for influencers. You can join our [Affiliate Program](https://af.uppromote.com/playvital/register) for a 10% commission on every order with a unique code for your followers. Thank you for your interest and support! We hope to collaborate in the future. [[SCRIPT=signature]]",
+          "text": "Hi! [[SCRIPT=ToFirstOrLastname]]\n\nThank you for your support! Unfortunately, we can't provide products at this time due to specific requirements for influencers. You can join our [Affiliate Program](https://af.uppromote.com/playvital/register) for a 10% commission on every order with a unique code for your followers. Thank you for your interest and support! We hope to collaborate in the future. \n\nBest,",
           "shortcut": "5",
           "type": "text/plain",
           "keyword": "no",
