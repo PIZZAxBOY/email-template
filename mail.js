@@ -1,8 +1,8 @@
 import { createTransport } from "nodemailer";
-import { readFileSync } from "fs";
 import { convert } from "html-to-text";
 import * as p from "@clack/prompts";
 import colors from "picocolors";
+import config from "./config.json";
 
 // 在终端右下角显示状态信息
 function displayStatus(message) {
@@ -19,17 +19,15 @@ function displayStatus(message) {
 async function main() {
   // 清空终端
   process.stdout.write("\x1b[2J\x1b[0;0H");
-  p.intro("📧 Mailer");
+
+  p.box("📧 a simple template batch sending script", "Mailer", {
+    rounded: true,
+  });
+
   p.note(`${colors.dim("↑↓/jk Navigate")}`, "Instructions");
-  // 读取配置文件
-  const configPath = "./config.json";
-  let config;
-  try {
-    const configContent = readFileSync(configPath, "utf8");
-    config = JSON.parse(configContent);
-  } catch (error) {
-    p.cancel("Can't read config.json: " + error.message);
-    process.exit(1);
+
+  if (config.length === 0) {
+    throw new Error(`未找到任何配置！请重新在此目录下创建配置文件`);
   }
 
   // 选择模板
@@ -56,51 +54,37 @@ async function main() {
   let transporter = createTransport(selectedEmail);
 
   // 读取模板文件
-  const templatePath = `./template/${selectedEmail.template}`;
+  const templatePath = `template/${selectedEmail.template}`;
+
   if (!templatePath || typeof templatePath !== "string") {
     p.cancel("配置文件中未指定有效的模板路径！");
     process.exit(1);
   }
 
-  let htmlContent;
-  try {
-    htmlContent = readFileSync(templatePath, "utf8");
-  } catch (error) {
-    p.cancel("无法读取模板文件: " + error.message);
-    process.exit(1);
+  const html = Bun.file(templatePath);
+  const exists = await html.exists();
+  if (!exists) {
+    throw new Error(`文件不存在`);
   }
+
+  const htmlContent = await html.text();
 
   // 将 HTML 转换为纯文本
   const textContent = convert(htmlContent, {
     wordwrap: 130,
   });
 
-  // 输入收件人邮箱地址
-  const recipientsInput = await p.text({
-    message: "Input recipients email adresses here. (use comma to separate)",
-    placeholder: "example@email.com, test@email.com",
-    validate: (value) => {
-      if (!value) return "请输入至少一个邮箱地址";
-      const recipients = value
-        .split(",")
-        .map((email) => email.trim())
-        .filter((email) => /\S+@\S+\.\S+/.test(email));
-      if (recipients.length === 0) return "请输入有效的邮箱地址";
-      return;
-    },
+  const choice = await p.confirm({
+    message: "是否通过文件导入待发送收件人(当前目录下的 sendbox.txt)",
   });
 
-  if (p.isCancel(recipientsInput)) {
+  if (p.isCancel(choice)) {
     p.cancel("canceled");
     process.exit(0);
   }
 
-  const recipients = recipientsInput
-    .split(",")
-    .map((email) => email.trim())
-    .filter((email) => /\S+@\S+\.\S+/.test(email));
+  const recipients = await getReceipients(choice);
 
-  // 创建进度条
   const s = p.spinner();
   s.start(
     `Using ${selectedEmail.template}, ${recipients.length} receipients in total`,
@@ -128,7 +112,6 @@ async function main() {
     };
 
     try {
-      // 使用 Promise 包装 sendMail
       await new Promise((resolve, reject) => {
         transporter.sendMail(mailOptions, (error, info) => {
           if (error) reject(error);
@@ -155,7 +138,7 @@ async function main() {
 
   if (failed > 0) {
     p.log.warning(
-      `${colors.bgYellow(colors.black("Failed recipients"))}: ${failures.map((f) => `${f.recipient}`).join(",")}`,
+      `${colors.yellowBright("Failed recipients")}: ${failures.map((f) => `${f.recipient}`).join(",")}`,
     );
   } else {
     p.log.success(
@@ -166,6 +149,46 @@ async function main() {
 }
 
 main().catch((error) => {
-  p.cancel("Error: " + error.message);
+  p.log.error(colors.redBright(error.message));
   process.exit(1);
 });
+
+// 让用户选择如何 输入收件人邮箱
+async function getReceipients(choice) {
+  if (choice) {
+    const sendbox = Bun.file("./sendbox.txt");
+    const text = await sendbox.text();
+    const receipients = text
+      .split("\n")
+      .map((email) => email.trim())
+      .filter((email) => /\S+@\S+\.\S+/.test(email));
+    return receipients;
+  } else {
+    // 输入收件人邮箱地址
+    const recipientsInput = await p.text({
+      message: "Input recipients email adresses here. (use comma to separate)",
+      placeholder: "example@email.com, test@email.com",
+      validate: (value) => {
+        if (!value) return "请输入至少一个邮箱地址";
+        const recipients = value
+          .split(",")
+          .map((email) => email.trim())
+          .filter((email) => /\S+@\S+\.\S+/.test(email));
+        if (recipients.length === 0) return "请输入有效的邮箱地址";
+        return;
+      },
+    });
+
+    if (p.isCancel(recipientsInput)) {
+      p.cancel("canceled");
+      process.exit(0);
+    }
+
+    const recipient = recipientsInput
+      .split(",")
+      .map((email) => email.trim())
+      .filter((email) => /\S+@\S+\.\S+/.test(email));
+
+    return recipient;
+  }
+}
