@@ -4,14 +4,13 @@ import * as p from "@clack/prompts";
 import colors from "picocolors";
 import config from "./config.json";
 
-// 在终端右下角显示状态信息
 function displayStatus(message) {
   const row = 1;
   const col = Math.max(1, process.stdout.columns - message.length - 5);
   // 保存当前光标位置
   process.stderr.write("\x1b[s");
   process.stderr.write(`\x1b[${row};${col}H`);
-  process.stderr.write(`󰀆 : ${colors.italic(colors.yellow(message))}`);
+  process.stderr.write(` :${colors.italic(colors.yellow(message))}`);
   // 恢复光标位置
   process.stderr.write("\x1b[u");
 }
@@ -20,11 +19,11 @@ async function main() {
   // 清空终端
   process.stdout.write("\x1b[2J\x1b[0;0H");
 
-  p.box("📧 a simple template batch sending script", "Mailer", {
+  p.box("📧 一个简单的 MJML 邮件发送脚本", "Mailer", {
     rounded: true,
   });
 
-  p.note(`${colors.dim("↑↓/jk Navigate")}`, "Instructions");
+  p.note(`${colors.dim("↑↓/jk 切换选项")}`, "指引");
 
   if (config.length === 0) {
     throw new Error(`未找到任何配置！请重新在此目录下创建配置文件`);
@@ -37,12 +36,12 @@ async function main() {
   }));
 
   const selectedEmailIndex = await p.select({
-    message: "Choose a template",
+    message: "选择一个模板",
     options: templateChoices,
   });
 
   if (p.isCancel(selectedEmailIndex)) {
-    p.cancel("Canceled");
+    p.cancel("操作取消");
     process.exit(0);
   }
 
@@ -79,15 +78,19 @@ async function main() {
   });
 
   if (p.isCancel(choice)) {
-    p.cancel("canceled");
+    p.cancel("操作取消");
     process.exit(0);
   }
 
   const recipients = await getReceipients(choice);
 
-  const s = p.spinner();
-  s.start(
-    `Using ${selectedEmail.template}, ${recipients.length} receipients in total`,
+  const progress = p.progress({
+    max: recipients.length,
+    style: "block",
+    frames: ["󱡯 "],
+  });
+  progress.start(
+    `使用模板 ${selectedEmail.template}， 一共 ${recipients.length} 个收件人`,
   );
 
   // 将邮件列表转换为 Async Iterator
@@ -120,32 +123,34 @@ async function main() {
       });
 
       completed++;
-      s.message(`Progress: ${completed}/${recipients.length}`);
+      progress.advance(1, `正在发送 ${completed}/${recipients.length}`);
     } catch (error) {
       failed++;
       failures.push({ recipient, error: error.message });
 
-      s.message(
-        `Progress: ${completed}/${recipients.length} (Failed: ${failed})`,
+      progress.advance(
+        1,
+        `发送 ${completed}/${recipients.length} (失败: ${failed})`,
       );
     }
   }
 
   // 完成后显示总结
-  s.stop(
+  progress.stop(
     `${selectedEmail.template} | ${colors.green("\uebb3")}  ${completed} ${colors.red("\ue654")}  ${failed}`,
   );
 
   if (failed > 0) {
     p.log.warning(
-      `${colors.yellowBright("Failed recipients")}: ${failures.map((f) => `${f.recipient}`).join(",")}`,
+      `${colors.yellowBright("送信失败")}: ${failures.map((f) => `${f.recipient}`).join(",")}`,
     );
   } else {
     p.log.success(
-      `${colors.green("All done!")} ${completed} emails sent successfully.`,
+      colors.green(colors.buld("全部发送成功：")) +
+        "发送了 ${completed} 封邮件 ",
     );
   }
-  p.outro("End...");
+  p.outro("byebye");
 }
 
 main().catch((error) => {
@@ -166,7 +171,9 @@ async function getReceipients(choice) {
   } else {
     // 输入收件人邮箱地址
     const recipientsInput = await p.text({
-      message: "Input recipients email adresses here. (use comma to separate)",
+      message:
+        "在下方输入收件人的地址，多个收件人请使用" +
+        colors.redBright(colors.bold("英语逗号分割")),
       placeholder: "example@email.com, test@email.com",
       validate: (value) => {
         if (!value) return "请输入至少一个邮箱地址";
@@ -180,7 +187,7 @@ async function getReceipients(choice) {
     });
 
     if (p.isCancel(recipientsInput)) {
-      p.cancel("canceled");
+      p.cancel("操作取消");
       process.exit(0);
     }
 
