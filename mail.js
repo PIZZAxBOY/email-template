@@ -146,7 +146,7 @@ async function main() {
     );
   } else {
     p.log.success(
-      colors.green(colors.buld("全部发送成功：")) +
+      colors.green(colors.bold("全部发送成功：")) +
         "发送了 ${completed} 封邮件 ",
     );
   }

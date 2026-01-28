@@ -29,3 +29,4 @@ build/
 out/
 
 sendbox.txt
+*.ods
