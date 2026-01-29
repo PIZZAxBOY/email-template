@@ -3,6 +3,7 @@ import { convert } from "html-to-text";
 import * as p from "@clack/prompts";
 import colors from "picocolors";
 import config from "./config.json";
+import { mailFinder } from "./db.js";
 
 function displayStatus(message) {
   const row = 1;
@@ -84,11 +85,29 @@ async function main() {
 
   const recipients = await getReceipients(choice);
 
+  const result = recipients
+    .map((i) => {
+      return colors.green(i);
+    })
+    .join("\n");
+
+  p.box(result, colors.bold(colors.blue(`待发送：${recipients.length} 个`)));
+
+  const sendConfirm = await p.confirm({
+    message: "是否确认并发送？",
+  });
+
+  if (!sendConfirm || p.isCancel(sendConfirm)) {
+    p.cancel("操作取消");
+    process.exit(0);
+  }
+
   const progress = p.progress({
     max: recipients.length,
     style: "block",
     frames: ["󱡯 "],
   });
+
   progress.start(
     `使用模板 ${selectedEmail.template}， 一共 ${recipients.length} 个收件人`,
   );
@@ -147,7 +166,7 @@ async function main() {
   } else {
     p.log.success(
       colors.green(colors.bold("全部发送成功：")) +
-        "发送了 ${completed} 封邮件 ",
+        `发送了 ${completed} 封邮件`,
     );
   }
   p.outro("byebye");
@@ -163,11 +182,14 @@ async function getReceipients(choice) {
   if (choice) {
     const sendbox = Bun.file("./sendbox.txt");
     const text = await sendbox.text();
-    const receipients = text
+    const arr = text
       .split("\n")
       .map((email) => email.trim())
       .filter((email) => /\S+@\S+\.\S+/.test(email));
-    return receipients;
+
+    const set = new Set(arr);
+    const recipients = Array.from(set);
+    return recipients;
   } else {
     // 输入收件人邮箱地址
     const recipientsInput = await p.text({
