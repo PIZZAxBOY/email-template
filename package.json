@@ -5,6 +5,7 @@
     "@clack/prompts": "^1.0.0-alpha.9",
     "elysia": "^1.4.22",
     "html-to-text": "^9.0.5",
+    "imapflow": "^1.2.8",
     "nodemailer": "^7.0.12",
     "picocolors": "^1.1.1"
   },

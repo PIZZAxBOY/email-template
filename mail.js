@@ -1,9 +1,15 @@
+import { searchSentMails } from "./imap";
 import { createTransport } from "nodemailer";
 import { convert } from "html-to-text";
 import * as p from "@clack/prompts";
 import colors from "picocolors";
 import config from "./config.json";
-import { mailFinder } from "./db.js";
+import { recorder } from "./db";
+
+main().catch((error) => {
+  p.log.error(colors.redBright(error.message));
+  process.exit(1);
+});
 
 function displayStatus(message) {
   const row = 1;
@@ -17,15 +23,18 @@ function displayStatus(message) {
 }
 
 async function main() {
-  // 清空终端
-  process.stdout.write("\x1b[2J\x1b[0;0H");
-
-  p.box("📧 一个简单的 MJML 邮件发送脚本", "Mailer", {
-    rounded: true,
-  });
-
-  p.note(`${colors.dim("↑↓/jk 切换选项")}`, "指引");
-
+  console.log(
+    colors.yellow(`
+                                                                      z 
+                                                                    z
+    ██╗      █████╗ ███████╗██╗   ██╗███╗   ███╗ █████╗ ██╗██╗     z
+    ██║     ██╔══██╗╚══███╔╝╚██╗ ██╔╝████╗ ████║██╔══██╗██║██║     
+    ██║     ███████║  ███╔╝  ╚████╔╝ ██╔████╔██║███████║██║██║     
+    ██║     ██╔══██║ ███╔╝    ╚██╔╝  ██║╚██╔╝██║██╔══██║██║██║     
+    ███████╗██║  ██║███████╗   ██║   ██║ ╚═╝ ██║██║  ██║██║███████╗
+    ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝╚══════╝
+    `),
+  );
   if (config.length === 0) {
     throw new Error(`未找到任何配置！请重新在此目录下创建配置文件`);
   }
@@ -49,9 +58,6 @@ async function main() {
   const selectedEmail = config.emails[selectedEmailIndex];
 
   displayStatus(`${selectedEmail.auth.user}`);
-
-  // 创建邮件发送器
-  let transporter = createTransport(selectedEmail);
 
   // 读取模板文件
   const templatePath = `template/${selectedEmail.template}`;
@@ -102,82 +108,12 @@ async function main() {
     process.exit(0);
   }
 
-  const progress = p.progress({
-    max: recipients.length,
-    style: "block",
-    frames: ["󱡯 "],
-  });
+  await sendMails(recipients, selectedEmail, textContent, htmlContent);
 
-  progress.start(
-    `使用模板 ${selectedEmail.template}， 一共 ${recipients.length} 个收件人`,
-  );
-
-  // 将邮件列表转换为 Async Iterator
-  async function* emailStream(recipientList) {
-    for (const recipient of recipientList) {
-      yield recipient;
-    }
-  }
-
-  let completed = 0;
-  let failed = 0;
-  const failures = [];
-
-  // 使用 for await 处理邮件流
-  for await (const recipient of emailStream(recipients)) {
-    let mailOptions = {
-      from: selectedEmail.from,
-      to: recipient,
-      subject: selectedEmail.subject,
-      text: textContent,
-      html: htmlContent,
-    };
-
-    try {
-      await new Promise((resolve, reject) => {
-        transporter.sendMail(mailOptions, (error, info) => {
-          if (error) reject(error);
-          else resolve(info);
-        });
-      });
-
-      completed++;
-      progress.advance(1, `正在发送 ${completed}/${recipients.length}`);
-    } catch (error) {
-      failed++;
-      failures.push({ recipient, error: error.message });
-
-      progress.advance(
-        1,
-        `发送 ${completed}/${recipients.length} (失败: ${failed})`,
-      );
-    }
-  }
-
-  // 完成后显示总结
-  progress.stop(
-    `${selectedEmail.template} | ${colors.green("\uebb3")}  ${completed} ${colors.red("\ue654")}  ${failed}`,
-  );
-
-  if (failed > 0) {
-    p.log.warning(
-      `${colors.yellowBright("送信失败")}: ${failures.map((f) => `${f.recipient}`).join(",")}`,
-    );
-  } else {
-    p.log.success(
-      colors.green(colors.bold("全部发送成功：")) +
-        `发送了 ${completed} 封邮件`,
-    );
-  }
   p.outro("byebye");
+  process.exit(1);
 }
 
-main().catch((error) => {
-  p.log.error(colors.redBright(error.message));
-  process.exit(1);
-});
-
-// 让用户选择如何 输入收件人邮箱
 async function getReceipients(choice) {
   if (choice) {
     const sendbox = Bun.file("./sendbox.txt");
@@ -220,4 +156,116 @@ async function getReceipients(choice) {
 
     return recipient;
   }
+}
+
+/**
+ * @param {Array.<string>} recipients - 收件人数组
+ * @param {Object} selectedEmail - 选中的模板对象
+ * @param {string} textContent - 纯文本内容
+ * @param {string} htmlContent - HTML 内容
+ * */
+async function sendMails(recipients, selectedEmail, textContent, htmlContent) {
+  const progress = p.progress({
+    size: process.stdout.columns - 70,
+    max: recipients.length,
+    style: "block",
+    frames: ["󱡯 "],
+  });
+
+  progress.start(`使用模板 ${selectedEmail.template}`);
+
+  let transporter = createTransport({
+    // 设置连接池
+    pool: true,
+    maxConnections: 3,
+    maxMessages: 100,
+    ...selectedEmail,
+  });
+
+  const completed = [];
+  const failures = [];
+  const skipped = [];
+
+  for (let i = 0; i < recipients.length; i++) {
+    const recipient = recipients[i];
+    const isLast = i === recipients.length - 1;
+    let status = "completed";
+    let mailOptions = {
+      from: selectedEmail.from,
+      to: recipient,
+      subject: selectedEmail.subject,
+      text: textContent,
+      html: htmlContent,
+    };
+
+    try {
+      const currentTime = Date.now();
+      const result = recorder.searchSentTime(recipient);
+      const sentTime = result?.last_sent;
+      if (sentTime) {
+        const dayBetween = (currentTime - sentTime) / (24 * 60 * 60 * 1000);
+        // 判断发送间隔是否大于 30 天
+        if (dayBetween < 30) {
+          skipped.push(recipient);
+          status = "skipped";
+          continue;
+        }
+      }
+      await transporter.sendMail(mailOptions);
+      completed.push(recipient);
+      // 记录存入数据库
+      recorder.insertRecord(recipient, currentTime);
+      status = "failed";
+    } catch (error) {
+      failures.push({ recipient, error: error.message || String(error) });
+    } finally {
+      progress.advance(
+        1,
+        `发送中 ${completed.length + failures.length + skipped.length}/${recipients.length}` +
+          (status === "skipped" ? ` 跳过：${recipient}` : ""),
+      );
+      // 如果是最后一个收件人，停留半秒
+      if (isLast) {
+        await new Promise((resolve) => setTimeout(resolve, 500));
+      }
+    }
+  }
+
+  progress.stop();
+
+  const divider = (message) => {
+    const col = process.stdout.columns - message.length - 10;
+
+    return colors.bold(colors.italic(message)) + " " + "─".repeat(col);
+  };
+  const completeResult =
+    completed.length > 0 ? colors.greenBright(completed.join("\n")) : "";
+  const skipResult =
+    skipped.length > 0 ? colors.blueBright(skipped.join("\n")) : "";
+  const failResult =
+    failures.length > 0
+      ? failures
+          .map(
+            (obj) =>
+              obj.recipient + "\n└╴" + colors.redBright(" " + obj.error),
+          )
+          .join("\n")
+      : "";
+
+  let boxContent = "";
+  if (completeResult)
+    boxContent += `${divider("Completed")}\n${completeResult}\n`;
+  if (skipResult) boxContent += `${divider("Skipped")}\n${skipResult}\n`;
+  if (failResult) boxContent += `${divider("Failed")}\n${failResult}\n`;
+
+  p.box(
+    boxContent,
+    `${selectedEmail.template} | ${colors.green("\uebb3")}  ${completed.length}  ${colors.red(" ")} ${failures.length}  ${colors.blueBright(" ")} ${skipped.length}`,
+  );
+
+  return {
+    completed,
+    failures,
+    skipped,
+  };
 }

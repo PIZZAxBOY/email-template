@@ -31,3 +31,10 @@ out/
 sendbox.txt
 *.ods
 image
+.stfolder
+.stversions
+nul
+.stignore
+key.jsonc
+db/recipients.db
+*.json5
