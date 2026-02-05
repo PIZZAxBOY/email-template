@@ -38,3 +38,6 @@ nul
 key.jsonc
 db/recipients.db
 *.json5
+blacklist.txt
+secrets.json
+test.js
