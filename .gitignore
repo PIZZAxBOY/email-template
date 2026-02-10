@@ -41,3 +41,6 @@ db/recipients.db
 blacklist.txt
 secrets.json
 test.js
+/google_token.json
+/client_secret.json
+/hosts.json

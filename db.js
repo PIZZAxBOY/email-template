@@ -20,7 +20,7 @@ class Recorder {
       .query(`
       SELECT last_sent FROM records WHERE email = ?
     `)
-      .get(email);
+      .get(email)?.last_sent;
   }
   // 保存记录（单条）
   insertRecord(email, sentTime) {

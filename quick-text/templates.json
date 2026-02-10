@@ -19,7 +19,7 @@
         },
         {
           "name": "collab details",
-          "text": "<p>Hi [[SCRIPT=ToFirstOrLastname]],</p>\n<p>\n  Thanks for getting back to us. We're excited about the possibility of\n  partnering with you on **[[INPUT=平台|select|YouTube;Instagram;TikTok]]**\n  showcasing some of our awesome accessories. We propose the following:\n</p>\n<div>## Deliverables</div>\n<p>\n  **[[INPUT=产出数量]]*[[SCRIPT=contentType|output]]** on **[[INPUT=平台]]**\n  showcasing PlayVital products (featuring key benefits, functionality, and\n  personal experience with them).\n</p>\n[[SCRIPT=videoLength]]\n<div>## Timeline</div>\n<p class=\"lst\">\n  Approximately **[[INPUT=产出时间]]** after receiving the products.<br />\n</p>\n<div>## Affiliate Program</div>\n<p>\n  To make this partnership more rewarding. We'd like to invite you to join our\n  [affiliate program](https://af.uppromote.com/playvital/register?p=175715) !\n  This means your followers will not only discover awesome products through your\n  reviews, but they'll also get a special **10%** discount using your unique\n  coupon code. Plus, you'll earn a **15%** commission on every sale generated\n  through your referrals!\n</p>\n<div>## Budget</div>\n<p>We are offering **[[INPUT=价格]]** commission for this collaboration.</p>\n<div>## Payment</div>\n<p>We will process the payment via PayPal upon reviewing the demo video.</p>\n\n<div>## Shipping</div>\n<p>\n  We are shipping internationally, We will ship the sample cases directly to\n  your address. The estimate time depends on the address.\n</p>\n<div>## Sample Request</div>\n<p>\n  You can apply the samples by filling out this [delivery\n  form](https://tally.so/r/mepkZx). We will arrange the shipping for you asap.\n</p>\n<p>\n  ---<br />\n  Let us know if there is any question or concern. Look forward to hearing from\n  you.\n</p>\n<p>Thanks,</p>",
+          "text": "<p>Hi [[SCRIPT=ToFirstOrLastname]],</p><p>Thanks for getting back to us. We're excited about the possibility of  partnering with you on **[[INPUT=平台|select|YouTube;Instagram;TikTok]]**  showcasing some of our awesome accessories. We propose the following:</p><div>## Deliverables</div><p>**[[INPUT=产出数量]]*[[SCRIPT=contentType|output]]** on **[[INPUT=平台]]**  showcasing PlayVital products (featuring key benefits, functionality, and  personal experience with them).</p>[[SCRIPT=videoLength]]<div>## Timeline</div><p class=\"lst\">  Approximately **[[INPUT=产出时间]]** after receiving the products.<br /></p><div>## Affiliate Program</div><p>To make this partnership more rewarding. We'd like to invite you to join our  [affiliate program](https://af.uppromote.com/playvital/register?p=175715) !  This means your followers will not only discover awesome products through your  reviews, but they'll also get a special **10%** discount using your unique  coupon code. Plus, you'll earn a **15%** commission on every sale generated  through your referrals!</p><div>## Budget</div><p>We are offering **[[INPUT=价格]]** commission for this collaboration.</p><div>## Payment</div><p>We will process the payment via PayPal upon reviewing the demo video.</p><div>## Shipping</div><p>We are shipping internationally, We will ship the sample cases directly to  your address. The estimate time depends on the address.</p><div>## Sample Request</div><p>You can apply the samples by filling out this [delivery  form](https://tally.so/r/mepkZx). We will arrange the shipping for you asap.</p><p>---<br />  Let us know if there is any question or concern. Look forward to hearing from  you.</p><p>Thanks,</p>",
           "shortcut": "2",
           "type": "text/html",
           "keyword": "",
@@ -27,8 +27,17 @@
           "attachments": ""
         },
         {
+          "name": "package sent",
+          "text": "<p>Hi friend!<p>We have arranged a shipping for you. Here is the [tracking link]([[CURSOR]])</p><p>Let us know if there is any question or concern.</p></p>Have a nice day!</p><p>Best,</p>",
+          "shortcut": "8",
+          "type": "text/html",
+          "keyword": "sent",
+          "subject": "",
+          "attachments": ""
+        },
+        {
           "name": "package arrived",
-          "text": "<p>Hi [[SCRIPT=ToFirstOrLastname]],</p>\n\n<p>\n  We noticed that your package has arrived at the destination. Please feel free\n  to pick it up at your convenience.\n</p>\n<p>Let us know if there is any question or concern.</p>\n\n<p>Have a nice day!</p>\n\n<p>Best,</p>",
+          "text": "<p>Hi [[SCRIPT=ToFirstOrLastname]],</p><p>We noticed that your package has arrived at the destination. Please feel free  to pick it up at your convenience.</p><p>Let us know if there is any question or concern.</p><p>Have a nice day!</p><p>Best,</p>",
           "shortcut": "3",
           "type": "text/html",
           "keyword": "",
@@ -37,7 +46,7 @@
         },
         {
           "name": "interested",
-          "text": "Hi [[SCRIPT=ToFirstOrLastname]],\n\nThank you for reaching out. We would absolutely love to work with you! 🤗 We are primarily interested in promoting our newest arrivals.\n\n## To Get Start...\n\n1. Head to our [official store](https://playvital.com/collections/new-products)\n2. Choose your favorite products and copy the URL\n3. Fill out the [Delivery Form](https://tally.so/r/n0OyxA)\n4. The products will be shipped soon!\n\n## One more thing:\n\nTo make this partnership even more rewarding, we'd like to invite you to join our [affiliate program](https://af.uppromote.com/playvital/register?p=175715)!\nThis means your followers will not only discover awesome products through your reviews, but they'll also get a special **10%** discount using your unique coupon code. Plus, you'll earn a **15%** commission on every sale generated through your referrals!\n\nLet us know if there is any question or concern!\n\nWishing you all the best☺  ",
+          "text": "Hi [[SCRIPT=ToFirstOrLastname]],Thank you for reaching out. We would absolutely love to work with you! 🤗 We are primarily interested in promoting our newest arrivals.## To Get Start...1. Head to our [official store](https://playvital.com/collections/new-products)2. Choose your favorite products and copy the URL3. Fill out the [Delivery Form](https://tally.so/r/n0OyxA)4. The products will be shipped soon!## One more thing:To make this partnership even more rewarding, we'd like to invite you to join our [affiliate program](https://af.uppromote.com/playvital/register?p=175715)!This means your followers will not only discover awesome products through your reviews, but they'll also get a special **10%** discount using your unique coupon code. Plus, you'll earn a **15%** commission on every sale generated through your referrals!Let us know if there is any question or concern!Wishing you all the best☺  ",
           "shortcut": "4",
           "type": "text/plain",
           "keyword": "yes",
@@ -46,7 +55,7 @@
         },
         {
           "name": "not interested",
-          "text": "Hi! [[SCRIPT=ToFirstOrLastname]]\n\nThank you for your support! Unfortunately, we can't provide products at this time due to specific requirements for influencers. You can join our [Affiliate Program](https://af.uppromote.com/playvital/register) for a 10% commission on every order with a unique code for your followers. Thank you for your interest and support! We hope to collaborate in the future. \n\nBest,",
+          "text": "Hi! [[SCRIPT=ToFirstOrLastname]]Thank you for your support! Unfortunately, we can't provide products at this time due to specific requirements for influencers. You can join our [Affiliate Program](https://af.uppromote.com/playvital/register) for a 10% commission on every order with a unique code for your followers. Thank you for your interest and support! We hope to collaborate in the future. Best,",
           "shortcut": "5",
           "type": "text/plain",
           "keyword": "no",
@@ -55,7 +64,7 @@
         },
         {
           "name": "brazil",
-          "text": "Hi friend,\n\nThank you for reaching out and for your interest in working with us. Unfortunately, we are unable to provide products for you due to the strict customs policy in Brazil.\n\nThank you for understanding![[SCRIPT=signature]]",
+          "text": "Hi friend,Thank you for reaching out and for your interest in working with us. Unfortunately, we are unable to provide products for you due to the strict customs policy in Brazil.Thank you for understanding![[SCRIPT=signature]]",
           "shortcut": "6",
           "type": "text/plain",
           "keyword": "",
