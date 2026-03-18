@@ -46,18 +46,18 @@
         },
         {
           "name": "interested",
-          "text": "Hi [[SCRIPT=ToFirstOrLastname]],Thank you for reaching out. We would absolutely love to work with you! 🤗 We are primarily interested in promoting our newest arrivals.## To Get Start...1. Head to our [official store](https://playvital.com/collections/new-products)2. Choose your favorite products and copy the URL3. Fill out the [Delivery Form](https://tally.so/r/n0OyxA)4. The products will be shipped soon!## One more thing:To make this partnership even more rewarding, we'd like to invite you to join our [affiliate program](https://af.uppromote.com/playvital/register?p=175715)!This means your followers will not only discover awesome products through your reviews, but they'll also get a special **10%** discount using your unique coupon code. Plus, you'll earn a **15%** commission on every sale generated through your referrals!Let us know if there is any question or concern!Wishing you all the best☺  ",
+          "text": "<p>Hi [[SCRIPT=ToFirstOrLastname]],</p> <p>Thank you for reaching out. We would absolutely love to work with you! 🤗 We are primarily interested in promoting our newest arrivals.</p> <p>## To Get Start...</p> <p>1. Head to our [official store](https://playvital.com/collections/new-products)</p> <p>2. Choose your favorite products and copy the URL</p> <p>3. Fill out the [Delivery Form](https://tally.so/r/n0OyxA)</p> <p>4. The products will be shipped soon!</p> <p>## One more thing:</p> <p>To make this partnership even more rewarding, we'd like to invite you to join our [affiliate program](https://af.uppromote.com/playvital/register?p=175715)!This means your followers will not only discover awesome products through your reviews, but they'll also get a special **10%** discount using your unique coupon code.</p> <p>Plus, you'll earn a **15%** commission on every sale generated through your referrals!Let us know if there is any question or concern!</p> <p>Wishing you all the best😊</p>",
           "shortcut": "4",
-          "type": "text/plain",
+          "type": "text/html",
           "keyword": "yes",
           "subject": "",
           "attachments": ""
         },
         {
           "name": "not interested",
-          "text": "Hi! [[SCRIPT=ToFirstOrLastname]]Thank you for your support! Unfortunately, we can't provide products at this time due to specific requirements for influencers. You can join our [Affiliate Program](https://af.uppromote.com/playvital/register) for a 10% commission on every order with a unique code for your followers. Thank you for your interest and support! We hope to collaborate in the future. Best,",
+          "text": "<p>Hi! [[SCRIPT=ToFirstOrLastname]]</p> <p>Thank you for your support! Unfortunately, we can't provide products at this time due to specific requirements for influencers. You can join our [Affiliate Program](https://af.uppromote.com/playvital/register) for a 10% commission on every order with a unique code for your followers. Thank you for your interest and support! We hope to collaborate in the future.</p> <p>Best,</p>",
           "shortcut": "5",
-          "type": "text/plain",
+          "type": "text/html",
           "keyword": "no",
           "subject": "",
           "attachments": ""

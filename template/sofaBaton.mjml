@@ -1,0 +1,196 @@
+<mjml>
+  <mj-head>
+    <mj-preview>
+    </mj-preview>
+    <mj-font name="Geist" href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" />
+    <mj-attributes>
+      <mj-all font-family="Geist, 'noto sans serif', sans-serif" font-size="13px" line-height="1.5" />
+      <mj-image border-radius="8px" padding="5px 10px" />
+      <mj-class name="features" font-family="Geist, 'noto sans serif', sans-serif" />
+    </mj-attributes>
+
+    <mj-style inline="inline">
+      a {
+      background-color: rgb(90, 89, 255);
+      color: white;
+      }
+
+      .products {
+      color: #e1a77b;
+      }
+      .navebar-link {
+      text-decoration-color: rgb(90, 89, 255) !important;
+      text-decoration-line: underline !important;
+      text-decoration-thickness: 2px !important;
+      text-underline-offset: 2px !important;
+      font-family: geist !important;
+      }
+
+      h1 {
+      font-weight: 400;
+      font-size: 32px;
+      }
+
+      p {
+      font-size: 15px;
+      }
+
+      .first-letter {
+      float: left;
+      font-size: 32px;
+      font-weight: 700;
+      margin-right: 5px;
+      line-height: 1.25;
+      }
+
+      li {
+      margin: 10px 0px;
+      }
+
+      h2 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      color: #ff9c6a;
+      }
+    </mj-style>
+  </mj-head>
+
+  <mj-body background-color="#f8f7f4">
+    <!-- 正文 -->
+    <mj-section padding="10px 0">
+      <mj-column>
+        <mj-text>
+          <h2 style="font-family: geist, sans-serif">🪂 Big News</h2>
+          <p>Hello hello!</p>
+          <p>
+            PlayVital just dropped our
+            <strong style="color: maroon">next-gen Nintendo Switch 2 accessories</strong>, designed to blend style,
+            durability, and seamless gameplay—and
+            we’d love for you to be among the first to experience them!
+          </p>
+          <p>
+            From
+            <strong>ultra-slim protective cases with grip-enhancing textures</strong>
+            to <strong> vibrant, customizable skins</strong> that make every
+            console uniquely yours, this lineup is all about elevating gameplay
+            and aesthetics. Perfect for your audience who craves both
+            functionality and flair!
+          </p>
+          <p>
+            Want to test them out? We’re offering
+            <strong style="color: maroon">samples + a collaboration opportunity</strong>
+            to showcase your honest review!
+          </p>
+          <p>
+            Whether it’s a unboxing, a durability test, or a style guide, let’s
+            create something awesome together.
+          </p>
+          <p>
+            <strong>To request samples</strong>, simply fill out this
+            <a href="https://tally.so/r/n0OyxA">🚚delivery form</a>, and send
+            over the links to the products. We will arrange a shipping for you
+            asap.
+          </p>
+          <p>
+            PS:
+            <strong style="color: maroon">I have attached the product brief below please feel free to check
+              out.</strong>
+          </p>
+          <p>Thank you for your time.</p>
+          <p>🌊🌊🌊</p>
+          <p>
+            ~~<br />
+            Team PlayVital
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0">
+      <mj-column>
+        <mj-text mj-class="features" padding="0 25px">
+          <h2 class="products">🪼 Products</h2>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0 15px">
+      <mj-column>
+        <mj-image fluid-on-mobile="true" src="https://image.null747.qzz.io/XJKNTM004.jpg"
+          alt="PlayVital BEYOND-GRIP Interchangeable Grip Protective Cover for Nintendo Switch 2"
+          href="https://www.playvital.com/products/playvital-beyond-grip-interchangeable-grip-protective-cover-for-nintendo-switch-2-2025-ergonomic-tpu-dockable-case-accessories-for-switch-2-with-joystick-caps-red-orange" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0 15px">
+      <mj-column width="60%">
+        <mj-image fluid-on-mobile="true" src="https://image.null747.qzz.io/YPLNTP001.jpg"
+          alt="PlayVital Ocean Whisper Series Protective Case for Nintendo Switch 2"
+          href="https://www.playvital.com/products/playvital-ocean-whisper-series-protective-case-for-nintendo-switch-2-shockproof-dockable-hard-shell-case-silicone-grips-for-switch-2-with-thumb-grips-sticker-mint-blue" />
+        <mj-image fluid-on-mobile="true" src="https://image.null747.qzz.io/XYFNTM001@500.jpg"
+          alt="PlayVital Cherry Blossoms Kitten Protective Cover for Nintendo Switch 2"
+          href="https://www.playvital.com/collections/for-nintendo-switch-2-cherry-blossoms-kitten-protective-cover" />
+        <mj-image fluid-on-mobile="true" src="https://image.null747.qzz.io/XYFNTM002@500.jpg" alt="magic wings for ns2"
+          href="https://www.playvital.com/collections/for-nintendo-switch-2-magic-wings-protective-case" />
+      </mj-column>
+      <mj-column width="40%">
+        <mj-image fluid-on-mobile="true" src="https://image.null747.qzz.io/MURNTV002.jpg"
+          alt="PlayVital Cute Cartoon Hard Protective Case for Nintendo Switch 2, Anti-scratch Kawaii Dockable Hard Case Shell for Switch 2 with Thumb Grip & Sticker & Button Caps - Celestial Rabbit Orbit"
+          href="https://www.playvital.com/products/playvital-cute-cartoon-hard-protective-case-celestial-rabbit-orbit-for-nintendo-switch-2-anti-scratch-kawaii-dockable-hard-case-shell-with-thumb-grip-sticker-button-caps-for-switch-2" />
+        <mj-image fluid-on-mobile="true" src="https://image.null747.qzz.io/WWYNTJ001@800p.jpg" alt="Cutie Seal Squad"
+          href="https://playvital.com/products/playvital-4-pcs-cute-thumb-grip-caps-for-nintendo-switch-2-cutie-seal-squad" />
+        <mj-image fluid-on-mobile="true" src="https://image.null747.qzz.io/WWYNTJ010@800p.jpg"
+          href="https://playvital.com/products/playvital-4-pcs-cute-thumb-grip-caps-for-nintendo-switch-2-cutie-penguin"
+          alt="Cutie Penguin" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-spacer />
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0">
+      <mj-column>
+        <mj-divider border-width="1px" border-color="#dedede" />
+        <mj-text color="#a5a5a5" font-size="13px" font-family="Geist, sans-serif" align="center" padding-top="30px">
+          SofaBaton, founded in 2018, is a leading universal remote control brand with over 5 million units sold
+          globally. We specialize in simplifying home entertainment by consolidating control of multiple devices into a
+          single, user-friendly remote.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0">
+      <mj-column>
+        <mj-social icon-size="20px" inner-padding="20px">
+          <mj-social-element
+            src="https://cdn.shopify.com/shopify-email/b44b9z24d10ct9dov9fozqqm8vqf.svg?width=60&height=60&format=png"
+            href="https://www.youtube.com/@sofabaton/">
+          </mj-social-element>
+
+          <mj-social-element
+            src="https://cdn.shopify.com/shopify-email/4s0eae5xdawkwa9aals5ya8qujky.svg?width=60&height=60&format=png"
+            href="https://www.tiktok.com/@playvitalgaming">
+          </mj-social-element>
+
+          <mj-social-element
+            src="https://cdn.shopify.com/shopify-email/mezbe8bg2srefo0ca2vqbbv13mjg.svg?width=60&height=60&format=png"
+            href="https://www.instagram.com/sofabaton/">
+          </mj-social-element>
+
+          <mj-social-element
+            src="https://cdn.shopify.com/shopify-email/1m71lepjigcxdvp7yvsp6fhrv3ih.svg?width=60&height=60&format=png"
+            href="https://twitter.com/sofabaton">
+          </mj-social-element>
+        </mj-social>
+      </mj-column>
+    </mj-section>
+    <!-- header -->
+    <mj-section>
+      <mj-column>
+        <mj-image src="https://image.null747.qzz.io/pv.png" alt="playvital logo" href="https://playvital.com/" />
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
