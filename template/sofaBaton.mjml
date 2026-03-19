@@ -20,15 +20,16 @@
         align="center"
         padding-top="30px"
       />
-      <mj-class name="white-border" border=".1px solid #1F1F1F" />
+      <mj-class name="invitation" font-size="14px" />
+      <mj-class name="white-border-all" border="1px solid #1F1F1F" />
+      <mj-class name="white-border-top" border-top="1px solid #1F1F1F" />
+      <mj-class name="white-border-left" border-left="1px solid #1F1F1F" />
+      <mj-class name="white-border-right" border-right="1px solid #1F1F1F" />
+      <mj-class name="white-border-bottom" border-bottom="1px solid #1F1F1F" />
       <mj-class name="feature" font-size="20px" />
     </mj-attributes>
 
-    <mj-style inline="inline">
-      .muted-background {
-        color: #a5a5a5;
-      }
-    </mj-style>
+    <mj-style inline="inline"> .muted-background { color: #a5a5a5; } </mj-style>
   </mj-head>
 
   <mj-body background-color="black">
@@ -43,9 +44,22 @@
       </mj-column>
     </mj-section>
 
-    <mj-section mj-class="white-border">
+    <mj-section mj-class="white-border-all ">
       <mj-column>
-        <mj-text>Here are some text. </mj-text>
+        <mj-text mj-class="invitation">
+          Hello,
+          <br /><br />
+          We're SofaBaton, a leading universal remote control brand. We're
+          reaching out because we believe your audience would appreciate our
+          innovative products.
+          <br /><br />
+          We're currently promoting our <b>X1S Remote</b> and would love to
+          collaborate with you. The product details are included below for your
+          review. <br /><br />
+          If you're interested in exploring a partnership, please reply to this
+          email or contact us at <b>marketing@sofabaton.com</b>. <br /><br />
+          We look forward to hearing from you!
+        </mj-text>
       </mj-column>
     </mj-section>
 
@@ -56,10 +70,22 @@
       background-url="https://www.sofabaton.com/wp-content/uploads/2023/10/sofabaton-x1-universal-remote-control-comfortable-grip.jpg"
       height="250px"
       background-position="top center"
+      vertical-align="bottom"
     >
+      <mj-button
+        href="https://www.sofabaton.com/products/x1s/"
+        background-color="#ededed"
+        color="black"
+        align="right"
+        border-radius="0"
+      >
+        Learn more
+      </mj-button>
     </mj-hero>
     <mj-section padding="0">
-      <mj-column mj-class="white-border">
+      <mj-column
+        mj-class="white-border-left white-border-right white-border-bottom"
+      >
         <mj-text mj-class="feature">
           <div>
             <svg
@@ -91,7 +117,7 @@
           </div>
         </mj-text>
       </mj-column>
-      <mj-column mj-class="white-border">
+      <mj-column mj-class="white-border-right white-border-bottom">
         <mj-text mj-class="feature">
           <div>
             <svg
@@ -120,7 +146,7 @@
           </div>
         </mj-text>
       </mj-column>
-      <mj-column mj-class="white-border">
+      <mj-column mj-class="white-border-bottom white-border-right">
         <mj-text mj-class="feature">
           <div>
             <svg
@@ -152,7 +178,9 @@
     </mj-section>
 
     <mj-section padding="0">
-      <mj-column mj-class="white-border">
+      <mj-column
+        mj-class="white-border-left white-border-right white-border-bottom"
+      >
         <mj-text mj-class="feature">
           <div>
             <svg
@@ -176,14 +204,14 @@
             </svg>
           </div>
           <div>
-            <b>Comfortable. </b
+            <b>Comfort. </b
             ><span class="muted-background"
               >Great care in experience and design enables everyone.</span
             >
           </div>
         </mj-text>
       </mj-column>
-      <mj-column mj-class="white-border">
+      <mj-column mj-class="white-border-right white-border-bottom">
         <mj-text mj-class="feature">
           <div>
             <svg
@@ -213,7 +241,7 @@
           </div>
         </mj-text>
       </mj-column>
-      <mj-column mj-class="white-border">
+      <mj-column mj-class="white-border-bottom white-border-right">
         <mj-text mj-class="feature">
           <div>
             <svg
@@ -242,9 +270,19 @@
         </mj-text>
       </mj-column>
     </mj-section>
-    <mj-section>
+
+    <mj-section padding="0">
       <mj-column>
-        <mj-spacer />
+        <mj-text>
+          <h1>Join us to shape the future of smart home control.</h1>
+        </mj-text>
+        <mj-button
+          border-radius="20px"
+          background-color="#ededed"
+          color="black"
+          href="mailto:marketing@sofabaton.com"
+          >Contact</mj-button
+        >
       </mj-column>
     </mj-section>
 
