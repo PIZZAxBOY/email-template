@@ -295,6 +295,7 @@ async function sendEmails(selectedAccount, selectedEmail) {
     selectedEmail,
     email.text,
     email.html,
+    getSenderEmail(selectedAccount),
   );
 
   if (done || failed) {
@@ -378,12 +379,33 @@ async function getRecipients(useFile) {
 }
 
 /**
+ * 获取发件邮箱地址，用于隔离不同邮箱的发送记录
+ * @param {Object} account - 账户或 SMTP 配置
+ * @returns {string} 发件邮箱地址
+ */
+function getSenderEmail(account) {
+  const senderEmail =
+    account?.imap?.auth?.user ||
+    account?.smtp?.auth?.user ||
+    account?.auth?.user ||
+    account?.from?.match(/<([^>]+)>/)?.[1] ||
+    account?.from;
+
+  if (!senderEmail) {
+    throw new Error("缺少发件邮箱，无法记录发送历史");
+  }
+
+  return senderEmail;
+}
+
+/**
  * 发送邮件
  * @param {Object} smtpConfig - SMTP 配置（包含 host, port, auth, from 等）
  * @param {Array.<string>} recipients - 收件人数组
  * @param {Object} selectedEmail - 选中的模板对象
  * @param {string} textContent - 纯文本内容
  * @param {string} htmlContent - HTML 内容
+ * @param {string} senderEmail - 发件邮箱
  * @returns {Promise<{done: string[], failed: Array<{recipient: string, error: string}>}>}
  **/
 async function sendMails(
@@ -392,6 +414,7 @@ async function sendMails(
   selectedEmail,
   textContent,
   htmlContent,
+  senderEmail,
 ) {
   const progress = p.progress({
     indicator: "timer",
@@ -445,6 +468,7 @@ async function sendMails(
         done.push(recipient);
         // 批量收集记录
         batchRecords.push({
+          sender_email: senderEmail,
           email: recipient,
           last_sent: Date.now(),
         });
@@ -492,13 +516,14 @@ async function sendMails(
  */
 async function filterRecipients(recipients, account) {
   const recipientsSet = new Set(recipients);
+  const senderEmail = getSenderEmail(account);
 
   // 加载黑名单
   const rawFile = await Bun.file(CONFIG.BLACKLIST_FILE).text();
   const blacklist = rawFile.replace("\r", "").split("\n").filter(Boolean);
 
   const filtered = [...recipientsSet].filter((i) => {
-    const sentTime = recorder.searchSentTime(i);
+    const sentTime = recorder.searchSentTime(senderEmail, i);
     return (
       (sentTime < Date.now() - CONFIG.MS_PER_DAY * account.range ||
         !sentTime) &&
@@ -660,6 +685,7 @@ async function searchSentMails(since) {
   const accounts = await loadConfig(CONFIG.SECRETS_FILE);
   const testAccount = accounts.map((i) => i.imap.auth.user);
   const choice = await chooseAccount(accounts);
+  const senderEmail = getSenderEmail(choice);
 
   displayStatus(choice.imap.auth.user);
 
@@ -744,6 +770,7 @@ async function searchSentMails(since) {
       // 转换为数组格式
       const recordsArray = Object.entries(records).map(
         ([email, last_sent]) => ({
+          sender_email: senderEmail,
           email,
           last_sent,
         }),

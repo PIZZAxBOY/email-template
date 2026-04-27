@@ -2,41 +2,67 @@ import { Database } from "bun:sqlite";
 
 const db = new Database("./db/recipients.db");
 
+function hasColumn(table, column) {
+  return db
+    .query(`PRAGMA table_info(${table})`)
+    .all()
+    .some((item) => item.name === column);
+}
+
 function ensureTable() {
   db.run(`
     CREATE TABLE IF NOT EXISTS records (
-      email TEXT NOT NULL UNIQUE,
-      last_sent INTEGER NOT NULL
+      sender_email TEXT NOT NULL,
+      email TEXT NOT NULL,
+      last_sent INTEGER NOT NULL,
+      UNIQUE(sender_email, email)
     )
-`);
+  `);
+
+  if (!hasColumn("records", "sender_email")) {
+    db.run(`DROP TABLE records`);
+    db.run(`
+      CREATE TABLE records (
+        sender_email TEXT NOT NULL,
+        email TEXT NOT NULL,
+        last_sent INTEGER NOT NULL,
+        UNIQUE(sender_email, email)
+      )
+    `);
+  }
 }
 
 class Recorder {
   constructor() {
     // 不需要初始化属性
   }
-  searchSentTime(email) {
+
+  searchSentTime(senderEmail, email) {
     return db
       .query(`
-      SELECT last_sent FROM records WHERE email = ?
-    `)
-      .get(email)?.last_sent;
+        SELECT last_sent FROM records WHERE sender_email = ? AND email = ?
+      `)
+      .get(senderEmail, email)?.last_sent;
   }
+
   // 保存记录（单条）
-  insertRecord(email, sentTime) {
+  insertRecord(senderEmail, email, sentTime) {
     db.query(`
-    INSERT OR REPLACE INTO records (email, last_sent)
-    VALUES (?,?)
-  `).run(email, sentTime);
+      INSERT INTO records (sender_email, email, last_sent)
+      VALUES (?, ?, ?)
+      ON CONFLICT(sender_email, email) DO UPDATE SET
+        last_sent = excluded.last_sent
+      WHERE records.last_sent != excluded.last_sent
+    `).run(senderEmail, email, sentTime);
   }
 
   // 批量保存记录
   insertRecords(records) {
     const insert = db.query(`
-      INSERT INTO records (email, last_sent)
-      VALUES (?,?)
-      ON CONFLICT(email) DO UPDATE SET
-      last_sent = excluded.last_sent
+      INSERT INTO records (sender_email, email, last_sent)
+      VALUES (?, ?, ?)
+      ON CONFLICT(sender_email, email) DO UPDATE SET
+        last_sent = excluded.last_sent
       WHERE records.last_sent != excluded.last_sent
     `);
 
@@ -44,7 +70,11 @@ class Recorder {
 
     const insertRows = db.transaction((records) => {
       for (const record of records) {
-        const change = insert.run(record.email, record.last_sent).changes;
+        const change = insert.run(
+          record.sender_email,
+          record.email,
+          record.last_sent,
+        ).changes;
         changes += change;
       }
     });
@@ -57,9 +87,13 @@ class Recorder {
   deleteDueRecords(dueDate) {
     return db
       .query(`
-      DELETE FROM "records" where last_sent < ?
-    `)
+        DELETE FROM records WHERE last_sent < ?
+      `)
       .run(dueDate);
+  }
+
+  deleteAllRecords() {
+    return db.query(`DELETE FROM records`).run();
   }
 }
 
