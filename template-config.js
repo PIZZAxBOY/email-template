@@ -21,6 +21,13 @@ export async function listHtmlTemplates(templateDir) {
   return files.sort((a, b) => a.localeCompare(b));
 }
 
+export function buildTemplateOptions(templates) {
+  return templates.map((template) => ({
+    label: template,
+    value: template,
+  }));
+}
+
 export function normalizeTemplatePath(input, templateDir) {
   const value = String(input || "").trim();
   const normalizedDir = templateDir.replace(/\\/g, "/").replace(/\/$/, "");

@@ -5,10 +5,11 @@ import { join } from "node:path";
 
 import {
   appendTemplateConfig,
+  buildTemplateOptions,
   buildTemplateConfigRecord,
   listHtmlTemplates,
   normalizeTemplatePath,
-} from "./template-config.js";
+} from "../template-config.js";
 
 const tempDirs = [];
 
@@ -52,6 +53,13 @@ test("builds required template config record", () => {
 test("normalizes selected template path relative to template directory", () => {
   expect(normalizeTemplatePath("template/welcome.html", "template")).toBe("welcome.html");
   expect(normalizeTemplatePath("/project/template/nested/promo.html", "/project/template")).toBe("nested/promo.html");
+});
+
+test("builds autocomplete options from template-relative html paths", () => {
+  expect(buildTemplateOptions(["nested/promo.html", "welcome.html"])).toEqual([
+    { label: "nested/promo.html", value: "nested/promo.html" },
+    { label: "welcome.html", value: "welcome.html" },
+  ]);
 });
 
 test("appends template config to existing config file", async () => {
