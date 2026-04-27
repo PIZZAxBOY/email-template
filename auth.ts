@@ -80,11 +80,17 @@ export async function getAccessToken(): Promise<string> {
     if (refresh_token) {
       client.setCredentials({ refresh_token });
 
-      const { token } = await client.getAccessToken();
-      if (!token) {
-        throw new Error("No access token returned by Google");
+      try {
+        const { token } = await client.getAccessToken();
+        if (!token) {
+          throw new Error("No access token returned by Google");
+        }
+        return token;
+      } catch (error) {
+        process.stderr.write(
+          `刷新 Gmail token 失败，将重新打开浏览器授权：${formatErrorMessage(error)}\n`,
+        );
       }
-      return token;
     }
   }
 
@@ -127,16 +133,15 @@ export async function getAccessToken(): Promise<string> {
         if (!tokens.refresh_token) {
           throw new Error("No refresh token returned by Google");
         }
+        const accessToken = tokens.access_token;
+        if (!accessToken) {
+          throw new Error("No access token returned by Google");
+        }
 
         client.setCredentials(tokens);
         await saveRefreshToken(tokens.refresh_token);
 
-        const { token } = await client.getAccessToken();
-        if (!token) {
-          throw new Error("No access token returned by Google");
-        }
-
-        finish(() => resolve(token));
+        finish(() => resolve(accessToken));
         return "授权成功，可以回到终端";
       } catch (err) {
         const message = formatErrorMessage(err);
@@ -156,8 +161,7 @@ export async function getAccessToken(): Promise<string> {
         state,
       });
 
-      console.log("请在浏览器完成 Gmail 授权：");
-      console.log(authorizeUrl);
+      process.stderr.write(`请在浏览器完成 Gmail 授权：\n${authorizeUrl}\n`);
       open(authorizeUrl).catch((err) => finish(() => reject(err)));
     } catch (err) {
       finish(() => reject(err));

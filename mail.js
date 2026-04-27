@@ -1,3 +1,5 @@
+import { spawn } from "node:child_process";
+import { chmod, unlink, writeFile } from "node:fs/promises";
 import { createTransport } from "nodemailer";
 import { ImapFlow } from "imapflow";
 import { checkServerIdentity as defaultCheckServerIdentity } from "node:tls";
@@ -31,6 +33,8 @@ const UI_CONSTANTS = {
   SMTP_POOL_MAX_CONNECTIONS: 5,
   SMTP_POOL_MAX_MESSAGES: 100,
 };
+
+const GMAIL_API_BASE = "https://gmail.googleapis.com/gmail/v1/users/me";
 
 const MESSAGES = {
   PROMPTS: {
@@ -508,6 +512,252 @@ export function withTlsServername(config) {
   };
 }
 
+function quoteCurlConfigValue(value) {
+  return String(value).replace(/\\/g, "\\\\").replace(/"/g, '\\"').replace(/\r?\n/g, " ");
+}
+
+async function requestGmailApiJson(url, accessToken, options = {}) {
+  const configFile = `/tmp/gmail-api-curl-${crypto.randomUUID()}.conf`;
+  const method = options.method || "GET";
+  const body = options.body;
+  const headers = [
+    `header = "Authorization: Bearer ${quoteCurlConfigValue(accessToken)}"`,
+    'header = "Accept: application/json"',
+  ];
+
+  if (body !== undefined) {
+    headers.push('header = "Content-Type: application/json"');
+  }
+
+  await writeFile(
+    configFile,
+    [
+      `url = "${quoteCurlConfigValue(url)}"`,
+      `request = "${quoteCurlConfigValue(method)}"`,
+      ...headers,
+    ].join("\n"),
+    { mode: 0o600 },
+  );
+  await chmod(configFile, 0o600).catch(() => undefined);
+
+  return await new Promise((resolve, reject) => {
+    const args = [
+      "-sS",
+      "--max-time",
+      "30",
+      "--connect-timeout",
+      "10",
+      "-w",
+      "\n%{http_code}",
+      "--config",
+      configFile,
+    ];
+
+    if (body !== undefined) {
+      args.push("--data-binary", "@-");
+    }
+
+    const child = spawn("curl", args);
+
+    let stdout = "";
+    let stderr = "";
+
+    child.stdout.setEncoding("utf8");
+    child.stderr.setEncoding("utf8");
+    child.stdout.on("data", (chunk) => {
+      stdout += chunk;
+    });
+    child.stderr.on("data", (chunk) => {
+      stderr += chunk;
+    });
+    child.on("error", reject);
+    child.on("close", (code) => {
+      void unlink(configFile).catch(() => undefined);
+
+      if (code !== 0) {
+        reject(new Error(stderr.trim() || `curl exited with code ${code}`));
+        return;
+      }
+
+      const separatorIndex = stdout.lastIndexOf("\n");
+      const text = separatorIndex >= 0 ? stdout.slice(0, separatorIndex) : "";
+      const statusText = separatorIndex >= 0 ? stdout.slice(separatorIndex + 1).trim() : stdout.trim();
+      const status = Number(statusText);
+
+      if (!Number.isInteger(status)) {
+        reject(new Error(`Gmail API 返回了无效 HTTP 状态码: ${statusText || "empty"}`));
+        return;
+      }
+
+      if (status < 200 || status >= 300) {
+        reject(new Error(`Gmail API 请求失败 HTTP ${status}: ${text}`));
+        return;
+      }
+
+      try {
+        resolve(text ? JSON.parse(text) : {});
+      } catch (error) {
+        reject(new Error(`Gmail API 响应不是 JSON: ${error.message}`));
+      }
+    });
+
+    child.stdin.end(body);
+  });
+}
+
+function formatGmailSearchDate(date) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}/${month}/${day}`;
+}
+
+function getSentSyncSinceDate(choice, since) {
+  if (since) {
+    return since;
+  }
+
+  const lastrun = choice?.lastrun;
+  if (lastrun) {
+    return new Date(lastrun - CONFIG.MS_PER_DAY * 2);
+  }
+
+  const range = choice?.range || 30;
+  return new Date(Date.now() - CONFIG.MS_PER_DAY * range);
+}
+
+function extractEmailAddress(value) {
+  return String(value || "").match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i)?.[0];
+}
+
+function getGmailHeader(headers, name) {
+  return headers?.find((header) => header?.name?.toLowerCase() === name.toLowerCase())?.value;
+}
+
+function getGmailRecipientAddress(headers) {
+  return (
+    extractEmailAddress(getGmailHeader(headers, "To")) ||
+    extractEmailAddress(getGmailHeader(headers, "Cc")) ||
+    extractEmailAddress(getGmailHeader(headers, "Bcc"))
+  );
+}
+
+async function mapWithConcurrency(items, limit, mapper) {
+  const results = new Array(items.length);
+  let nextIndex = 0;
+  const workers = Array.from({ length: Math.min(limit, items.length) }, async () => {
+    while (nextIndex < items.length) {
+      const currentIndex = nextIndex++;
+      results[currentIndex] = await mapper(items[currentIndex], currentIndex);
+    }
+  });
+
+  await Promise.all(workers);
+  return results;
+}
+
+async function listGmailSentMessageIds(accessToken, sinceDate, beforeDate) {
+  const ids = [];
+  let pageToken;
+
+  do {
+    const url = new URL(`${GMAIL_API_BASE}/messages`);
+    url.searchParams.set("labelIds", "SENT");
+    url.searchParams.set("maxResults", "500");
+    url.searchParams.set(
+      "q",
+      `after:${formatGmailSearchDate(sinceDate)} before:${formatGmailSearchDate(beforeDate)}`,
+    );
+    if (pageToken) {
+      url.searchParams.set("pageToken", pageToken);
+    }
+
+    const data = await requestGmailApiJson(url.toString(), accessToken);
+    ids.push(...(data.messages || []).map((message) => message.id).filter(Boolean));
+    pageToken = data.nextPageToken;
+  } while (pageToken);
+
+  return ids;
+}
+
+async function getGmailMessageMetadata(accessToken, id) {
+  const url = new URL(`${GMAIL_API_BASE}/messages/${encodeURIComponent(id)}`);
+  url.searchParams.set("format", "metadata");
+  for (const header of ["To", "Cc", "Bcc", "Date"]) {
+    url.searchParams.append("metadataHeaders", header);
+  }
+
+  return await requestGmailApiJson(url.toString(), accessToken);
+}
+
+async function syncGmailSentMails(choice, accessToken, testAccount, senderEmail, since) {
+  const sinceDate = getSentSyncSinceDate(choice, since);
+  const beforeDate = new Date(Date.now() + CONFIG.MS_PER_DAY * 2);
+  const dateString = sinceDate.toLocaleString();
+
+  s.message(`通过 Gmail API 获取 ${colors.magentaBright(dateString)} 以来的邮件信息`);
+
+  const ids = await listGmailSentMessageIds(accessToken, sinceDate, beforeDate);
+  if (ids.length === 0) {
+    return 0;
+  }
+
+  s.message(`通过 Gmail API 拉取 ${ids.length} 封已发送邮件`);
+  const messages = await mapWithConcurrency(ids, 5, (id) =>
+    getGmailMessageMetadata(accessToken, id),
+  );
+
+  const records = {};
+  for (const message of messages) {
+    const headers = message?.payload?.headers || [];
+    const recipient = getGmailRecipientAddress(headers);
+    if (!recipient || testAccount.has(normalizeEmailAddress(recipient))) {
+      continue;
+    }
+
+    const date = Date.parse(getGmailHeader(headers, "Date")) || Number(message.internalDate) || Date.now();
+    const prev = records[recipient];
+    if (!prev || date > prev) {
+      records[recipient] = date;
+    }
+  }
+
+  const recordsArray = Object.entries(records).map(([email, last_sent]) => ({
+    sender_email: senderEmail,
+    email,
+    last_sent,
+  }));
+
+  return recordsArray.length > 0 ? recorder.insertRecords(recordsArray) : 0;
+}
+
+function encodeBase64Url(buffer) {
+  return Buffer.from(buffer)
+    .toString("base64")
+    .replace(/\+/g, "-")
+    .replace(/\//g, "_")
+    .replace(/=+$/g, "");
+}
+
+async function buildRawEmail(mailOptions) {
+  const transport = createTransport({
+    streamTransport: true,
+    buffer: true,
+    newline: "unix",
+  });
+  const info = await transport.sendMail(mailOptions);
+  return encodeBase64Url(info.message);
+}
+
+async function sendGmailApiMail(smtpConfig, mailOptions) {
+  const accessToken = smtpConfig?.auth?.accessToken || (await getAccessToken());
+  const raw = await buildRawEmail(mailOptions);
+  await requestGmailApiJson(`${GMAIL_API_BASE}/messages/send`, accessToken, {
+    method: "POST",
+    body: JSON.stringify({ raw }),
+  });
+}
+
 export function getConfiguredAccountEmails(accounts) {
   return new Set(
     accounts
@@ -562,17 +812,20 @@ async function sendMails(
   progress.start(`使用模板 ${selectedEmail.template}`);
 
   let transporter;
+  const useGmailApi = smtpConfig.host === "smtp.gmail.com";
   try {
-    transporter = createTransport({
-      // 设置连接池
-      pool: true,
-      maxConnections: UI_CONSTANTS.SMTP_POOL_MAX_CONNECTIONS,
-      maxMessages: UI_CONSTANTS.SMTP_POOL_MAX_MESSAGES,
-      ...withTlsServername({
-        ...smtpConfig,
-        ...selectedEmail,
-      }),
-    });
+    if (!useGmailApi) {
+      transporter = createTransport({
+        // 设置连接池
+        pool: true,
+        maxConnections: UI_CONSTANTS.SMTP_POOL_MAX_CONNECTIONS,
+        maxMessages: UI_CONSTANTS.SMTP_POOL_MAX_MESSAGES,
+        ...withTlsServername({
+          ...smtpConfig,
+          ...selectedEmail,
+        }),
+      });
+    }
   } catch (error) {
     progress.stop(colors.red("SMTP 连接失败"));
     throw new Error(`SMTP 连接失败: ${error.message}`);
@@ -601,7 +854,11 @@ async function sendMails(
       };
 
       try {
-        await transporter.sendMail(mailOptions);
+        if (useGmailApi) {
+          await sendGmailApiMail(smtpConfig, mailOptions);
+        } else {
+          await transporter.sendMail(mailOptions);
+        }
         done.push(recipient);
         // 批量收集记录
         batchRecords.push({
@@ -843,6 +1100,20 @@ async function searchSentMails(since) {
       const newToken = await getAccessToken();
       choice.imap.auth.accessToken = newToken;
       choice.smtp.auth.accessToken = newToken;
+
+      stage = "通过 Gmail API 同步已发送邮件";
+      const changes = await syncGmailSentMails(
+        choice,
+        newToken,
+        testAccount,
+        senderEmail,
+        since,
+      );
+
+      stage = "写入运行时间";
+      choice.lastrun = Date.now();
+      await Bun.write(CONFIG.SECRETS_FILE, JSON.stringify(accounts, null, 2));
+      return changes;
     }
     // client = new ImapFlow({ ...choice.imap, proxy: process.env.HTTP_PROXY });
     client = new ImapFlow(withTlsServername(choice.imap));
