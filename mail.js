@@ -151,10 +151,12 @@ function displayStatus(message) {
   });
 }
 
-main().catch((error) => {
-  p.log.error(colors.redBright(error.message));
-  process.exit(1);
-});
+if (import.meta.main) {
+  main().catch((error) => {
+    p.log.error(colors.redBright(error.message));
+    process.exit(1);
+  });
+}
 
 /**
  * 主函数
@@ -466,6 +468,35 @@ function getSenderEmail(account) {
   return senderEmail;
 }
 
+function normalizeEmailAddress(email) {
+  return String(email || "").trim().toLowerCase();
+}
+
+export function getConfiguredAccountEmails(accounts) {
+  return new Set(
+    accounts
+      .flatMap((account) => [
+        account?.imap?.auth?.user,
+        account?.smtp?.auth?.user,
+        account?.auth?.user,
+        account?.smtp?.from?.match(/<([^>]+)>/)?.[1],
+        account?.smtp?.from,
+        account?.from?.match(/<([^>]+)>/)?.[1],
+        account?.from,
+      ])
+      .map(normalizeEmailAddress)
+      .filter(Boolean),
+  );
+}
+
+export function shouldKeepRecipient({ recipient, sentTime, range, configuredAccountEmails, now = Date.now() }) {
+  const normalizedRecipient = normalizeEmailAddress(recipient);
+  const isConfiguredAccount = configuredAccountEmails.has(normalizedRecipient);
+  const sentHistoryExpired = sentTime < now - CONFIG.MS_PER_DAY * range;
+
+  return isConfiguredAccount || sentHistoryExpired || !sentTime;
+}
+
 /**
  * 发送邮件
  * @param {Object} smtpConfig - SMTP 配置（包含 host, port, auth, from 等）
@@ -585,6 +616,8 @@ async function sendMails(
 async function filterRecipients(recipients, account) {
   const recipientsSet = new Set(recipients);
   const senderEmail = getSenderEmail(account);
+  const accounts = await loadConfig(CONFIG.SECRETS_FILE);
+  const configuredAccountEmails = getConfiguredAccountEmails(accounts);
 
   // 加载黑名单
   const rawFile = await Bun.file(CONFIG.BLACKLIST_FILE).text();
@@ -593,9 +626,12 @@ async function filterRecipients(recipients, account) {
   const filtered = [...recipientsSet].filter((i) => {
     const sentTime = recorder.searchSentTime(senderEmail, i);
     return (
-      (sentTime < Date.now() - CONFIG.MS_PER_DAY * account.range ||
-        !sentTime) &&
-      !blacklist.includes(i)
+      shouldKeepRecipient({
+        recipient: i,
+        sentTime,
+        range: account.range,
+        configuredAccountEmails,
+      }) && !blacklist.includes(i)
     );
   });
 
@@ -751,7 +787,7 @@ async function setAccount(option) {
  */
 async function searchSentMails(since) {
   const accounts = await loadConfig(CONFIG.SECRETS_FILE);
-  const testAccount = accounts.map((i) => i.imap.auth.user);
+  const testAccount = getConfiguredAccountEmails(accounts);
   const choice = await chooseAccount(accounts);
   const senderEmail = getSenderEmail(choice);
 
@@ -827,7 +863,7 @@ async function searchSentMails(since) {
 
         const date = m.envelope.date ? m.envelope.date.getTime() : Date.now();
 
-        if (!testAccount.includes(recipient)) {
+        if (!testAccount.has(normalizeEmailAddress(recipient))) {
           const prev = records[recipient];
           if (!prev || date > prev) {
             records[recipient] = date;
