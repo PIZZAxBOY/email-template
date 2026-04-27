@@ -1,3 +1,4 @@
+import { spawn } from "node:child_process";
 import { chmod, rename, writeFile } from "node:fs/promises";
 import { OAuth2Client } from "google-auth-library";
 import open from "open";
@@ -26,6 +27,12 @@ type GoogleTokenResponse = {
   refresh_token?: string;
   error?: string;
   error_description?: string;
+};
+
+type GoogleTokenHttpResult = {
+  ok: boolean;
+  status: number;
+  text: string;
 };
 
 async function loadClientSecret(): Promise<InstalledClientSecret> {
@@ -80,22 +87,99 @@ function formatErrorMessage(error: unknown) {
   return error instanceof Error ? error.message : String(error);
 }
 
-async function requestGoogleToken(body: URLSearchParams): Promise<GoogleTokenResponse> {
-  let response: Response;
-  try {
-    response = await fetch(GOOGLE_TOKEN_URL, {
-      method: "POST",
-      headers: {
-        "content-type": "application/x-www-form-urlencoded",
-      },
-      body,
-      signal: AbortSignal.timeout(30_000),
+async function requestGoogleTokenViaFetch(body: URLSearchParams): Promise<GoogleTokenHttpResult> {
+  const response = await fetch(GOOGLE_TOKEN_URL, {
+    method: "POST",
+    headers: {
+      "content-type": "application/x-www-form-urlencoded",
+    },
+    body,
+    signal: AbortSignal.timeout(30_000),
+  });
+
+  return {
+    ok: response.ok,
+    status: response.status,
+    text: await response.text(),
+  };
+}
+
+async function requestGoogleTokenViaCurl(body: URLSearchParams): Promise<GoogleTokenHttpResult> {
+  return await new Promise((resolve, reject) => {
+    const child = spawn("curl", [
+      "-sS",
+      "--max-time",
+      "30",
+      "--connect-timeout",
+      "10",
+      "-w",
+      "\\n%{http_code}",
+      "-X",
+      "POST",
+      "-H",
+      "content-type: application/x-www-form-urlencoded",
+      "--data-binary",
+      "@-",
+      GOOGLE_TOKEN_URL,
+    ]);
+
+    let stdout = "";
+    let stderr = "";
+
+    child.stdout.setEncoding("utf8");
+    child.stderr.setEncoding("utf8");
+    child.stdout.on("data", (chunk) => {
+      stdout += chunk;
     });
+    child.stderr.on("data", (chunk) => {
+      stderr += chunk;
+    });
+    child.on("error", reject);
+    child.on("close", (code) => {
+      if (code !== 0) {
+        reject(new Error(stderr.trim() || `curl exited with code ${code}`));
+        return;
+      }
+
+      const separatorIndex = stdout.lastIndexOf("\n");
+      const text = separatorIndex >= 0 ? stdout.slice(0, separatorIndex) : "";
+      const statusText = separatorIndex >= 0 ? stdout.slice(separatorIndex + 1).trim() : stdout.trim();
+      const status = Number(statusText);
+
+      if (!Number.isInteger(status)) {
+        reject(new Error(`curl 返回了无效 HTTP 状态码: ${statusText || "empty"}`));
+        return;
+      }
+
+      resolve({
+        ok: status >= 200 && status < 300,
+        status,
+        text,
+      });
+    });
+
+    child.stdin.end(body.toString());
+  });
+}
+
+async function requestGoogleToken(body: URLSearchParams): Promise<GoogleTokenResponse> {
+  let result: GoogleTokenHttpResult;
+  try {
+    result = await requestGoogleTokenViaFetch(body);
   } catch (error) {
-    throw new Error(`Google OAuth 网络请求失败: ${formatErrorMessage(error)}`);
+    // Bun's TLS stack can fail on local proxy / CA setups with
+    // "unknown certificate verification error". curl uses the system TLS store
+    // and receives the OAuth body through stdin, so secrets are not exposed in args.
+    try {
+      result = await requestGoogleTokenViaCurl(body);
+    } catch (curlError) {
+      throw new Error(
+        `Google OAuth 网络请求失败: ${formatErrorMessage(error)}；curl 备用请求也失败: ${formatErrorMessage(curlError)}`,
+      );
+    }
   }
 
-  const text = await response.text();
+  const text = result.text;
   let data: GoogleTokenResponse | string = text;
   try {
     data = JSON.parse(text) as GoogleTokenResponse;
@@ -103,8 +187,8 @@ async function requestGoogleToken(body: URLSearchParams): Promise<GoogleTokenRes
     // Keep the original text for diagnostics without printing request secrets.
   }
 
-  if (!response.ok) {
-    throw new Error(`Google OAuth token 请求失败: ${formatGoogleTokenError(data, response.status)}`);
+  if (!result.ok) {
+    throw new Error(`Google OAuth token 请求失败: ${formatGoogleTokenError(data, result.status)}`);
   }
 
   if (typeof data === "string") {
