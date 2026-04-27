@@ -147,16 +147,18 @@ export async function getAccessToken(): Promise<string> {
     });
 
     try {
-      app.listen(3003, () => {
-        const authorizeUrl = client.generateAuthUrl({
-          access_type: "offline",
-          prompt: "consent",
-          scope: ["https://mail.google.com"],
-          state,
-        });
+      app.listen(3003);
 
-        open(authorizeUrl).catch((err) => finish(() => reject(err)));
+      const authorizeUrl = client.generateAuthUrl({
+        access_type: "offline",
+        prompt: "consent",
+        scope: ["https://mail.google.com"],
+        state,
       });
+
+      console.log("请在浏览器完成 Gmail 授权：");
+      console.log(authorizeUrl);
+      open(authorizeUrl).catch((err) => finish(() => reject(err)));
     } catch (err) {
       finish(() => reject(err));
     }
