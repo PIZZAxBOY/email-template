@@ -12,7 +12,7 @@ node_modules/
 Thumbs.db
 
 # 编译产物/生成文件
-template/*.html
+template/
 *.tmp
 *.temp
 
