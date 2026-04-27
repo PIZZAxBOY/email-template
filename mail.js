@@ -5,6 +5,12 @@ import * as p from "@clack/prompts";
 import colors from "picocolors";
 import { recorder } from "./db";
 import { getAccessToken } from "./auth";
+import {
+  appendTemplateConfig,
+  buildTemplateConfigRecord,
+  listHtmlTemplates,
+  normalizeTemplatePath,
+} from "./template-config";
 
 // ==================== 配置常量 ====================
 const CONFIG = {
@@ -157,6 +163,7 @@ async function main() {
   displayBanner();
 
   await ensureTemplateConfig();
+  await addTemplateConfig();
   await initializeData();
 
   const { account, config } = await setupAccount();
@@ -165,6 +172,64 @@ async function main() {
   await sendEmails(account, selectedEmail);
 
   p.outro("byebye");
+  process.exit(0);
+}
+
+/**
+ * 添加邮件模板配置
+ */
+async function addTemplateConfig() {
+  if (!["add-template", "template"].includes(process.argv[2])) {
+    return;
+  }
+
+  const templates = await listHtmlTemplates(CONFIG.TEMPLATE_DIR);
+  if (templates.length === 0) {
+    throw new Error(`未在 ${CONFIG.TEMPLATE_DIR} 找到 HTML 模板文件`);
+  }
+
+  const selectedPath = checkCancel(
+    await p.path({
+      message: "选择 HTML 模板文件",
+      root: CONFIG.TEMPLATE_DIR,
+      initialValue: templates[0],
+      validate: (value) => {
+        const template = normalizeTemplatePath(value, CONFIG.TEMPLATE_DIR);
+        if (!template) return "请选择模板文件";
+        if (!template.toLowerCase().endsWith(".html")) {
+          return "请选择 .html 模板文件";
+        }
+        if (!templates.includes(template)) {
+          return "请选择 template 目录中存在的 HTML 文件";
+        }
+      },
+    }),
+  );
+
+  const template = normalizeTemplatePath(selectedPath, CONFIG.TEMPLATE_DIR);
+  const name = checkCancel(
+    await p.text({
+      message: "模板名称",
+      placeholder: "例如：NS2 Launch",
+      validate: (value) => {
+        if (!value?.trim()) return "模板名称不能为空";
+      },
+    }),
+  );
+  const subject = checkCancel(
+    await p.text({
+      message: "邮件主题",
+      placeholder: "例如：Collaboration Opportunity",
+      validate: (value) => {
+        if (!value?.trim()) return "邮件主题不能为空";
+      },
+    }),
+  );
+
+  const record = buildTemplateConfigRecord({ name, subject, template });
+  const count = await appendTemplateConfig(CONFIG.CONFIG_FILE, record);
+
+  p.outro(`已添加模板配置：${record.name}，当前共 ${count} 个模板`);
   process.exit(0);
 }
 
