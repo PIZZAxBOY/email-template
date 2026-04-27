@@ -1,9 +1,50 @@
 import { chmod, rename, writeFile } from "node:fs/promises";
 import { OAuth2Client } from "google-auth-library";
-import secret from "./client_secret.json";
 import open from "open";
 
+const CLIENT_SECRET_FILE = "./client_secret.json";
 const TOKEN_FILE = `./${["google", "token"].join("_")}.json`;
+
+type GoogleClientSecret = {
+  installed?: {
+    client_id?: string;
+    client_secret?: string;
+    redirect_uris?: string[];
+  };
+};
+
+type InstalledClientSecret = {
+  client_id: string;
+  client_secret: string;
+  redirect_uri: string;
+};
+
+async function loadClientSecret(): Promise<InstalledClientSecret> {
+  const file = Bun.file(CLIENT_SECRET_FILE);
+  if (!(await file.exists())) {
+    throw new Error(
+      `缺少 ${CLIENT_SECRET_FILE}，无法使用 Gmail OAuth。请从 Google Cloud Console 下载 OAuth 客户端 JSON，并保存为 ${CLIENT_SECRET_FILE}`,
+    );
+  }
+
+  const secret = (await file.json()) as GoogleClientSecret;
+  const installed = secret.installed;
+  if (
+    !installed?.client_id ||
+    !installed?.client_secret ||
+    !installed?.redirect_uris?.[0]
+  ) {
+    throw new Error(
+      `${CLIENT_SECRET_FILE} 格式不完整，需要包含 installed.client_id、installed.client_secret 和 installed.redirect_uris[0]`,
+    );
+  }
+
+  return {
+    client_id: installed.client_id,
+    client_secret: installed.client_secret,
+    redirect_uri: installed.redirect_uris[0],
+  };
+}
 
 async function saveRefreshToken(refreshToken: string) {
   const tmpFile = `${TOKEN_FILE}.${crypto.randomUUID()}.tmp`;
@@ -17,10 +58,11 @@ async function saveRefreshToken(refreshToken: string) {
 }
 
 export async function getAccessToken() {
+  const secret = await loadClientSecret();
   const client = new OAuth2Client({
-    client_id: secret.installed.client_id,
-    client_secret: secret.installed.client_secret,
-    redirectUri: secret.installed.redirect_uris[0],
+    client_id: secret.client_id,
+    client_secret: secret.client_secret,
+    redirectUri: secret.redirect_uri,
   });
 
   if (await Bun.file(TOKEN_FILE).exists()) {
