@@ -1,6 +1,12 @@
 import { Database } from "bun:sqlite";
+import { mkdirSync } from "node:fs";
 
-const db = new Database("./db/recipients.db");
+const DB_DIR = "./db";
+const DB_FILE = `${DB_DIR}/recipients.db`;
+
+mkdirSync(DB_DIR, { recursive: true });
+
+const db = new Database(DB_FILE);
 
 function hasColumn(table, column) {
   return db

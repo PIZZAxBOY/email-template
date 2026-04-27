@@ -1,0 +1,68 @@
+{
+  "qq": {
+    "imap": {
+      "port": 993,
+      "host": "imap.qq.com",
+      "secure": true,
+      "logger": false,
+      "auth": {
+        "user": "",
+        "pass": ""
+      }
+    },
+    "smtp": {
+      "port": 465,
+      "host": "smtp.qq.com",
+      "secure": true,
+      "auth": {
+        "user": "",
+        "pass": ""
+      },
+      "from": ""
+    }
+  },
+  "exmail": {
+    "imap": {
+      "port": 993,
+      "secure": true,
+      "logger": false,
+      "host": "imap.exmail.qq.com",
+      "auth": {
+        "user": "",
+        "pass": ""
+      }
+    },
+    "smtp": {
+      "port": 465,
+      "host": "smtp.exmail.qq.com",
+      "secure": true,
+      "auth": {
+        "user": "",
+        "pass": ""
+      },
+      "from": ""
+    }
+  },
+  "gmail": {
+    "imap": {
+      "port": 993,
+      "secure": true,
+      "logger": false,
+      "host": "imap.gmail.com",
+      "auth": {
+        "user": "",
+        "accessToken": ""
+      }
+    },
+    "smtp": {
+      "port": 465,
+      "host": "smtp.gmail.com",
+      "secure": true,
+      "auth": {
+        "type": "OAuth2",
+        "user": ""
+      },
+      "from": ""
+    }
+  }
+}

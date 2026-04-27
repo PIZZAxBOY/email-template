@@ -156,6 +156,7 @@ main().catch((error) => {
 async function main() {
   displayBanner();
 
+  await ensureTemplateConfig();
   await initializeData();
 
   const { account, config } = await setupAccount();
@@ -165,6 +166,19 @@ async function main() {
 
   p.outro("byebye");
   process.exit(0);
+}
+
+/**
+ * 首次启动时创建空模板配置文件
+ */
+async function ensureTemplateConfig() {
+  const configFile = Bun.file(CONFIG.CONFIG_FILE);
+  if (await configFile.exists()) {
+    return;
+  }
+
+  await Bun.write(CONFIG.CONFIG_FILE, JSON.stringify([], null, 2));
+  p.log.message(`未找到模板配置，已创建空配置 => ${CONFIG.CONFIG_FILE}`);
 }
 
 /**

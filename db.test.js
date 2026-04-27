@@ -1,5 +1,6 @@
 import { afterAll, expect, test } from "bun:test";
-import { mkdir, mkdtemp, rm } from "node:fs/promises";
+import { existsSync } from "node:fs";
+import { mkdtemp, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
@@ -10,12 +11,11 @@ const tempDirs = [];
 async function loadRecorder() {
   const tempDir = await mkdtemp(join(tmpdir(), "email-db-test-"));
   tempDirs.push(tempDir);
-  await mkdir(join(tempDir, "db"));
 
   process.chdir(tempDir);
   const dbModuleUrl = pathToFileURL(resolve(projectRoot, "db.js")).href;
   const mod = await import(`${dbModuleUrl}?case=${crypto.randomUUID()}`);
-  return mod.recorder;
+  return { recorder: mod.recorder, tempDir };
 }
 
 afterAll(async () => {
@@ -24,7 +24,10 @@ afterAll(async () => {
 });
 
 test("records are isolated by sender email", async () => {
-  const recorder = await loadRecorder();
+  const { recorder, tempDir } = await loadRecorder();
+
+  expect(existsSync(join(tempDir, "db"))).toBe(true);
+  expect(existsSync(join(tempDir, "db", "recipients.db"))).toBe(true);
 
   recorder.insertRecords([
     { sender_email: "sender-a@example.com", email: "recipient@example.com", last_sent: 1000 },
@@ -36,7 +39,7 @@ test("records are isolated by sender email", async () => {
 });
 
 test("upserts only update matching sender and recipient", async () => {
-  const recorder = await loadRecorder();
+  const { recorder } = await loadRecorder();
 
   recorder.insertRecords([
     { sender_email: "sender-a@example.com", email: "recipient@example.com", last_sent: 1000 },
