@@ -5,6 +5,8 @@ import open from "open";
 const CLIENT_SECRET_FILE = "./client_secret.json";
 const TOKEN_FILE = `./${["google", "token"].join("_")}.json`;
 
+const GOOGLE_TOKEN_URL = "https://oauth2.googleapis.com/token";
+
 type GoogleClientSecret = {
   installed?: {
     client_id?: string;
@@ -17,6 +19,13 @@ type InstalledClientSecret = {
   client_id: string;
   client_secret: string;
   redirect_uri: string;
+};
+
+type GoogleTokenResponse = {
+  access_token?: string;
+  refresh_token?: string;
+  error?: string;
+  error_description?: string;
 };
 
 async function loadClientSecret(): Promise<InstalledClientSecret> {
@@ -57,6 +66,93 @@ async function saveRefreshToken(refreshToken: string) {
   await rename(tmpFile, TOKEN_FILE);
 }
 
+function formatGoogleTokenError(data: GoogleTokenResponse | string, status: number) {
+  if (typeof data === "string") {
+    return data || `HTTP ${status}`;
+  }
+
+  return [data.error, data.error_description || `HTTP ${status}`]
+    .filter(Boolean)
+    .join(": ");
+}
+
+function formatErrorMessage(error: unknown) {
+  return error instanceof Error ? error.message : String(error);
+}
+
+async function requestGoogleToken(body: URLSearchParams): Promise<GoogleTokenResponse> {
+  let response: Response;
+  try {
+    response = await fetch(GOOGLE_TOKEN_URL, {
+      method: "POST",
+      headers: {
+        "content-type": "application/x-www-form-urlencoded",
+      },
+      body,
+      signal: AbortSignal.timeout(30_000),
+    });
+  } catch (error) {
+    throw new Error(`Google OAuth 网络请求失败: ${formatErrorMessage(error)}`);
+  }
+
+  const text = await response.text();
+  let data: GoogleTokenResponse | string = text;
+  try {
+    data = JSON.parse(text) as GoogleTokenResponse;
+  } catch {
+    // Keep the original text for diagnostics without printing request secrets.
+  }
+
+  if (!response.ok) {
+    throw new Error(`Google OAuth token 请求失败: ${formatGoogleTokenError(data, response.status)}`);
+  }
+
+  if (typeof data === "string") {
+    throw new Error("Google OAuth token 响应不是 JSON");
+  }
+
+  return data;
+}
+
+async function refreshAccessToken(secret: InstalledClientSecret, refreshToken: string) {
+  const tokens = await requestGoogleToken(
+    new URLSearchParams({
+      client_id: secret.client_id,
+      client_secret: secret.client_secret,
+      refresh_token: refreshToken,
+      grant_type: "refresh_token",
+    }),
+  );
+
+  if (!tokens.access_token) {
+    throw new Error("No access token returned by Google");
+  }
+
+  return tokens.access_token;
+}
+
+async function exchangeAuthorizationCode(secret: InstalledClientSecret, code: string) {
+  const tokens = await requestGoogleToken(
+    new URLSearchParams({
+      client_id: secret.client_id,
+      client_secret: secret.client_secret,
+      code,
+      grant_type: "authorization_code",
+      redirect_uri: secret.redirect_uri,
+    }),
+  );
+
+  if (!tokens.refresh_token) {
+    throw new Error("No refresh token returned by Google");
+  }
+  if (!tokens.access_token) {
+    throw new Error("No access token returned by Google");
+  }
+
+  await saveRefreshToken(tokens.refresh_token);
+  return tokens.access_token;
+}
+
 export async function getAccessToken() {
   const secret = await loadClientSecret();
   const client = new OAuth2Client({
@@ -69,13 +165,7 @@ export async function getAccessToken() {
     await chmod(TOKEN_FILE, 0o600).catch(() => undefined);
     const { refresh_token } = await Bun.file(TOKEN_FILE).json();
     if (refresh_token) {
-      client.setCredentials({ refresh_token });
-
-      const { token } = await client.getAccessToken();
-      if (!token) {
-        throw new Error("No access token returned by Google");
-      }
-      return token;
+      return await refreshAccessToken(secret, refresh_token);
     }
   }
 
@@ -123,23 +213,13 @@ export async function getAccessToken() {
         }
 
         try {
-          const { tokens } = await client.getToken(code);
-          if (!tokens.refresh_token) {
-            throw new Error("No refresh token returned by Google");
-          }
-
-          client.setCredentials(tokens);
-          await saveRefreshToken(tokens.refresh_token);
-
-          const { token } = await client.getAccessToken();
-          if (!token) {
-            throw new Error("No access token returned by Google");
-          }
+          const token = await exchangeAuthorizationCode(secret, code);
           finish(() => resolve(token));
           return new Response("授权成功，可以回到终端");
         } catch (err) {
+          const message = formatErrorMessage(err);
           finish(() => reject(err));
-          return new Response("授权失败", { status: 500 });
+          return new Response(`授权失败：${message}`, { status: 500 });
         }
       },
     });
