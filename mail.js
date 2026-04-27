@@ -1,5 +1,6 @@
 import { createTransport } from "nodemailer";
 import { ImapFlow } from "imapflow";
+import { checkServerIdentity as defaultCheckServerIdentity } from "node:tls";
 import { convert } from "html-to-text";
 import * as p from "@clack/prompts";
 import colors from "picocolors";
@@ -472,6 +473,41 @@ function normalizeEmailAddress(email) {
   return String(email || "").trim().toLowerCase();
 }
 
+function certificateNamesMatchHost(host, cert) {
+  const subjectAltName = String(cert?.subjectaltname || "");
+  const dnsNames = subjectAltName
+    .split(/,\s*/)
+    .map((entry) => entry.replace(/^DNS:/i, "").toLowerCase())
+    .filter(Boolean);
+
+  return dnsNames.includes(host.toLowerCase()) || cert?.subject?.CN === host;
+}
+
+function checkTlsServerIdentity(host, cert) {
+  const error = defaultCheckServerIdentity(host, cert);
+  if (!error || certificateNamesMatchHost(host, cert)) {
+    return undefined;
+  }
+
+  return error;
+}
+
+export function withTlsServername(config) {
+  const host = config?.host;
+  if (!host) {
+    return config;
+  }
+
+  return {
+    ...config,
+    tls: {
+      ...(config.tls || {}),
+      servername: config.tls?.servername || host,
+      checkServerIdentity: config.tls?.checkServerIdentity || checkTlsServerIdentity,
+    },
+  };
+}
+
 export function getConfiguredAccountEmails(accounts) {
   return new Set(
     accounts
@@ -532,8 +568,10 @@ async function sendMails(
       pool: true,
       maxConnections: UI_CONSTANTS.SMTP_POOL_MAX_CONNECTIONS,
       maxMessages: UI_CONSTANTS.SMTP_POOL_MAX_MESSAGES,
-      ...smtpConfig,
-      ...selectedEmail,
+      ...withTlsServername({
+        ...smtpConfig,
+        ...selectedEmail,
+      }),
     });
   } catch (error) {
     progress.stop(colors.red("SMTP 连接失败"));
@@ -807,7 +845,7 @@ async function searchSentMails(since) {
       choice.smtp.auth.accessToken = newToken;
     }
     // client = new ImapFlow({ ...choice.imap, proxy: process.env.HTTP_PROXY });
-    client = new ImapFlow({ ...choice.imap });
+    client = new ImapFlow(withTlsServername(choice.imap));
     stage = `连接 IMAP ${choice.imap.host}:${choice.imap.port}`;
     await client.connect();
 
@@ -910,7 +948,9 @@ async function searchSentMails(since) {
       try {
         await client.logout();
       } catch (error) {
-        console.error(`关闭 IMAP 连接失败: ${error.message}`);
+        if (error.message !== "Connection not available") {
+          console.error(`关闭 IMAP 连接失败: ${error.message}`);
+        }
       }
     }
   }

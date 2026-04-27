@@ -69,3 +69,39 @@ test("configured account recipients are not skipped by sent history", async () =
     }),
   ).toBe(false);
 });
+
+test("TLS servername is added from host without mutating config", async () => {
+  const { withTlsServername } = await loadMailModule();
+  const config = {
+    host: "imap.gmail.com",
+    port: 993,
+    secure: true,
+    tls: { minVersion: "TLSv1.2" },
+    auth: { user: "sender@example.com", accessToken: "token" },
+  };
+
+  const result = withTlsServername(config);
+
+  expect(result).toMatchObject({
+    host: "imap.gmail.com",
+    port: 993,
+    secure: true,
+    tls: { minVersion: "TLSv1.2", servername: "imap.gmail.com" },
+    auth: { user: "sender@example.com", accessToken: "token" },
+  });
+  expect(typeof result.tls.checkServerIdentity).toBe("function");
+  expect(config.tls).toEqual({ minVersion: "TLSv1.2" });
+  expect(result.auth).toBe(config.auth);
+});
+
+test("existing TLS servername and identity checker are preserved", async () => {
+  const { withTlsServername } = await loadMailModule();
+  const checkServerIdentity = () => undefined;
+  const result = withTlsServername({
+    host: "smtp.gmail.com",
+    tls: { servername: "custom.example.com", checkServerIdentity },
+  });
+
+  expect(result.tls.servername).toBe("custom.example.com");
+  expect(result.tls.checkServerIdentity).toBe(checkServerIdentity);
+});
