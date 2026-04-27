@@ -36,7 +36,6 @@ image
 nul
 .stignore
 key.jsonc
-db/recipients.db
 *.json5
 blacklist.txt
 secrets.json
@@ -44,3 +43,4 @@ test.js
 /google_token.json
 /client_secret.json
 /hosts.json
+*.db

@@ -1,6 +1,9 @@
 <mjml>
   <mj-head>
-    <mj-preview> </mj-preview>
+    <mj-preview>
+      Let's collaborate! SofaBaton seeks content creators for our innovative
+      universal remote.
+    </mj-preview>
     <mj-font
       name="Geist"
       href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
@@ -29,7 +32,11 @@
       <mj-class name="feature" font-size="20px" />
     </mj-attributes>
 
-    <mj-style inline="inline"> .muted-background { color: #a5a5a5; } </mj-style>
+    <mj-style inline="inline">
+      .muted-background {
+        color: #a5a5a5;
+      }
+    </mj-style>
   </mj-head>
 
   <mj-body background-color="black">

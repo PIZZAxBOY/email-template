@@ -347,8 +347,21 @@ async function getRecipients(useFile) {
     const sendbox = Bun.file(CONFIG.SENDBOX_FILE);
     const text = await sendbox.text();
 
-    // 使用 Set 去重，然后转换为数组
-    const uniqueRecipients = new Set(validateEmails(text));
+    // 按换行符和逗号分割，支持多种分隔符
+    const emails = text
+      .split(/[,，\n]/)
+      .map((email) => email.trim())
+      .filter((email) => email.length > 0);
+
+    // 验证每个邮箱地址
+    const validEmails = emails.filter((email) => /\S+@\S+\.\S+/.test(email));
+
+    if (validEmails.length === 0) {
+      throw new Error(MESSAGES.ERRORS.INVALID_EMAIL);
+    }
+
+    // 使用 Set 去重
+    const uniqueRecipients = new Set(validEmails);
     return Array.from(uniqueRecipients);
   }
 
@@ -652,27 +665,28 @@ async function searchSentMails(since) {
 
   let client;
   let lock;
+  let stage = "连接前";
 
   s.start("开始初始化数据");
   try {
     if (choice.imap.host === "imap.gmail.com") {
+      stage = "更新 Gmail token";
       s.message("更新 token");
       const newToken = await getAccessToken();
       choice.imap.auth.accessToken = newToken;
       choice.smtp.auth.accessToken = newToken;
     }
-    client = new ImapFlow({ ...choice.imap, proxy: process.env.HTTP_PROXY });
+    // client = new ImapFlow({ ...choice.imap, proxy: process.env.HTTP_PROXY });
+    client = new ImapFlow({ ...choice.imap });
+    stage = `连接 IMAP ${choice.imap.host}:${choice.imap.port}`;
     await client.connect();
 
     // 获取邮箱列表
-    const mailboxes = await client.list({
-      specialUseHints: { sent: true },
-    });
+    stage = "读取邮箱列表";
+    const mailboxes = await client.list();
 
-    const sentMailbox = mailboxes.find((mb) => mb.specialUse === "\\Sent");
-    const mailboxPath = sentMailbox ? sentMailbox.path : "[Gmail]/Sent Mail";
-
-    lock = await client.getMailboxLock(mailboxPath);
+    stage = "打开已发送邮箱";
+    lock = await getSentMailboxLock(client, mailboxes, choice.imap.host);
 
     let changes = 0;
     let sinceDate;
@@ -691,6 +705,7 @@ async function searchSentMails(since) {
 
     const dateString = sinceDate.toLocaleString();
 
+    stage = "搜索已发送邮件";
     s.message(`获取 ${colors.magentaBright(dateString)} 以来的邮件信息`);
 
     const result = await client.search(
@@ -699,6 +714,7 @@ async function searchSentMails(since) {
     );
 
     if (result.length > 0) {
+      stage = "拉取邮件 envelope";
       const messages = await client.fetchAll(
         result,
         { envelope: true },
@@ -706,10 +722,14 @@ async function searchSentMails(since) {
       );
 
       s.message("写入中");
+      stage = "写入本地记录";
 
       const records = {};
       for (const m of messages) {
-        const recipient = m.envelope.to[0].address;
+        const recipient = getRecipientAddress(m.envelope);
+        if (!recipient) {
+          continue;
+        }
 
         const date = m.envelope.date ? m.envelope.date.getTime() : Date.now();
 
@@ -735,6 +755,7 @@ async function searchSentMails(since) {
     }
 
     // 记录下运行时间
+    stage = "写入运行时间";
     const run_time = Date.now();
     choice.lastrun = run_time;
 
@@ -743,7 +764,7 @@ async function searchSentMails(since) {
     return changes;
   } catch (error) {
     s.stop(colors.red("IMAP 操作失败"));
-    throw new Error(`IMAP 操作失败: ${error.message}`);
+    throw new Error(formatImapError(error, stage));
   } finally {
     // 确保释放锁
     if (lock) {
@@ -762,6 +783,79 @@ async function searchSentMails(since) {
       }
     }
   }
+}
+
+/**
+ * 格式化 IMAP 错误，尽量带上服务端返回细节
+ * @param {Error & {responseStatus?: string, responseText?: string, serverResponseCode?: string, command?: string}} error
+ * @param {string} stage
+ * @returns {string}
+ */
+function formatImapError(error, stage) {
+  const details = [
+    stage ? `阶段: ${stage}` : "",
+    error?.command ? `命令: ${error.command}` : "",
+    error?.responseStatus ? `状态: ${error.responseStatus}` : "",
+    error?.serverResponseCode ? `响应码: ${error.serverResponseCode}` : "",
+    error?.responseText ? `服务端: ${error.responseText}` : "",
+    error?.message ? `消息: ${error.message}` : "",
+  ].filter(Boolean);
+
+  return `IMAP 操作失败: ${details.join(" | ")}`;
+}
+
+/**
+ * 获取收件人地址，优先使用 To，其次回退到 Cc/Bcc
+ * @param {Object} envelope - IMAP 邮件 envelope
+ * @returns {string|undefined} 收件人地址
+ */
+function getRecipientAddress(envelope) {
+  const recipients = [
+    ...(envelope?.to || []),
+    ...(envelope?.cc || []),
+    ...(envelope?.bcc || []),
+  ];
+
+  return recipients.find((item) => item?.address)?.address;
+}
+
+/**
+ * 获取已发送邮箱的锁，兼容不同服务商的文件夹命名
+ * @param {ImapFlow} client - IMAP 客户端
+ * @param {Array<{path: string, specialUse?: string}>} mailboxes - 邮箱列表
+ * @param {string} host - IMAP 主机
+ * @returns {Promise<any>} 邮箱锁
+ */
+async function getSentMailboxLock(client, mailboxes, host) {
+  const exactSent = mailboxes.find((mailbox) => mailbox.specialUse === "\\Sent");
+  if (exactSent) {
+    return client.getMailboxLock(exactSent.path);
+  }
+
+  const normalizedHost = (host || "").toLowerCase();
+  const providerFallbacks = normalizedHost.includes("gmail")
+    ? ["[Gmail]/Sent Mail"]
+    : ["Sent Messages", "Sent Items", "Sent", "已发送"];
+
+  const inferredPaths = mailboxes
+    .filter((mailbox) => /sent|已发送/i.test(mailbox.path || ""))
+    .map((mailbox) => mailbox.path);
+
+  const candidates = [...new Set([...inferredPaths, ...providerFallbacks])];
+  let lastError;
+
+  for (const path of candidates) {
+    try {
+      return await client.getMailboxLock(path);
+    } catch (error) {
+      lastError = error;
+    }
+  }
+
+  const availablePaths = mailboxes.map((mailbox) => mailbox.path).join(", ");
+  throw new Error(
+    `未找到可用的已发送邮箱。可用文件夹: ${availablePaths}${lastError ? `。最后一次错误: ${lastError.message}` : ""}`,
+  );
 }
 
 /**
