@@ -94,6 +94,10 @@ export async function getAccessToken() {
     server = Bun.serve({
       hostname: "localhost",
       port: 3003,
+      // Gmail OAuth can take longer than Bun's default 10s request idle timeout
+      // while the callback exchanges the authorization code for tokens.
+      // 0 disables the timeout for this local-only callback server.
+      idleTimeout: 0,
       async fetch(request) {
         const url = new URL(request.url);
 
