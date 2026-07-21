@@ -1,0 +1,47 @@
+# 配置文件
+config.json
+
+# Node.js 依赖目录
+node_modules/
+
+# 日志文件
+*.log
+
+# 操作系统生成的文件
+.DS_Store
+Thumbs.db
+
+# 编译产物/生成文件
+template/
+*.tmp
+*.temp
+*.exe
+
+# 编辑器/IDE文件
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 依赖目录
+node_modules/
+dist/
+build/
+out/
+
+sendbox.txt
+*.ods
+image
+.stfolder
+.stversions
+nul
+.stignore
+key.jsonc
+*.json5
+blacklist.txt
+secrets.json
+test.js
+/google_token.json
+/google_token.*.json
+/client_secret.json
+*.db
