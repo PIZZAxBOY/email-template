@@ -32,10 +32,7 @@ out/
 sendbox.txt
 *.ods
 image
-.stfolder
-.stversions
 nul
-.stignore
 key.jsonc
 *.json5
 blacklist.txt
